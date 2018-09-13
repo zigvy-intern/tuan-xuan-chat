@@ -64,103 +64,6 @@
     background: #9FD16A;
 }
 
-/*Aside Navigation*/
-.aside-nav {
-    width: 75px;
-    background: #2b303b;
-    height: 100vh;
-    float: left;
-    position: relative;
-}
-
-.aside__logo {
-
-    background: #21252D;
-    padding: 12px 15px;
-}
-
-.aside__logo img {
-    width: 40px;
-    height: 45px;
-    max-width: 40px;
-    max-height: 45px;
-}
-
-.nav__container,
-.header__nav {
-    padding: 20px 0;
-    list-style: none;
-}
-
-.nav__icon-item {
-    margin: 20px auto;
-    width: 40px;
-    height: 40px;
-    max-width: 40px;
-    max-height: 40px;
-    background: #21252D;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav__icon-item:hover {
-    background: #01CEBB;
-    transition: all 0.3s ease-in-out;
-}
-
-.nav__icon-item a {
-    padding: 5px;
-    width: inherit;
-    height: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav__icon-item img {
-    width: 20px;
-    height: 20px;
-}
-
-.aside__avatar {
-    width: inherit;
-    position: absolute;
-    bottom: 0;
-    margin: 20px 0;
-}
-
-.avatar {
-    display: block;
-    text-decoration: none;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-}
-
-.avatar--large {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    border-radius: unset;
-}
-
-.avatar--medium {
-    width: 24px;
-    height: 24px;
-    font-size: 14px;
-}
-
-.avatar--small {
-    width: 16px;
-    height: 16px;
-    font-size: 10px;
-}
-
-
-
 /*Header*/
 /* header {
     width: 100vw;
@@ -315,13 +218,14 @@
     font-size: 9px;
     margin: 2px;
 }
-.chatbox__content
-{
+
+.chatbox__content {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
 }
+
 .chatbox header p {
     margin: 20px auto 10px auto;
     text-align: center;
@@ -337,7 +241,7 @@
 
 .chat-line--receive {
     grid-template-columns: 10% 90%;
-   
+
 }
 
 .chat-line--receive .avatar {
