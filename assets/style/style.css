@@ -77,15 +77,23 @@
 }
 
 .header__nav,
-.header-wrap nav {
+.header__nav li {
     display: flex;
     flex-direction: row;
     align-items: center;
-
+    border-radius: 5px;
+   
 }
 
 .header__nav li {
     margin: 0 20px;
+    min-width: 95px;
+    height: 30px;
+    justify-content: space-around;
+}
+.header__nav li:hover
+{
+    background-color: #F7F7F7;
 }
 
 .noti__label {
@@ -133,13 +141,15 @@
     color: #979797;
     border: unset;
     border-radius: 10px !important;
+    background: #F7F7F7;
 }
 
 .border-box {
     border: rgba(0, 0, 0, 0.1) solid 1px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     overflow: hidden;
+    background: white;
 }
 
 
@@ -163,27 +173,34 @@
 
 
 /*Block*/
+main
+{
+    background: #F1F1F2;
+    height: 100%;
+}
 .block-inner {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     height: inherit;
+    padding-right: 1.5vw;
+    padding-left:1vw;
 }
 
 .block-inner>* {
-    margin: 20px 10px;
+    margin: 20px 1vw;
 }
 
 .block--medium {
-    width: 35%;
+    width: 30%;
     min-width: 375px;
 
 
 }
 
 .block--large {
-    width: 40%;
+    width: 45%;
     min-width: 460px;
 
 }
@@ -197,8 +214,14 @@
 /*Inbox*/
 .inbox {
     min-height: 60px;
-    padding: 20px 30px 20px 20px;
+    padding: 10px 20px 10px 20px;
     margin-bottom: 10px;
+}
+
+.inbox:hover
+{
+    background: #F7F7F7;
+    cursor: pointer;
 }
 
 .inbox section {
@@ -223,7 +246,10 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
+    width: inherit;
+    padding: 10px;
+    background: #F7F7F7;
+    height: 440px;
 }
 
 .chatbox header p {
@@ -241,7 +267,7 @@
 
 .chat-line--receive {
     grid-template-columns: 10% 90%;
-
+align-self: flex-start;
 }
 
 .chat-line--receive .avatar {
@@ -250,11 +276,11 @@
 
 .chat-line--send {
     grid-template-columns: 90% 10%;
-    float: right;
+    align-self: flex-end;
 }
 
 .chat-line--send .avatar {
-    justify-self: left;
+    justify-self:  left;
 }
 
 .chat-line__content-wrap {
