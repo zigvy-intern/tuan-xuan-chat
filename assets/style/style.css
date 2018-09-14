@@ -4,6 +4,11 @@
     font-family: 'Roboto';
     color: #666666;
     font-size: 11px;
+    box-sizing: border-box;
+}
+body
+{
+    background: #F1F1F2;
 }
 
 /*Classes*/
@@ -70,10 +75,14 @@
     max-height: 75px; 
 } */
 .header-wrap {
+    width: 100vw;
+    padding-left: 5vw;
+    max-height: 5vw;
+    min-height: 75px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    background: white;
 }
 
 .header__nav,
@@ -87,18 +96,24 @@
 
 .header__nav li {
     margin: 0 20px;
-    min-width: 95px;
+   
     height: 30px;
-    justify-content: space-around;
+
 }
-.header__nav li:hover
+.header__nav li a
 {
-    background-color: #F7F7F7;
+    padding: 5px 10px;    
+}
+.header__nav li:hover, .inbox:hover
+{
+    background: #F7F7F7;
+    cursor: pointer;
+    transition: 0.2s ease-in;
 }
 
 .noti__label {
     text-decoration: none;
-    font-size: 11px;
+  
 
 }
 
@@ -159,8 +174,9 @@
 
 .inner-addon img {
     position: absolute;
-    padding: 5px 2px;
+   margin: 6px 15px;
     pointer-events: none;
+   
 }
 
 .left-addon img {
@@ -175,7 +191,8 @@
 /*Block*/
 main
 {
-    background: #F1F1F2;
+    margin-left: 5vw;
+    width: 95vw;
     height: 100%;
 }
 .block-inner {
@@ -216,13 +233,10 @@ main
     min-height: 60px;
     padding: 10px 20px 10px 20px;
     margin-bottom: 10px;
+    
 }
 
-.inbox:hover
-{
-    background: #F7F7F7;
-    cursor: pointer;
-}
+
 
 .inbox section {
     display: grid;
@@ -261,7 +275,6 @@ main
 .chat-line {
     width: 80%;
     display: grid;
-    grid-gap: 10px;
     margin: 10px 0;
 }
 
@@ -269,7 +282,10 @@ main
     grid-template-columns: 10% 90%;
 align-self: flex-start;
 }
-
+.chat-line__content-wrap
+{
+    margin: 0 10px;
+}
 .chat-line--receive .avatar {
     justify-self: right;
 }
