@@ -1,23 +1,22 @@
 /*Aside Navigation*/
 .aside-nav {
-    width: 75px;
+   max-width: 5vw;
+    min-width: 75px;
     background: #2b303b;
     height: 100vh;
     float: left;
-    position: relative;
 }
 
 .aside__logo {
-
+    max-height: 5vw;
+    min-height: 75px;
     background: #21252D;
-    padding: 12px 15px;
+    
 }
 
 .aside__logo img {
-    width: 40px;
-    height: 45px;
-    max-width: 40px;
-    max-height: 45px;
+    min-width: 40px;
+    min-height: 45px;
 }
 
 .nav__container,
@@ -28,17 +27,17 @@
 
 .nav__icon-item {
     margin: 20px auto;
-    width: 40px;
-    height: 40px;
-    max-width: 40px;
-    max-height: 40px;
+    width:2vw;
+    height: 2vw;
+    min-width: 40px;
+    min-height: 40px;
     background: #21252D;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.nav__icon-item:hover {
+.nav__icon-item:hover, .active {
     background: #01CEBB;
     transition: all 0.3s ease-in-out;
 }
@@ -58,10 +57,9 @@
 }
 
 .aside__avatar {
-    width: inherit;
-    position: absolute;
-    bottom: 0;
-    margin: 20px 0;
+   position: absolute;
+   bottom: 0;
+   margin-bottom: 20px;
 }
 
 .avatar {
@@ -75,8 +73,10 @@
 }
 
 .avatar--large {
-    width: 40px;
-    height: 40px;
+    width:2vw;
+    height: 2vw;
+    min-width: 40px;
+    min-height: 40px;
     font-size: 18px;
     border-radius: unset;
 }
