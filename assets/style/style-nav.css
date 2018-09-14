@@ -36,6 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .nav__icon-item:hover, .active {
@@ -50,12 +51,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
-.nav__icon-item img {
-    width: 20px;
-    height: 20px;
+.nav__icon-item span {
+    padding: 1vw;
+    font-size:20px;
 }
+.nav__icon-item span:hover {
+    color:#fff;
+}
+
 
 .aside__avatar {
    position: absolute;
