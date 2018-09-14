@@ -75,8 +75,7 @@ body
     max-height: 75px; 
 } */
 .header-wrap {
-    width: 100vw;
-    padding-left: 5vw;
+
     max-height: 5vw;
     min-height: 75px;
     display: flex;
@@ -155,13 +154,13 @@ body
     padding: 8px 0 8px 14px;
     color: #979797;
     border: unset;
-    border-radius: 10px !important;
+    border-radius: 5px;
     background: #F7F7F7;
 }
 
 .border-box {
     border: rgba(0, 0, 0, 0.1) solid 1px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 10px rgba(247,247,247, 0.1);
     border-radius: 5px;
     overflow: hidden;
     background: white;
@@ -191,9 +190,7 @@ body
 /*Block*/
 main
 {
-    margin-left: 5vw;
-    width: 95vw;
-    height: 100%;
+
 }
 .block-inner {
     display: flex;
@@ -201,30 +198,28 @@ main
     flex-wrap: nowrap;
     justify-content: space-between;
     height: inherit;
-    padding-right: 1.5vw;
-    padding-left:1vw;
+    padding: 0 1vw;
 }
 
 .block-inner>* {
-    margin: 20px 1vw;
+    margin:1vw;
 }
 
 .block--medium {
     width: 30%;
-    min-width: 375px;
 
 
 }
 
 .block--large {
     width: 45%;
-    min-width: 460px;
+
 
 }
 
 .block--small {
     width: 25%;
-    min-width: 280px;
+
 
 }
 
