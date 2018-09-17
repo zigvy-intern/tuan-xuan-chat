@@ -7,7 +7,6 @@
     <title>Conversation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/style/style.css" />
-    <link rel="stylesheet" href="./assets/style/style-nav.css">
     <link rel="stylesheet" href="/assets/style/font-icomoon.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet">
 </head>
@@ -32,9 +31,11 @@
         </div>
 
     </aside>
+
+    <!-- Header -->
     <header class="header-wrap">
-        <div class="header-left">
-            <nav>
+        <nav class="header-left">
+           
 
                 <ul class="header__nav">
                     <li><a class="avatar avatar--medium bgr-cyan" href="#">T</a><a class="noti__label center-inner"
@@ -43,18 +44,23 @@
                     <li><a class="noti__label center-inner" href="#">All&nbsp;<span class="noti center-inner bgr-red">10</span></a></li>
                 </ul>
             </nav>
-        </div>
         <div class="header-right">
-            <div class="inner-addon right-addon">
+            <div class="inner-addon right-addon" id="search">
                 <img style="width:15px; height:15px;" src="./assets/img/SVG/search.svg" alt="notification">
-                <input class="text-box" type="text" placeholder="Search history in all conversations">
+                <input  class="text-box" type="text" placeholder="Search history in all conversations">
             </div>
-            <a class="noti__label center-inner" href="#">Online&nbsp;<span class="noti center-inner bgr-green">10</span></a>
+            <ul class="header__nav">
+                 <li><a class="noti__label center-inner" href="#">Online&nbsp;<span class="noti center-inner bgr-green">10</span></a></li>
+            </ul>
         </div>
     </header>
+
+    <!-- MAIN -->
     <main>
         <div class="inner-block"> 
+            <!-- Block 1 -->
             <section class="block--medium">
+                <!-- Inbox -->
                 <div class="border-box inbox">
                     <section>
                         <a class="avatar avatar--medium bgr-cyan" href="#"> H</a>
@@ -70,6 +76,7 @@
                             necessitatibus totam ullam officia </p>
                     </section>
                 </div>
+                <!-- Inbox -->
                 <div class="border-box inbox">
                     <section>
                         <a class="avatar avatar--medium bgr-yellow" href="#"> H</a>
@@ -78,7 +85,6 @@
                             <p class="inbox__time">2 days</p>
                         </div>
                     </section>
-
                     <section>
                         <a class="avatar avatar--small bgr-orange" href="#"> K </a>
                         <p class="inbox__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
@@ -129,18 +135,20 @@
                         <p class="inbox__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
                             necessitatibus totam ullam officia </p>
                     </section>
-                </div>
-                
+                </div>  
             </section>
-            <section class="block--large border-box">
-                <div class="chatbox">
+
+            <!-- CHATBOX -->
+            <section class="block--large">
+                <div class="chatbox border-box">
                     <header>
                         <p class="bold">luuminhtan123@gmail.com</p>
                     </header>
+                    <!-- Show mess part-->
                     <section class="chatbox__content">
+                        <!-- One line -->
                         <div class="chat-line__wrap .--receive">
                             <div class="chat-line chat-line--receive">
-
                                 <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
                                 <div class="border-box chat-line__content-wrap">
                                     <p class="inbox__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -151,6 +159,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- One line -->
                         <div class="chat-line__wrap .--send">
                             <div class="chat-line chat-line--send">
 
@@ -160,13 +169,11 @@
                                         laudantium aut, hic temporibus totam? Molestias repellendus saepe illo magnam
                                         in ipsa!</p>
                                     <p class="inbox__time">2 days</p>
-
-
                                 </div>
                                 <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
-
                             </div>
                         </div>
+                        <!-- One line -->
                         <div class="chat-line__wrap .--receive">
                             <div class="chat-line chat-line--receive">
 
@@ -197,17 +204,24 @@
                             </div>
                         </div>
                     </section>
+                    <!-- Chat input & option -->
                     <section class="chatbox__input">
+                        <!-- Features -->
                         <header class="chat__tab">
                             <ul>
                                 <li class="active-tab"><a href="">Reply</a></li>
                                 <li><a href="">Note</a></li>
                             </ul>
                         </header>
+                        <!-- Input space -->
                         <textarea class="chat__text-box" type="text"></textarea>
+                        <!-- More input options -->
                         <footer class="chat__option">
                             <ul>
-                                <li><a href=""></a></li>
+                                <li><a href="#">Aa</a></li>
+                                <li><a href="#" class="icon-attachment"></a></li>
+                                <li><a href="#" class="icon-picture"></a></li>
+                                <li><a href="#" class="icon-emoji"></a></li>
                             </ul>
                             <button class="btn btn--small bgr-cyan">
                                 Send
@@ -216,8 +230,10 @@
                     </section>
                 </div>
             </section>
-            <section class="block--small border-box">
-                <div class="info">
+            <!-- INFO-BOX -->
+            <section class="block--small ">
+                <div class="info border-box">
+                    <!-- Add -->
                     <section class="info__add">
                         <input class="text-box" type="text" placeholder="Add teammates and team">
                         <p>Assign to teammate</p>
@@ -233,6 +249,7 @@
                     </section>
 
                     <div class="line"></div>
+                    <!-- Detail -->
                     <section class="info__detail">
                         <p>Name<span>luuminhtan123@gmail.com</span></p>
                         <p>Location<span>Ho Chi Minh city, Vietnam</span></p>
@@ -243,11 +260,13 @@
                     </section>
               
                 <div class="line"></div>
+                <!-- Tag -->
                 <section class="info__tag ">
                     <a class="tag" href="#"><span class="icon-chat"></span> Add tag</a>
                     <a class="tag" href="#"> Business<span class="icon-user"></span></a>
                 </section>
                 <div class="line"></div>
+                <!-- Option -->
                 <section class="info__option">
                     <button class="btn btn--white btn--large">Close this conversation</button>
                     <button class="btn btn--yellow btn--large">Unsubscribe from email</button>
@@ -255,7 +274,7 @@
                 </section>
 
             </section>
-        </div>
+        </a>
 
     </main>
 
