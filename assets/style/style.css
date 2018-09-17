@@ -52,18 +52,22 @@ body {
     box-shadow: unset;
     border: unset;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .btn--small {
     width: 68px;
-    height: 27px;
+    height: 30px;
 }
 
-.btn--large {}
+.btn--large {
+    width: 100%;
+    height: 35px;
+}
 
 
 .btn--white {
-    background: white;
+    background: #F1F1F2;
     color: #B1B1B1;
 }
 
@@ -228,7 +232,7 @@ main {
     overflow: hidden;
 }
 
-.block-inner {
+.inner-block {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -237,10 +241,10 @@ main {
     padding: 0 1vw;
 }
 
-.block-inner>* {
+.inner-block>* {
     /* max-height: inherit; */
     margin: 1vw;
-    height: 85vh;
+   height: 85vh;
     overflow-y: auto;
 }
 
@@ -411,11 +415,75 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: cadetblue;
     padding: 10px 15px;
 }
 
 .chat__option ul
 {
     list-style: none;
+}
+
+/*Info*/
+.line{
+    height: 1px;
+    background: #F0F0F0;
+    width: 100%;
+}
+.info>section
+{
+    padding: 20px;
+}
+.info p, .info__detail p span
+{
+    font-size: 12px;
+    line-height: 25px;
+}
+.info__add>p
+{
+    margin-top: 10px;
+}
+.info__option .btn
+{
+    margin: 15px 0;
+}
+.info__tag, .avatar-row
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.avatar-row>.avatar
+{
+    margin: 5px 10px 5px 0;
+}
+.info__detail p
+{
+    color:#B1B1B1;
+
+}
+.info__detail p span
+{
+   float: right;
+   color: black;
+}
+.tag
+{
+    border: 1px solid #F0F0F0;
+    border-radius: 30px;
+    padding: 10px 12px;
+    background: white;
+    margin-right: 10px;
+    box-sizing: content-box;
+    text-decoration: none;
+}
+
+.tag span
+{
+ margin: 0 4px;
+}
+
+.tag:hover
+{
+    background: #F0F0F0;
 }

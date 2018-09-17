@@ -16,8 +16,8 @@
 }
 
 .aside__logo img {
-    min-width: 40px;
-    min-height: 45px;
+    width: 40px;
+    height: 45px;
 }
 
 .nav__container,
