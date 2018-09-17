@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <aside class="aside-nav">
+    <aside class="aside-nav" id="mySidenav">
         <div class="aside__logo center-inner">
             <a href="#"><img src="./assets/img/SVG/logo.svg" alt="logo"></a>
         </div>
-
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <nav>
             <ul class="nav__container">
                 <li class="nav__icon-item"><a href="#"><span class="icon-bell"></span></a></li>
@@ -31,6 +31,7 @@
     </aside>
     <header class="header-wrap">
         <div class="header-left">
+            <img onclick="openNav()" class="header-menu" src="/assets/img/SVG/menu.svg" alt="menu">
             <h1 class="header--title">SWITCH APPS</h1>
         </div>
     </header>
@@ -76,5 +77,16 @@
 
     </main>
 </body>
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.visibility = "visible";
+        document.getElementById("mySidenav").style.transitionTimingFunction = "ease-in";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.visibility = "hidden";
+        document.getElementById("mySidenav").style.transitionTimingFunction = "ease-out";
+    }
+</script>
 
 </html>
