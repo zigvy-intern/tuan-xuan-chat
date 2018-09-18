@@ -79,11 +79,15 @@
 </body>
 <script>
     function openNav() {
-        document.getElementById("mySidenav").style.display = "block";
+        if (window.matchMedia("(max-width: 411px)")) { // If media query matches
+            document.getElementById("mySidenav").style.display = "block";
+        }
     }
 
-    function closeNav() {
-        document.getElementById("mySidenav").style.display = "none";
+    function closeNav(x) {
+        if (window.matchMedia("(max-width: 411px)")) { // If media query matches
+            document.getElementById("mySidenav").style.display = "none";
+        }
     }
 </script>
 
