@@ -16,6 +16,9 @@ body {
     background: #F1F1F2;
 }
 
+.aside-nav .closebtn {
+    display: none;
+}
 .header-wrap {
     max-height: 5vw;
     min-height: 75px;
@@ -121,7 +124,9 @@ section {
     font-weight: bold;
     color: #808080;
 }
+@media(min-width:411px){
 
+}
 @media(max-width:411px) {
     .header-menu {
         display: block;
@@ -133,8 +138,7 @@ section {
         z-index: 1;
         top: 0;
         left: 0;
-        visibility: hidden;
-        transition: 1s;
+        display: none;
     }
 
     .aside-nav .closebtn {
@@ -145,6 +149,7 @@ section {
         margin-left: 50px;
         text-decoration: none;
         color:#2B303B;
+        display: block;
     }
     
     .flex--row {
