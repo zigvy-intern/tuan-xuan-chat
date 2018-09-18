@@ -101,7 +101,7 @@ body {
 }
 
 /*AVATAR*/
-.avatar {
+.avatar, .icon {
     display: block;
     text-decoration: none;
     color: white;
@@ -120,7 +120,7 @@ body {
     border-radius: unset;
 }
 
-.avatar--medium {
+.avatar--medium, .icon-button {
     width: 24px;
     height: 24px;
     font-size: 14px;
@@ -147,6 +147,7 @@ body {
     width: 100%;
     padding: 8px 0 8px 14px;
     border: unset;
+    border: #F0F0F0 solid 1px;
     border-radius: 3px;
 }
 
@@ -254,4 +255,10 @@ main {
     height: 12px;
     display: inline-block;
     border-radius: 50%;
+}
+
+.inline-p
+{
+    display: inline;
+    margin-right: 20px;
 }
