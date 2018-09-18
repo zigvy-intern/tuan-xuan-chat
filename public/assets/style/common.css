@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700");
 
 .bold {
     font-weight: bold;
@@ -11,7 +12,16 @@
     align-items: center;
     justify-content: center;
 }
-
+/* Container */
+.flex--row {
+    display: flex;
+    flex-direction: row;
+}
+/* TITLE */
+.header--title {
+    font-size:14px;
+    font-weight: 400;
+}
 /*BUTTON*/
 
 .btn {

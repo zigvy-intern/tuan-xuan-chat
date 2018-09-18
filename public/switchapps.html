@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/style/style-switchapps.css">
+    <title>Dchat - Switch apps</title>
+</head>
+
+<body>
+    <aside class="aside-nav" id="mySidenav">
+        <div class="aside__logo center-inner">
+            <a href="#"><img src="./assets/img/SVG/logo.svg" alt="logo"></a>
+        </div>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <nav>
+            <ul class="nav__container">
+                <li class="nav__icon-item"><a href="#"><span class="icon-bell"></span></a></li>
+                <li class="nav__icon-item"><a href="#"><span class="icon-user"></span></a></li>
+                <li class="nav__icon-item"><a href="#"><span class="icon-chat"></span></a></li>
+                <li class="nav__icon-item"><a href="#"><span class="icon-setting"></span></a></li>
+                <li class="nav__icon-item"><a href="#"><span class="icon-swtich"></span></a></li>
+            </ul>
+        </nav>
+        <div class="center-inner">
+            <div class="aside__avatar"> <a class="avatar avatar--large bgr-cyan" href="#"> T </a></div>
+        </div>
+
+    </aside>
+    <header class="header-wrap">
+        <div class="header-left">
+            <img onclick="openNav()" class="header-menu" src="./assets/img/SVG/menu.svg" alt="menu">
+            <h1 class="header--title">SWITCH APPS</h1>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="switch__title">MY OWN APPS</div>
+            <div class="flex--row">
+                <div class="switch__item">
+                    <h3 class="switch__item-title">Poppi</h3>
+                    <span class="switch__item-noti">5</span>
+                    <span class="switch__item-url">https://poppi.com</span>
+                </div>
+                <div class="switch__item">
+                    <h3 class="switch__item-title">Poppi 1</h3>
+                    <span class="switch__item-noti">5</span>
+                    <span class="switch__item-url">https://thenewpoppi.com</span>
+                </div>
+                <div class="switch__item">
+                    <h3 class="switch__item-title">Poppi</h3>
+                    <span class="switch__item-noti">5</span>
+                    <span class="switch__item-url">https://poppi.com</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="switch__title">SHARED APPS</div>
+            <div class="flex--row">
+                <div class="switch__item">
+                    <h3 class="switch__item-title">Minhtan mobile </h3>
+                    <span class="switch__item-noti">5</span>
+                    <span class="switch__item-url">https://minhtanmobile.vn</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="switch__title">CREATE APP</div>
+            <div class="flex--row">
+                <div class="switch__item--create">
+                    <span>Create new app</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+<script>
+    function openNav() {
+        if (window.matchMedia("(max-width: 411px)")) { // If media query matches
+            document.getElementById("mySidenav").style.display = "block";
+        }
+    }
+
+    function closeNav(x) {
+        if (window.matchMedia("(max-width: 411px)")) { // If media query matches
+            document.getElementById("mySidenav").style.display = "none";
+        }
+    }
+</script>
+
+</html>
