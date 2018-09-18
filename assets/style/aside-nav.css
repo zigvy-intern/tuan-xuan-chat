@@ -1,0 +1,72 @@
+/*Aside Navigation*/
+
+.aside-nav {
+   max-width: 5vw;
+    min-width: 75px;
+    background: #2b303b;
+    height: 100vh;
+    float: left;
+}
+
+.aside__logo {
+    max-height: 5vw;
+    min-height: 75px;
+    background: #21252D;
+    
+}
+
+.aside__logo img {
+    width: 40px;
+    height: 45px;
+}
+
+.nav__container,
+.header__nav {
+    padding: 20px 0;
+    list-style: none;
+}
+
+.nav__icon-item {
+    margin: 20px auto;
+    width:2.5vw;
+    height: 2.5vw;
+    min-width: 40px;
+    min-height: 40px;
+    background: #21252D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.nav__icon-item:hover, .active {
+    background: #01CEBB;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav__icon-item a {
+    padding: 5px;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav__icon-item span {
+    padding: 1vw;
+    font-size:26px;
+    color:#979797;
+}
+.nav__icon-item span:hover {
+    color:#fff;
+}
+
+
+.aside__avatar {
+   position: absolute;
+   bottom: 0;
+   margin-bottom: 20px;
+}
+
