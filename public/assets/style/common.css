@@ -1,4 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    color: #666666;
+    font-size: 11px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F1F1F2;
+}
+
 
 .bold {
     font-weight: bold;
@@ -7,21 +20,16 @@
 .invisible {
     visibility: hidden;
 }
+.hidden
+{
+    display: none;
+}
 .center-inner {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-/* Container */
-.flex--row {
-    display: flex;
-    flex-direction: row;
-}
-/* TITLE */
-.header--title {
-    font-size:14px;
-    font-weight: 400;
-}
+
 /*BUTTON*/
 
 .btn {
@@ -134,7 +142,8 @@
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     overflow: hidden;
-    background: white;
+    padding: 20px;
+ background: white;
 }
 
 /*OTHERS*/
@@ -173,28 +182,43 @@
 }
  /*BLOCKS*/
  .inner-block {
+   max-width: 100%;
+   max-height: 87.6vh;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     padding: 0 1vw;
+  
 }
 
 
 .block--medium {
     width: 30%;
-
+    /* flex:3; */
 
 }
 
 .block--large {
     width: 45%;
-
-
+    /* background: #9FD16A; */
+    /* flex:4.5; */
 }
 
 .block--small {
     width: 25%;
-
+    /* background: #ED86BE; */
+    /* flex:2.5; */
 
 }
+main {
+    overflow: hidden;    
+}
+
+.inner-block>* {
+    /* max-height: inherit; */
+    margin: 1vw;
+    max-height: 600px;
+    overflow-y: auto;
+}
+

@@ -2,20 +2,6 @@
 @import url('./font-icomoon.css');
 @import url('./aside-nav.css');
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto';
-    color: #666666;
-    font-size: 11px;
-    box-sizing: border-box;
-}
-
-body {
-    background: #F1F1F2;
-}
-
 .aside-nav .closebtn {
     display: none;
 }
