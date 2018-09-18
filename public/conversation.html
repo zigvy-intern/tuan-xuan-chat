@@ -1,0 +1,223 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Conversation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/style/style-conversation.css" />
+</head>
+
+<body>
+    <aside id="nav" class="aside-nav">
+        <div class="aside__logo center-inner">
+            <a href="#"><img src="./assets/img/SVG/logo.svg" alt="logo"></a>
+        </div>
+
+        <nav>
+            <ul class="nav__container">
+                <li class="nav__icon-item"><a href="#"><span class="icon-bell"></span></a></li>
+                <li class="nav__icon-item"><a href="profile.html"><span class="icon-user"></span></a></li>
+                <li class="nav__icon-item"><a href="#"><span class="icon-chat"></span></a></li>
+                <li class="nav__icon-item"><a href="#"><span class="icon-setting"></span></a></li>
+                <li class="nav__icon-item"><a href="#"><span class="icon-swtich"></span></a></li>
+            </ul>
+        </nav>
+        <div class="center-inner">
+            <div class="aside__avatar"> <a class="avatar avatar--large bgr-cyan" href="#"> T </a></div>
+        </div>
+
+    </aside>
+
+    <!-- Header -->
+    <header class="header-wrap">
+        <nav class="header-left">
+                <ul class="header__nav">
+                    <li><a onclick="showMenu()" style="font-size:18px" >☰</a></li>
+                    <li><a class="avatar avatar--medium bgr-cyan" href="#">T</a><a class="noti__label center-inner"
+                            href="#">Me&nbsp;<span class="noti center-inner bgr-red">5</span></a></li>
+                    <li><a class="noti__label center-inner" href="#">Unassigned&nbsp;<span class="noti center-inner invisible">15</span></a></li>
+                    <li><a class="noti__label center-inner" href="#">All&nbsp;<span class="noti center-inner bgr-red">10</span></a></li>
+                </ul>
+            </nav>
+        <div class="header-right">
+            <div class="inner-addon right-addon" id="search">
+                <img style="width:15px; height:15px;" src="./assets/img/SVG/search.svg" alt="notification">
+                <input  class="text-box" type="text" placeholder="Search history in all conversations">
+            </div>
+            <ul class="header__nav">
+                 <li><a class="noti__label center-inner" href="#">Online&nbsp;<span class="noti center-inner bgr-green">10</span></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="inner-block"> 
+           
+            <section class="block--medium">
+                
+                <!-- Inbox -->
+                <div class="border-box inbox">
+                    <section>
+                        <a class="avatar avatar--medium bgr-cyan" href="#"> H</a>
+                        <div>
+                            <p class="inbox__email bold">Hieupham@gmail.com</p>
+                            <p class="inbox__time">2 days</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <a class="avatar avatar--small bgr-pink" href="#"> K </a>
+                        <p class="inbox__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
+                            necessitatibus totam ullam officia </p>
+                    </section>
+                </div>
+               
+
+            </section>
+
+            <!-- CHATBOX -->
+            <section class="block--large">
+                
+                <div class="chatbox border-box">
+                    <header>
+                        <p class="bold">luuminhtan123@gmail.com</p>
+                    </header>
+                    <!-- Show mess part-->
+                    <section class="chatbox__content">
+                        <!-- One line -->
+                        <div class="chat-line__wrap">
+                            <div class="chat-line chat-line--receive">
+                                <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
+                                <div class="border-box chat-line__content-wrap">
+                                    <p class="inbox__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Odit perferendis explicabo quos, quasi recusandae vel, officiis veniam nisi
+                                        laudantium aut, hic temporibus totam? Molestias repellendus saepe illo magnam
+                                        in ipsa!</p>
+                                    <p class="inbox__time">2 days</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- One line -->
+                        <div class="chat-line__wrap">
+                            <div class="chat-line chat-line--send">
+
+                                <div class="border-box chat-line__content-wrap">
+                                    <p class="inbox__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Odit perferendis explicabo quos, quasi recusandae vel, officiis veniam nisi
+                                        laudantium aut, hic temporibus totam? Molestias repellendus saepe illo magnam
+                                        in ipsa!</p>
+                                    <p class="inbox__time">2 days</p>
+                                </div>
+                                <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
+                            </div>
+                        </div>
+                        <!-- One line -->
+                        <div class="chat-line__wrap">
+                            <div class="chat-line chat-line--receive">
+
+                                <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
+                                <div class="border-box chat-line__content-wrap">
+                                    <p class="inbox__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Odit perferendis explicabo quos, quasi recusandae vel, officiis veniam nisi
+                                        laudantium aut, hic temporibus totam? Molestias repellendus saepe illo magnam
+                                        in ipsa!</p>
+                                    <p class="inbox__time">2 days</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-line__wrap">
+                            <div class="chat-line chat-line--send">
+
+                                <div class="border-box chat-line__content-wrap">
+                                    <p class="inbox__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Odit perferendis explicabo quos, quasi recusandae vel, officiis veniam nisi
+                                        laudantium aut, hic temporibus totam? Molestias repellendus saepe illo magnam
+                                        in ipsa!</p>
+                                    <p class="inbox__time">2 days</p>
+
+
+                                </div>
+                                <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
+
+                            </div>
+                        </div>
+                    </section class="block--small">
+                    <!-- Chat input & option -->
+                    <section class="chatbox__input">
+                        <!-- Features -->
+                        <header class="chat__tab">
+                            <ul>
+                                <li class="active-tab"><a href="">Reply</a></li>
+                                <li><a href="">Note</a></li>
+                            </ul>
+                        </header>
+                        <!-- Input space -->
+                        <textarea class="chat__text-box" type="text"></textarea>
+                        <!-- More input options -->
+                        <footer class="chat__option">
+                            <ul>
+                                <li><a href="#">Aa</a></li>
+                                <li><a href="#" class="icon-attachment"></a></li>
+                                <li><a href="#" class="icon-picture"></a></li>
+                                <li><a href="#" class="icon-emoji"></a></li>
+                            </ul>
+                            <button class="btn btn--small bgr-cyan">
+                                Send
+                            </button>
+                        </footer>
+                    </section>
+                </div>
+            </section>
+            <!-- INFO-BOX -->
+            <section class="block--small">
+                <div class="info border-box">
+                    <!-- Add -->
+                    <section class="info__add">
+                        <input class="text-box" type="text" placeholder="Add teammates and team">
+                        <p>Assign to teammate</p>
+                        <div class="avatar-row">
+                            <a class="avatar avatar--medium bgr-cyan" href="#"> H</a>
+                            <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
+                        </div>
+                        <p>Assign to team</p>
+                        <div class="avatar-row">
+                            <a class="avatar avatar--medium bgr-red" href="#"> H</a>
+
+                        </div>
+                    </section>
+
+                    <div class="line"></div>
+                    <!-- Detail -->
+                    <section class="info__detail">
+                        <p>Name<span>luuminhtan123@gmail.com</span></p>
+                        <p>Location<span>Ho Chi Minh city, Vietnam</span></p>
+                        <p>Email<span>luuminhtan123@gmail.com</span></p>
+                        <p>First seen<span>0:00 23/03/2016</span></p>
+                        <p>Last seen<span>0:00 23/03/2016</span></p>
+                        <p>Web sessions<span>10</span></p>
+                    </section>
+              
+                <div class="line"></div>
+                <!-- Tag -->
+                <section class="info__tag ">
+                    <a class="tag" href="#">+ Add tag</a>
+                    <a class="tag" href="#"> Business <span class="icon--dismiss">+</span></a>
+                </section>
+                <div class="line"></div>
+                <!-- Option -->
+                <section class="info__option">
+                    <button class="btn btn--white btn--large">Close this conversation</button>
+                    <button class="btn btn--yellow btn--large">Unsubscribe from email</button>
+                    <button class="btn btn--red btn--large">Block this person</button>
+                </section>
+
+            </section>
+</div>
+    </main>
+
+</body>
+
+</html>

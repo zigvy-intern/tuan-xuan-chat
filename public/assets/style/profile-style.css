@@ -1,0 +1,15 @@
+@import url("/assets/style/common.css");
+@import url("./nav.css");
+@import url('./font-icomoon.css');
+@import url('./style-conversation.css');
+
+
+
+.inner-block
+{
+    justify-content: center;
+}
+.grid-row
+{
+    gap: 0;
+}
