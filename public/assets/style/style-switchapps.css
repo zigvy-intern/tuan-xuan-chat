@@ -1,6 +1,6 @@
 @import url('./common.css');
 @import url('./font-icomoon.css');
-@import url('./aside-nav.css');
+@import url('./nav.css');
 
 .aside-nav .closebtn {
     display: none;

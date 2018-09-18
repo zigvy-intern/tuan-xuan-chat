@@ -205,6 +205,11 @@ body {
     /* flex:4.5; */
 }
 
+.block-extra-large
+{
+    width: 75%;
+}
+
 .block--small {
     width: 25%;
     /* background: #ED86BE; */
