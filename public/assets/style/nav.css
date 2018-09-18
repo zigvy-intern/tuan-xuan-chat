@@ -112,7 +112,7 @@
 }
 
 .header__nav li:hover,
-.inbox:hover {
+.border-box:hover {
     background: #F7F7F7;
     cursor: pointer;
     transition: 0.2s ease-in;

@@ -54,6 +54,11 @@ body {
     height: 35px;
 }
 
+.btn--medium
+{
+    width: 150px;
+    height: 30px;
+}
 
 .btn--white {
     background: #F1F1F2;
@@ -137,6 +142,14 @@ body {
     background: #F7F7F7;
 }
 
+.text-box--white
+{
+    width: 100%;
+    padding: 8px 0 8px 14px;
+    border: unset;
+    border-radius: 3px;
+}
+
 .border-box {
     border: rgba(0, 0, 0, 0.1) solid 1px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
@@ -205,9 +218,10 @@ body {
     /* flex:4.5; */
 }
 
-.block-extra-large
+.block--extra-large
 {
     width: 75%;
+    /* background: #01CEBB; */
 }
 
 .block--small {
@@ -227,3 +241,17 @@ main {
     overflow-y: auto;
 }
 
+.line {
+    height: 1px;
+    background: #F0F0F0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.dot
+{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 50%;
+}
