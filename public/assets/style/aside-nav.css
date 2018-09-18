@@ -1,4 +1,5 @@
 /*Aside Navigation*/
+
 .aside-nav {
    max-width: 5vw;
     min-width: 75px;
@@ -15,8 +16,8 @@
 }
 
 .aside__logo img {
-    min-width: 40px;
-    min-height: 45px;
+    width: 40px;
+    height: 45px;
 }
 
 .nav__container,
@@ -27,8 +28,8 @@
 
 .nav__icon-item {
     margin: 20px auto;
-    width:2vw;
-    height: 2vw;
+    width:2.5vw;
+    height: 2.5vw;
     min-width: 40px;
     min-height: 40px;
     background: #21252D;
@@ -55,7 +56,8 @@
 
 .nav__icon-item span {
     padding: 1vw;
-    font-size:20px;
+    font-size:26px;
+    color:#979797;
 }
 .nav__icon-item span:hover {
     color:#fff;
@@ -68,33 +70,3 @@
    margin-bottom: 20px;
 }
 
-.avatar {
-    display: block;
-    text-decoration: none;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-}
-
-.avatar--large {
-    width:2vw;
-    height: 2vw;
-    min-width: 40px;
-    min-height: 40px;
-    font-size: 18px;
-    border-radius: unset;
-}
-
-.avatar--medium {
-    width: 24px;
-    height: 24px;
-    font-size: 14px;
-}
-
-.avatar--small {
-    width: 16px;
-    height: 16px;
-    font-size: 10px;
-}
