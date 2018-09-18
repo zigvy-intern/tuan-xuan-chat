@@ -8,11 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/style/style.css" />
     <link rel="stylesheet" href="/assets/style/font-icomoon.css">
+    <script src="./assets/js/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/menu-toggle.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet">
 </head>
 
 <body>
-    <aside class="aside-nav">
+    <aside id="nav" class="aside-nav">
         <div class="aside__logo center-inner">
             <a href="#"><img src="./assets/img/SVG/logo.svg" alt="logo"></a>
         </div>
@@ -38,6 +40,7 @@
            
 
                 <ul class="header__nav">
+                    <li><a onclick="showMenu()" style="font-size:18px" >☰</a></li>
                     <li><a class="avatar avatar--medium bgr-cyan" href="#">T</a><a class="noti__label center-inner"
                             href="#">Me&nbsp;<span class="noti center-inner bgr-red">5</span></a></li>
                     <li><a class="noti__label center-inner" href="#">Unassigned&nbsp;<span class="noti center-inner invisible">15</span></a></li>
@@ -58,8 +61,9 @@
     <!-- MAIN -->
     <main>
         <div class="inner-block"> 
-            <!-- Block 1 -->
+           
             <section class="block--medium">
+                
                 <!-- Inbox -->
                 <div class="border-box inbox">
                     <section>
@@ -76,70 +80,13 @@
                             necessitatibus totam ullam officia </p>
                     </section>
                 </div>
-                <!-- Inbox -->
-                <div class="border-box inbox">
-                    <section>
-                        <a class="avatar avatar--medium bgr-yellow" href="#"> H</a>
-                        <div>
-                            <p class="inbox__email bold">Hieupham@gmail.com</p>
-                            <p class="inbox__time">2 days</p>
-                        </div>
-                    </section>
-                    <section>
-                        <a class="avatar avatar--small bgr-orange" href="#"> K </a>
-                        <p class="inbox__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
-                            necessitatibus totam ullam officia </p>
-                    </section>
-                </div>
-                <div class="border-box inbox">
-                    <section>
-                        <a class="avatar avatar--medium bgr-yellow" href="#"> H</a>
-                        <div>
-                            <p class="inbox__email bold">Hieupham@gmail.com</p>
-                            <p class="inbox__time">2 days</p>
-                        </div>
-                    </section>
+               
 
-                    <section>
-                        <a class="avatar avatar--small bgr-orange" href="#"> K </a>
-                        <p class="inbox__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
-                            necessitatibus totam ullam officia </p>
-                    </section>
-                </div>
-                <div class="border-box inbox">
-                    <section>
-                        <a class="avatar avatar--medium bgr-yellow" href="#"> H</a>
-                        <div>
-                            <p class="inbox__email bold">Hieupham@gmail.com</p>
-                            <p class="inbox__time">2 days</p>
-                        </div>
-                    </section>
-
-                    <section>
-                        <a class="avatar avatar--small bgr-orange" href="#"> K </a>
-                        <p class="inbox__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
-                            necessitatibus totam ullam officia </p>
-                    </section>
-                </div>
-                <div class="border-box inbox">
-                    <section>
-                        <a class="avatar avatar--medium bgr-yellow" href="#"> H</a>
-                        <div>
-                            <p class="inbox__email bold">Hieupham@gmail.com</p>
-                            <p class="inbox__time">2 days</p>
-                        </div>
-                    </section>
-
-                    <section>
-                        <a class="avatar avatar--small bgr-orange" href="#"> K </a>
-                        <p class="inbox__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
-                            necessitatibus totam ullam officia </p>
-                    </section>
-                </div>  
             </section>
 
             <!-- CHATBOX -->
             <section class="block--large">
+                
                 <div class="chatbox border-box">
                     <header>
                         <p class="bold">luuminhtan123@gmail.com</p>
@@ -147,7 +94,7 @@
                     <!-- Show mess part-->
                     <section class="chatbox__content">
                         <!-- One line -->
-                        <div class="chat-line__wrap .--receive">
+                        <div class="chat-line__wrap">
                             <div class="chat-line chat-line--receive">
                                 <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
                                 <div class="border-box chat-line__content-wrap">
@@ -160,7 +107,7 @@
                             </div>
                         </div>
                         <!-- One line -->
-                        <div class="chat-line__wrap .--send">
+                        <div class="chat-line__wrap">
                             <div class="chat-line chat-line--send">
 
                                 <div class="border-box chat-line__content-wrap">
@@ -174,7 +121,7 @@
                             </div>
                         </div>
                         <!-- One line -->
-                        <div class="chat-line__wrap .--receive">
+                        <div class="chat-line__wrap">
                             <div class="chat-line chat-line--receive">
 
                                 <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
@@ -187,7 +134,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="chat-line__wrap .--send">
+                        <div class="chat-line__wrap">
                             <div class="chat-line chat-line--send">
 
                                 <div class="border-box chat-line__content-wrap">
@@ -203,7 +150,7 @@
 
                             </div>
                         </div>
-                    </section>
+                    </section class="block--small">
                     <!-- Chat input & option -->
                     <section class="chatbox__input">
                         <!-- Features -->
@@ -231,7 +178,7 @@
                 </div>
             </section>
             <!-- INFO-BOX -->
-            <section class="block--small ">
+            <section class="block--small">
                 <div class="info border-box">
                     <!-- Add -->
                     <section class="info__add">
@@ -262,8 +209,8 @@
                 <div class="line"></div>
                 <!-- Tag -->
                 <section class="info__tag ">
-                    <a class="tag" href="#"><span class="icon-chat"></span> Add tag</a>
-                    <a class="tag" href="#"> Business<span class="icon-user"></span></a>
+                    <a class="tag" href="#">+ Add tag</a>
+                    <a class="tag" href="#"> Business <span class="icon--dismiss">+</span></a>
                 </section>
                 <div class="line"></div>
                 <!-- Option -->
@@ -274,8 +221,7 @@
                 </section>
 
             </section>
-        </a>
-
+</div>
     </main>
 
 </body>
