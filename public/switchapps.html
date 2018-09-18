@@ -78,20 +78,17 @@
     </main>
 </body>
 <script>
-    function openNav(x) {
-        if (x.matches) { // If media query matches
+    function openNav() {
+        if (window.matchMedia("(max-width: 411px)")) { // If media query matches
             document.getElementById("mySidenav").style.display = "block";
         }
     }
 
     function closeNav(x) {
-        if (x.matches) { // If media query matches
+        if (window.matchMedia("(max-width: 411px)")) { // If media query matches
             document.getElementById("mySidenav").style.display = "none";
         }
     }
-    var x = window.matchMedia("(max-width: 411px)");
-    openNav(x);
-    closeNav(x);
 </script>
 
 </html>
