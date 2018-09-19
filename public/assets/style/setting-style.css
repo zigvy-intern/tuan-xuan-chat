@@ -45,14 +45,7 @@
     margin-left: 12px;
 }
 
-.border-left-box
-{
-    border-left: 5px solid black;
-    display: flex;
-    align-items: center;
-    min-height: 20px;
-    margin-bottom: 20px;
-}
+
 .app-info__form-group
 {
     display: flex;
@@ -77,4 +70,9 @@
 {
     margin-top: 25px;
     text-transform: uppercase;
+    font-size: 11px;
+}
+.connect-status
+{
+    margin-top:15px;
 }
