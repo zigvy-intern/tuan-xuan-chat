@@ -122,21 +122,16 @@
 
 .header-left {
     flex: 1;
+    display: flex;
     padding-left: 23px;
     align-items: center;
 }
 
 .header-right {
     flex: 1;
-    padding-right: 20px;
+    padding-right: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-}
-
-.header-right {
-    display: grid;
-    grid-template-columns: 80% 20%;
-    align-content: center;
 }
 
