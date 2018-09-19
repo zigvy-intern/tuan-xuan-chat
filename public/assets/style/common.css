@@ -108,6 +108,12 @@ body {
     min-height: 20px;
     margin-bottom: 20px;
 }
+.border-left__title
+{
+    text-transform:uppercase;
+    font-size: 11px;
+    margin-left: 12px;
+}
 
 .border--yellow {
     border-color: #FFCD55;
@@ -165,9 +171,19 @@ body {
 }
 
 
-.icon {}
+.icon-wrap {
+    min-width: 30px;
+    min-height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    border-radius: 3px;
+}
 
-.icon--button {}
+.icon{
+    font-size: 16px;
+}
 
 .avatar--small {
     width: 16px;
@@ -251,7 +267,10 @@ body {
     padding: 23px;
 }
 
-
+.inner-block>*
+{
+    margin-right: 23px;
+}
 .block--medium {
     width: 30%;
     /* flex:3; */
@@ -307,4 +326,7 @@ body {
 .tab__label {
     padding: 11px 10px;
     background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
