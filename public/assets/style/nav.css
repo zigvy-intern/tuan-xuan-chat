@@ -122,6 +122,8 @@
 
 .header-left {
     flex: 1;
+    padding-left: 23px;
+    align-items: center;
 }
 
 .header-right {
