@@ -1,4 +1,4 @@
-@import url("/assets/style/common.css");
+@import url("./common.css");
 @import url("./nav.css");
 @import url('./font-icomoon.css');
 @import url('./style-conversation.css');
@@ -69,3 +69,23 @@ form
 {
    text-transform: uppercase;
 }
+.upgrade__row
+{
+    display: flex;
+}
+.upgrade__col
+{
+    flex: 3;
+}
+.upgrade__item
+{
+   
+    border-radius: 5px;
+    box-sizing: content-box;
+    padding: 11px 0;
+    text-transform: uppercase;
+    text-align: center;
+    border: solid 1px;
+    border-color: aqua;
+}
+
