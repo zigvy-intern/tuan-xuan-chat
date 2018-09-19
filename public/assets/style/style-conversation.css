@@ -197,11 +197,7 @@
 }
 
 /*Info*/
-.line {
-    height: 1px;
-    background: #F0F0F0;
-    width: 100%;
-}
+
 
 .info>section {
     padding: 10px 0;
