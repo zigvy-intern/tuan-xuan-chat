@@ -69,6 +69,7 @@ section {
 
 .switch__item-title {
     margin-top: 0;
+    margin-bottom: 5px;    
     font-size: 14px;
     color: #666666;
     font-weight: bold;
@@ -86,7 +87,7 @@ section {
 }
 
 .switch__item:hover,
-.switch__item:hover .switch__item-title {
+.switch__item:hover .switch__item-title, .switch__item:hover .switch__item-url {
     background-color: #01CEBB;
     color: #fff;
 }
