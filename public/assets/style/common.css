@@ -37,11 +37,13 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: unset;
     border: unset;
-    font-size: 12px;
+    font-size: 11px;
     cursor: pointer;
+    /* box-sizing: content-box;
+    padding: 10px; */
 }
 
 .btn--small {
@@ -54,6 +56,11 @@ body {
     height: 35px;
 }
 
+.btn--medium
+{
+    width: 150px;
+    height: 30px;
+}
 
 .btn--white {
     background: #F1F1F2;
@@ -95,8 +102,46 @@ body {
     background: #9FD16A;
 }
 
+.border-left-box
+{
+    border-left: 5px solid transparent;
+    display: flex;
+    align-items: center;
+    min-height: 20px;
+    margin-bottom: 20px;
+}
+
+.border--yellow
+{
+    border-color: #FFCD55;
+}
+.border--pink
+{
+    border-color: #ED86BE;
+}
+.border--blue
+{
+    border-color: #4FBFE7;
+}
+.border--red
+{
+    border-color: #F26C6C;
+}
+.border--orange
+{
+    border-color: #F9704F;
+}
+.border--cyan
+{
+    border-color: #01CEBB;
+}
+.border--green
+{
+    border-color: #9FD16A;
+}
+
 /*AVATAR*/
-.avatar {
+.avatar{
     display: block;
     text-decoration: none;
     color: white;
@@ -104,6 +149,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+   
 }
 
 .avatar--large {
@@ -121,6 +167,16 @@ body {
     font-size: 14px;
 }
 
+
+.icon
+{
+
+}
+.icon--button
+{
+
+}
+
 .avatar--small {
     width: 16px;
     height: 16px;
@@ -135,6 +191,17 @@ body {
     border: unset;
     border-radius: 5px;
     background: #F7F7F7;
+}
+
+.text-box--white
+{
+    resize: none;
+    height: 60px;
+    width: 100%;
+    padding: 8px 0 8px 14px;
+    border: unset;
+    border: #F0F0F0 solid 1px;
+    border-radius: 3px;
 }
 
 .border-box {
@@ -205,9 +272,10 @@ body {
     /* flex:4.5; */
 }
 
-.block-extra-large
+.block--extra-large
 {
     width: 75%;
+    /* background: #01CEBB; */
 }
 
 .block--small {
@@ -227,3 +295,24 @@ main {
     overflow-y: auto;
 }
 
+.line {
+    height: 1px;
+    background: #F0F0F0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.dot
+{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.inline-p
+{
+    display: inline;
+    margin-right: 20px;
+}
