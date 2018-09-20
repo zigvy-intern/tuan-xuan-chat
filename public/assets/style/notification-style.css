@@ -1,0 +1,30 @@
+@import url('./common.css');
+@import url('./font-icomoon.css');
+@import url('./nav.css');
+@import url('./style-conversation.css');
+
+.block--extra-large {
+    flex-direction: column;
+}
+.conversation__chart {
+    background-color:#fff;
+    height: 155px;
+    margin-bottom: 14px;
+}
+.convetsation__internal-room {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex:1;
+}
+.convetsation__internal-chat-room {
+    flex:1 6 60%;
+}
+
+.convetsation__activities {
+    flex:1 40 40%;
+    margin-left:22px;
+}
+.avatar-row {
+    margin: 14px 0px 7px 13px;
+}
