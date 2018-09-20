@@ -2,7 +2,9 @@
 @import url('./font-icomoon.css');
 @import url('./nav.css');
 
-
+a {
+    text-decoration: none;
+}
 .header-btn--export,
 .header-btn--attributes {
     background-color: #02CEBB;
