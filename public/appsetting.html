@@ -32,81 +32,244 @@
 
     <!-- Header -->
     <header class="header-wrap">
-        <nav class="header-left">
-            <ul class="header__nav">
-                <li><a onclick="showMenu()" style="font-size:18px; display: none;">☰</a></li>
-                <li><a href="#">APP SETTING</a></li>
-            </ul>
-        </nav>
-        <!-- <div class="header-right">
-            <div class="inner-addon right-addon" id="search">
-                <img style="width:15px; height:15px;" src="./assets/img/SVG/search.svg" alt="notification">
-                <input class="text-box" type="text" placeholder="Search history in all conversations">
-            </div>
-            <ul class="header__nav">
-                <li><a class="noti__label center-inner" href="#">Online&nbsp;<span class="noti center-inner bgr-green">10</span></a></li>
-            </ul>
-        </div> -->
+        <div class="header-left">
+            <!-- <img onclick="openNav()" class="header-menu" src="./assets/img/SVG/menu.svg" alt="menu"> -->
+            <h1 class="header--title">APP SETTING</h1>
+        </div>
     </header>
 
     <!-- MAIN -->
     <main>
-        <div class="inner-block">
-            <!-- INFO-BOX -->
+        <section class="inner-block">
+            <!-- TAB-BOX -->
             <section class="block--small">
                 <div class="tab-block">
-                    <div class="border-box">
-                        <a class=" tab" href="#">
-                            
-                            <span style="padding:4px;" class="icon icon-button icon-general bgr-red"></span>
-                            <p>General</p>
-                        </a>
+                    <!-- TAB -->
+                    <a class="border-box tab__label active-tab-detail" onclick="changeTab(event,'general')">
+                        <div class="icon-wrap bgr-cyan icon-general">
+
+                        </div>
+                        <p>General</p>
+                    </a>
+                    <!-- TAB -->
+                    <a class="border-box tab__label" onclick="changeTab(event,'team-member')">
+                        <div class="icon-wrap bgr-pink icon-member">
+
+                        </div>
+                        <p>Team member</p>
+                    </a>
+                    <a class="border-box tab__label" onclick="changeTab(event,'messaging')">
+                        <div class="icon-wrap bgr-green icon-messaging ">
+
+                        </div>
+                        <p>Messaging</p>
+                    </a>
+                    <a class="
+                            border-box tab__label" onclick="changeTab(event,'appearance')">
+                        <div class="icon-wrap bgr-blue icon-appearance">
+
+                        </div>
+                        <p>Appearance</p>
+                    </a>
+                    <a class="border-box tab__label" onclick="changeTab(event,'blocked-people')">
+                        <div class="icon-wrap bgr-red icon-blocked">
+
+                        </div>
+                        <p>Blocked people</p>
+                    </a>
+                    <a class="border-box tab__label" onclick="changeTab(event,'upgrade')">
+                        <div class="icon-wrap bgr-yellow  icon-upgrade">
+
+                        </div>
+                        <p>Upgrade</p>
+                    </a>
+                    <a class="border-box tab__label" onclick="changeTab(event,'billing')">
+                        <div class="icon-wrap bgr-pink icon-billing">
+
+                        </div>
+                        <p>Billing</p>
+                    </a>
                 </div>
-</div>
             </section>
-            <!-- INBOX -->
+            <!-- TAB DETAIL -->
             <section class="block--extra-large">
-                <div class="general border-box">
-                    <section>
-                        <header class="general__section-title border-left-box border--yellow ">
-                            <p>Information</p>
+                <!-- GENERAL TAB  (nhớ xóa) -->
+                <section id="general" class="tab-detail border-box " style="display:none;"> 
+                    <section class="border-bottom">
+                        <header class="border-left-box border--yellow ">
+                            <p class="border-left__title">Information</p>
                         </header>
-                        <div class="app-info__form-group">
-                        <div class="app-info__form">
-                            <p>Name of your app </p>
-                            <input class="text-box--white" type="text">
-                        </div>
-                        <div class="app-info__form">
-                            <p>Web domain </p>
-                            <input class="text-box--white" type="text">
-                        </div>
-                    </div>
+                        <form class="app-info__form-group">
+                            <div class="app-info__form">
+                                <p>Name of your app </p>
+                                <input class="text-box--white" type="text">
+                            </div>
+                            <div class="app-info__form">
+                                <p>Web domain </p>
+                                <input class="text-box--white" type="text">
+                            </div>
+                        </form>
                     </section>
-                    <div class="line"></div>
-                    <section>
-                        <header class="general__section-title border-left-box border--green">
-                            <p>App integration</p>
+
+                    <section class="border-bottom">
+                        <header class="border-left-box border--green">
+                            <p class="border-left__title">App integration</p>
                         </header>
-                        <textarea class="text-box--white" name="" id="" cols="30" rows="10">!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?a(require("jquery")):a(jQuery)}(function(a){function b(a){re- turn h.raw?a:encodeURIComponent(a)}function c(a){return h.raw?a:decodeURIComponent(a)}function d(a){return b(h.json?JSON.stringify(a):String(a))}func- tion e(a){0===a.indexOf('"')&&(a=a.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\"));</textarea>
+                        <form>
+                            <textarea class="text-box--white" name="" id="" cols="30" rows="10">!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?a(require("jquery")):a(jQuery)}(function(a){function b(a){re- turn h.raw?a:encodeURIComponent(a)}function c(a){return h.raw?a:decodeURIComponent(a)}function d(a){return b(h.json?JSON.stringify(a):String(a))}func- tion e(a){0===a.indexOf('"')&&(a=a.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\"));</textarea>
+                        </form>
                         <div class="connect-status">
-                        <p class="inline-p">Connection status: </p>
-                        <div class="dot bgr-green"></div>
-                        <p class="inline-p">Connected</p>
+                            <p class="inline-p">Connection status: </p>
+                            <div class="dot bgr-green"></div>
+                            <p class="inline-p">Connected</p>
                         </div>
-                        
+
                     </section>
-                    <div class="line"></div>
+
                     <section>
-                            <header class="general__section-title border-left-box border--red">
-                                    <p>Delete app</p>
-                                </header>
-                                <p class="grey-p">Warning: All your data will be deleted </p>
-                            <button class="btn btn--medium btn--orange">Delete this app</button>                                   
+                        <header class=" border-left-box border--red">
+                            <p class="border-left__title">Delete app</p>
+                        </header>
+                        <p class="grey-p">Warning: All your data will be deleted </p>
+                        <button class="btn btn--medium btn--orange">Delete this app</button>
                     </section>
-                </div>
+                </section>
+                <!-- TEAM MEMBER TAB -->
+                <section id="team-member"></section>
+
+                <!-- MESS TAB -->
+                <section id="messaging" class="tab-detail border-box" style="display:none;">
+                    <section class="border-bottom">
+                        <header class="border-left-box border--blue ">
+                            <p class="border-left__title">Begin new message</p>
+                        </header>
+                        <form class="app-info__form-group">
+                            <div class="app-info__form">
+                                <input class="text-box--white" type="text" value="Hi {{first name}} !">
+                            </div>
+                        </form>
+                    </section>
+
+                    <section class="border-bottom">
+                        <header class="border-left-box border--yellow">
+                            <p class="border-left__title">MESSAGE RESPONDER FOR WEB</p>
+                        </header>
+                        <form class="checkbox-wrap">
+                            <input class="check-box" type="checkbox" name="checkbox" id="checkbox_id" value="value">
+                            <label for="checkbox_id">Automatically show a response when someone asks a question </label>
+                        </form>
+                        <form>
+                            <textarea class="text-box--white" name="" id="" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+                        </form>
+                    </section>
+
+                    <section class="border-bottom">
+                        <header class=" border-left-box border--pink">
+                            <p class="border-left__title">Ask email</p>
+                        </header>
+                        <form class="app-info__form-group">
+                            <div class="app-info__form">
+                                <input class="text-box--white" type="text">
+                            </div>
+
+                        </form>
+                    </section>
+
+                    <section>
+                        <header class=" border-left-box border--blue">
+                            <p class="border-left__title">Ask phone number</p>
+                        </header>
+                        <form class="app-info__form-group">
+                            <div class="app-info__form">
+                                <input class="text-box--white" type="text">
+                            </div>
+
+                        </form>
+                    </section>
+                </section>
+                <!-- APPEARANCE TAB -->
+                <section id="appearance">
+
+
+                </section>
+                <!-- BLOCK TAB -->
+                <section id="blocked-people"></section>
+                <!-- UPGRADE TAB -->
+                <section id="upgrade" class="tab-detail border-box" style="display:none;">
+                    <section class="border-bottom">
+                        <header class="border-left-box border--yellow ">
+                            <p class="border-left__title">Upgrade</p>
+                        </header>
+                        <div class="upgrade__wrap">
+                            <section class="upgrade__col">
+                                <div class=" upgrade__item border--yellow">
+                                    <p class="color--yellow">MICRO</p>
+                                </div>
+                                <div class=" upgrade__item ">
+                                    <p>Free</p>
+                                </div>
+                                <div class="upgrade__item upgrade__item--large">
+                                        <p>Lorem ipsum</p>
+                                    </div>
+                            </section>
+                            <section class="upgrade__col">
+                                <div class=" upgrade__item border--green">
+                                    <p class="color--green">SMALL</p>
+                                </div>
+                                <div class=" upgrade__item bgr-green">
+                                    <p class="color--white">100.000 VND/Month</p>
+                                </div>
+                                <div class="upgrade__item upgrade__item--large">
+                                        <p>Lorem ipsum</p>
+                                    </div>
+                            </section>
+                            <section class="upgrade__col">
+                                <div class=" upgrade__item border--blue">
+                                    <p class="color--blue">MEDIUM</p>
+                                </div>
+                                <div class=" upgrade__item ">
+                                    <p>Comming soon</p>
+                                </div>
+                                <div class="upgrade__item upgrade__item--large">
+                                        <p>Lorem ipsum</p>
+                                    </div>
+                            </section>
+                            <section class="upgrade__col">
+                                <div class=" upgrade__item border--pink">
+                                    <p class="color--pink">LARGE</p>
+                                </div>
+                                <div class=" upgrade__item ">
+                                    <p>Comming soon</p>
+                                </div>
+                                <div class="upgrade__item upgrade__item--large">
+                                        <p>Lorem ipsum</p>
+                                    </div>
+                            </section>
+                        </div>
+                    </section>
+                </section>
+                <!-- BILLING TAB -->
+                <section id="billing"></section>
             </section>
-        </div>
+            </div>
     </main>
+
+    <script>
+        function changeTab(evt, tabID) {
+            // alert(tabID);
+            var i, tabcontent;
+            tabcontent = document.getElementsByClassName("tab-detail");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab__label");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active-tab-detail", "");
+            }
+            document.getElementById(tabID).style.display = "block";
+            evt.currentTarget.className += " active-tab-detail";
+        }
+    </script>
 </body>
 
 </html>

@@ -1,78 +1,89 @@
-@import url("/assets/style/common.css");
+@import url("./common.css");
 @import url("./nav.css");
 @import url('./font-icomoon.css');
 @import url('./style-conversation.css');
 
 
 
-.tab-block .border-box
-{
-    padding: 10px;
-} 
-.tab
-{
-    text-decoration: none;
-    width: 100%;
-    display: block;
-    background: white;
-    max-height: 42px;
-}
-.tab span
-{
-    display: block;
-    float: left;
-    margin-right: 20px;
-}
-.tab p
-{
-    display: inline-block;
-    float: left;
+.tab__label p {
+    margin-left: 20px;
 }
 
-.general
-{
-    padding: 0;
-    background: white;
-}
-.general>section
-{
-    padding: 30px;
-}
-.general__section-title p
-{
-    text-transform:uppercase;
-    font-size: 11px;
-    margin-left: 12px;
-}
-
-
-.app-info__form-group
-{
-    display: flex;
-    justify-content: space-between;
-}
-.app-info__form
-{
-   width: 49%;
-   
-}
-.app-info__form p
-{
+.tab-block .tab__label {
     margin-bottom: 10px;
 }
 
-.grey-p
-{
+.tab-detail {
+    padding: 0;
+    background: white;
+}
+
+.tab-detail>section {
+    padding: 20px 30px;
+}
+
+
+
+.app-info__form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-info__form {
+    width: 49%;
+}
+
+form {
+    margin-top: 10px;
+}
+
+.app-info__form p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.grey-p {
     color: #CACACA;
 }
 
-.general .btn
-{
-    margin-top: 25px;
+.tab-detail .btn {
+
     text-transform: uppercase;
     font-size: 11px;
+    margin-top: 25px;
 }
-.connect-status
+
+.connect-status {
+    margin-top: 15px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.border-left-box p {
+    text-transform: uppercase;
+}
+
+.upgrade__wrap {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.upgrade__col {
+    min-width: 24%;
+}
+
+.upgrade__item {
+    border-radius: 5px;
+    box-sizing: content-box;
+    padding: 11px 0;
+    margin-bottom: 10px;
+    text-align: center;
+    border: solid 1px #F1F1F2;
+}
+.upgrade__item--large
 {
-    margin-top:15px;
+    height: 50%;
+    min-height: 300px;
+    padding-top: 25px;
 }
