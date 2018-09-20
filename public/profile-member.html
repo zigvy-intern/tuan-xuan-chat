@@ -45,21 +45,25 @@
       <!-- INFO-BOX -->
       <section class="block--small">
         <div class="avatar avatar--extra-large bgr-blue"></div>
-        <section class="border-box">
+        <section class="info-user border-box">
           <input type="text" class="text-box" placeholder="First name">
           <input type="text" class="text-box" placeholder="Last name">
         </section>
-        <section class="border-box">
-          <input type="text" class="text-box" placeholder="First name">
-          <input type="text" class="text-box" placeholder="First name">
-          <input type="text" class="text-box" placeholder="First name">
-          <div class="line"></div>
-          <section class="info__option">
-              <button class="btn btn--cyan btn--large">Update</button>
-              <button class="btn btn--yellow btn--large">Cancel</button>
-            </section>
-        </section>
-        
+        <form class="border-box">
+          <div class="border-bottom">
+            <div class="info-user">
+              <p class="form__label">Change password</p>
+              <input type="password" class="text-box" placeholder="Current password" required>
+              <input type="password" class="text-box" placeholder="New password" required>
+              <input type="password" class="text-box" placeholder="Confirm new password" required>
+            </div>
+          </div>
+          <section class="info-user info__option">
+            <button type="submit" class="btn btn--cyan btn--large">Update</button>
+            <button type="reset" class="btn btn--gray btn--large">Cancel</button>
+          </section>
+        </form>
+
       </section>
       <!-- INBOX -->
       <section class="block--medium">
