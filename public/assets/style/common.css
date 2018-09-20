@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700');
+
 * {
     margin: 0;
     padding: 0;
@@ -83,7 +85,7 @@ body {
 
 .bgr-red,
 .btn--red {
-    background: #F26C6C;
+    background-color: #F26C6C;
 }
 
 .bgr-orange,
@@ -116,55 +118,33 @@ body {
 }
 
 .border--yellow {
-    border-color: #FFCD55 !important;
+    border-color: #FFCD55;
 }
 
 .border--pink {
-    border-color: #ED86BE !important;
+    border-color: #ED86BE;
 }
 
 .border--blue {
-    border-color: #4FBFE7 !important;
+    border-color: #4FBFE7;
 }
 
 .border--red {
-    border-color: #F26C6C !important;
+    border-color: #F26C6C;
 }
 
 .border--orange {
-    border-color: #F9704F !important;
+    border-color: #F9704F;
 }
 
 .border--cyan {
-    border-color: #01CEBB !important;
+    border-color: #02CEBB;
 }
 
 .border--green {
-    border-color: #9FD16A !important;
+    border-color: #9FD16A;
 }
 
-.color--yellow
-{
-    color:  #FFCD55 !important;
-}
-
-.color--green
-{
-    color: #9FD16A !important;
-}
-
-.color--blue
-{
-    color: #4FBFE7 !important;
-}
-.color--pink
-{
-    color: #ED86BE !important;
-}
-.color--white
-{
-    color: white;
-}
 /*AVATAR*/
 .avatar {
     display: block;
@@ -201,10 +181,11 @@ body {
     align-items: center;
     padding: 6px;
     border-radius: 3px;
-    font-size: 16px;
 }
 
-
+.icon{
+    font-size: 16px;
+}
 
 .avatar--small {
     width: 16px;
@@ -224,8 +205,8 @@ body {
 
 .text-box--white {
     resize: none;
+    height: 60px;
     width: 100%;
-    max-height: 60px;
     padding: 8px 0 8px 14px;
     border: unset;
     border: #F0F0F0 solid 1px;
@@ -323,9 +304,7 @@ body {
 }
 
 .line {
-    
-    height: 0.8px;
-    margin: 0.5px 0;
+    height: 1px;
     background: #F0F0F0;
     width: 100%;
     padding: 0;
@@ -338,7 +317,6 @@ body {
     display: inline-block;
     border-radius: 50%;
     vertical-align: middle;
-    margin: 0 5px;
 }
 
 .inline-p {
@@ -352,18 +330,4 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.checkbox-wrap
-{
-    display: flex;
-    align-items: center;
-}
-.check-box
-{
-    background: hotpink;
-}
-.border-bottom
-{
-    border-bottom: 1px solid #F0F0F0;
 }
