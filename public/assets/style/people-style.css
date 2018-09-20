@@ -1,0 +1,159 @@
+@import url('./common.css');
+@import url('./font-icomoon.css');
+@import url('./nav.css');
+
+
+.header-btn--export,
+.header-btn--attributes {
+    background-color: #02CEBB;
+    color: #fff;
+    border: unset;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header-btn--export {
+    width: 96px;
+    margin-left: 30px;
+}
+.header-btn--attributes {
+    width: 106px;
+}
+.icon-attributes::before, .icon-export::before{
+    margin-right:16px;
+}
+.header-btn--export:hover,
+.header-btn--attributes:hover {
+    background-color: #fff;
+    color:#02CEBB;
+    border: #02CEBB solid 1px;
+}
+
+.header-btn--export:hover .icon-export::before,
+.header-btn--attributes:hover .icon-attributes::before {
+    color:#02CEBB;
+}
+
+.border-left-box {
+    margin-bottom: 0px;
+}
+
+.border-left__title {
+    text-transform: unset;
+}
+
+.tab__label {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text-box[type="email"] {
+    margin-top: 13px;
+}
+
+.text-box[type="email"]::placeholder {
+    color: #CACACA;
+}
+
+.text-box__label {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    color: #CACACA;
+    font-size: 9px;
+}
+
+/* Style table */
+.table-detail {
+    padding: 0;
+    height: 100%;
+}
+
+.table__row {
+    display: flex;
+    border-bottom: 1px solid #F1F1F2;
+
+}
+
+.table__row--pading-row {
+    padding: 14px 30px 16px 30px;
+}
+
+.table__row:nth-last-child(1) {
+    border-bottom: none;
+
+}
+
+.table__heading {
+    color: #666666;
+    font-weight: bold;
+    display: flex;
+}
+
+.table__heading--padding-heading {
+    padding: 20px 30px 10px 30px;
+}
+
+.col__sort {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.col__sort--asc,
+.col__sort--desc {
+    margin-left: 7px;
+    margin-bottom: 2px;
+    font-size: 5px;
+    cursor: pointer;
+}
+
+.col__sort--asc {
+    display: block;
+    transform: rotate(180deg);
+}
+
+
+.col__name {
+    flex: 1 1 10%;
+}
+
+.col__email {
+    flex: 1 2 20%;
+}
+
+.col__location {
+    flex: 1 1.5 15%;
+}
+
+.col__first-seen {
+    flex: 1 1 10%;
+}
+
+.col__last-seen {
+    flex: 1 1 10%;
+}
+
+.col__browser {
+    flex: 1 2 20%;
+}
+
+.button--next,
+.button--pre {
+    background-color: #fff;
+    width: 32px;
+    height: 32px;
+    border: unset;
+    margin-top: 12px;
+    margin-right: 12px;
+    color: #4D4D4D;
+    cursor: pointer;
+}
+
+.button--next {
+    display: inline-block;
+    transform: rotate(180deg);
+}
