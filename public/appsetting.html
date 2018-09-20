@@ -99,16 +99,16 @@
                         <header class="border-left-box border--yellow ">
                             <p class="border-left__title">Information</p>
                         </header>
-                        <form class="app-info__form-group">
-                            <div class="app-info__form">
+                        <div class="app-info__form-group">
+                            <form class="app-info__form">
                                 <p>Name of your app </p>
                                 <input class="text-box--white" type="text">
-                            </div>
-                            <div class="app-info__form">
+                            </form>
+                            <form class="app-info__form">
                                 <p>Web domain </p>
                                 <input class="text-box--white" type="text">
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </section>
 
                     <section class="border-bottom">
@@ -212,18 +212,18 @@
 
                             <header class="team-box__header">
                                 All members
-                              
+
                             </header>
                             <div class="avatar-row">
                                 <a class="avatar avatar--medium bgr-cyan" href="#"> H</a>
-                           
+
                             </div>
 
                         </section>
                         <section class="border-grey bgr-grey team-box">
 
                             <header class="team-box__header">
-                               Business team
+                                Business team
                                 <span class="icon icon-remove-2"></span>
                             </header>
                             <div class="avatar-row">
@@ -235,7 +235,7 @@
                         <section class="border-grey bgr-grey team-box">
 
                             <header class="team-box__header">
-                               Marketing team
+                                Marketing team
                                 <span class="icon icon-remove-2"></span>
                             </header>
                             <div class="avatar-row">
@@ -253,8 +253,7 @@
                             <p class="border-left__title">Begin new message</p>
                         </header>
                         <form class="form-group">
-
-                            <input class="text-box--white" type="text" value="Hi {{first name}} !">
+                            <input type="text" class="text-box--white" value="Hi {{first name}} !">
 
                         </form>
                     </section>
@@ -278,7 +277,8 @@
                             <p class="border-left__title">Ask email</p>
                         </header>
                         <form class="form-group">
-                            <input class="text-box--white" type="text">
+                            <input type="text" class="text-box--white">
+
                         </form>
                     </section>
 
@@ -287,9 +287,7 @@
                             <p class="border-left__title">Ask phone number</p>
                         </header>
                         <form class="form-group">
-
-                            <input class="text-box--white" type="text">
-
+                            <input type="text" class="text-box--white">
 
                         </form>
                     </section>
@@ -300,7 +298,68 @@
 
                 </section>
                 <!-- BLOCK TAB -->
-                <section id="blocked-people"></section>
+                <section id="blocked-people" class="tab-detail border-box" style="display:none;">
+                    <section class="border-bottom">
+                        <header class="border-left-box border--red ">
+                            <p class="border-left__title">Blocked people</p>
+                        </header>
+
+                        <section class="table">
+                            <header class="table__row">
+                                <div class="col-2">
+                                    <p>IP</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>Name</p>
+                                </div>
+                                <div class="col-3">
+                                    <p>Email</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>Blocked date</p>
+                                </div>
+                                <div class="col-1">
+                                    <p>Unblock</p>
+                                </div>
+                            </header>
+                            <div class="table__row">
+                                <div class="col-2">
+                                    <p>168.199.0.23</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>Luu Minh Tan</p>
+                                </div>
+                                <div class="col-3">
+                                    <p>luuminhtan123@gmail.com</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>12/03/2016</p>
+                                </div>
+                                <div class="col-1">
+                                    <span class="icon bgr-yellow icon-refresh"></span>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="col-2">
+                                    <p>168.199.1.11</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>Truong Viet Ha</p>
+                                </div>
+                                <div class="col-3">
+                                    <p>hatruong@gmail.com</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>23/02/2016</p>
+                                </div>
+                                <div class="col-1">
+                                    <span class="icon icon-refresh-2"></span>
+                                </div>
+                            </div>
+
+                        </section>
+                    </section>
+                </section>
                 <!-- UPGRADE TAB -->
                 <section id="upgrade" class="tab-detail border-box" style="display:none;">
                     <section class="border-bottom">
@@ -356,7 +415,37 @@
                     </section>
                 </section>
                 <!-- BILLING TAB -->
-                <section id="billing"></section>
+                <section id="billing" class="tab-detail border-box">
+                    <section class="border-bottom">
+                        <header class="border-left-box border--cyan ">
+                            <p class="border-left__title">Current Subcription</p>
+                        </header>
+                        <div class="progress-bar">
+                            <div class="progress-bar--active"></div>
+                        </div>
+                    </section>
+                    <!-- billig part -->
+                    <section class="border-bottom">
+                        <header class="border-left-box border--pink ">
+                            <p class="border-left__title">Billing detail</p>
+                        </header>
+                        <div class="app-info__form-group">
+                            <form class="app-info__form">
+                                <p>Company name </p>
+                                <input class="text-box--white" type="text" value="Poppi">
+                            </form>
+                            <form class="app-info__form">
+                                <p>Billing email </p>
+                                <input class="text-box--white" type="text" value="truongvietha@gmail.com">
+                            </form>
+                        </div>
+                    </section>
+                    <section class="border-bottom">
+                        <header class="border-left-box border--green ">
+                            <p class="border-left__title">Invoice</p>
+                        </header>
+                    </section>
+                </section>
             </section>
             </div>
     </main>

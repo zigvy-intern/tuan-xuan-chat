@@ -65,7 +65,7 @@ body {
     width: 100px;
     height: 32px;
 }
-.btn--white {
+.btn--white, .color--gray {
     background: #F1F1F2;
     color: #B1B1B1;
 }
@@ -414,6 +414,7 @@ body {
 {
     border: #F7F7F7 solid 1.5px;
     border-radius: 5px;
+    overflow: auto;
 }
 .table header
 {
@@ -437,13 +438,22 @@ body {
 }
 .col-3
 {
-    flex: 1 3 30%;
+    flex: 1 1 30%;
+    min-width: 200px;
+
 }
 .col-4
 {
-    flex:1 4 40%;
+    flex:1 1 40%;
+    min-width: 300px;
 }
 .col-2
 {
-    flex: 1 2 20%;
+    flex: 1 1 20%;
+    min-width: 100px;
+}
+.col-1
+{
+    flex: 1 1 10%;
+    min-width: 100px;
 }
