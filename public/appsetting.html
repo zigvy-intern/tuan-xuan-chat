@@ -53,7 +53,7 @@
                         <p>General</p>
                     </a>
                     <!-- TAB -->
-                    <a class="border-box tab__label" onclick="changeTab('team-member')">
+                    <a class="border-box tab__label" onclick="changeTab(event,'team-member')">
                         <div class="icon-wrap bgr-pink icon-member">
 
                         </div>
@@ -66,25 +66,25 @@
                         <p>Messaging</p>
                     </a>
                     <a class="
-                            border-box tab__label" onclick="changeTab('appearance')">
+                            border-box tab__label" onclick="changeTab(event,'appearance')">
                         <div class="icon-wrap bgr-blue icon-appearance">
 
                         </div>
                         <p>Appearance</p>
                     </a>
-                    <a class="border-box tab__label" onclick="changeTab('blocked-people')">
+                    <a class="border-box tab__label" onclick="changeTab(event,'blocked-people')">
                         <div class="icon-wrap bgr-red icon-blocked">
 
                         </div>
                         <p>Blocked people</p>
                     </a>
-                    <a class="border-box tab__label" onclick="changeTab('upgrade')">
+                    <a class="border-box tab__label" onclick="changeTab(event,'upgrade')">
                         <div class="icon-wrap bgr-yellow  icon-upgrade">
 
                         </div>
                         <p>Upgrade</p>
                     </a>
-                    <a class="border-box tab__label" onclick="changeTab('billing')">
+                    <a class="border-box tab__label" onclick="changeTab(event,'billing')">
                         <div class="icon-wrap bgr-pink icon-billing">
 
                         </div>
@@ -94,9 +94,9 @@
             </section>
             <!-- TAB DETAIL -->
             <section class="block--extra-large">
-                <!-- GENERAL TAB -->
-                <section id="general" class="tab-detail border-box " style="display:none;">
-                    <section>
+                <!-- GENERAL TAB  (nhớ xóa) -->
+                <section id="general" class="tab-detail border-box " style="display:none;"> 
+                    <section class="border-bottom">
                         <header class="border-left-box border--yellow ">
                             <p class="border-left__title">Information</p>
                         </header>
@@ -111,8 +111,8 @@
                             </div>
                         </form>
                     </section>
-                    <div class="line"></div>
-                    <section>
+
+                    <section class="border-bottom">
                         <header class="border-left-box border--green">
                             <p class="border-left__title">App integration</p>
                         </header>
@@ -126,7 +126,7 @@
                         </div>
 
                     </section>
-                    <div class="line"></div>
+
                     <section>
                         <header class=" border-left-box border--red">
                             <p class="border-left__title">Delete app</p>
@@ -140,7 +140,7 @@
 
                 <!-- MESS TAB -->
                 <section id="messaging" class="tab-detail border-box" style="display:none;">
-                    <section>
+                    <section class="border-bottom">
                         <header class="border-left-box border--blue ">
                             <p class="border-left__title">Begin new message</p>
                         </header>
@@ -150,8 +150,8 @@
                             </div>
                         </form>
                     </section>
-                    <div class="line"></div>
-                    <section>
+
+                    <section class="border-bottom">
                         <header class="border-left-box border--yellow">
                             <p class="border-left__title">MESSAGE RESPONDER FOR WEB</p>
                         </header>
@@ -163,8 +163,8 @@
                             <textarea class="text-box--white" name="" id="" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
                         </form>
                     </section>
-                    <div class="line"></div>
-                    <section>
+
+                    <section class="border-bottom">
                         <header class=" border-left-box border--pink">
                             <p class="border-left__title">Ask email</p>
                         </header>
@@ -175,7 +175,7 @@
 
                         </form>
                     </section>
-                    <div class="line"></div>
+
                     <section>
                         <header class=" border-left-box border--blue">
                             <p class="border-left__title">Ask phone number</p>
@@ -196,31 +196,55 @@
                 <!-- BLOCK TAB -->
                 <section id="blocked-people"></section>
                 <!-- UPGRADE TAB -->
-                <section id="upgrade" class="tab-detail border-box ">
-                    <section>
+                <section id="upgrade" class="tab-detail border-box" style="display:none;">
+                    <section class="border-bottom">
                         <header class="border-left-box border--yellow ">
                             <p class="border-left__title">Upgrade</p>
                         </header>
-                        <div class="upgrade__row">
+                        <div class="upgrade__wrap">
+                            <section class="upgrade__col">
+                                <div class=" upgrade__item border--yellow">
+                                    <p class="color--yellow">MICRO</p>
+                                </div>
+                                <div class=" upgrade__item ">
+                                    <p>Free</p>
+                                </div>
+                                <div class="upgrade__item upgrade__item--large">
+                                        <p>Lorem ipsum</p>
+                                    </div>
+                            </section>
+                            <section class="upgrade__col">
+                                <div class=" upgrade__item border--green">
+                                    <p class="color--green">SMALL</p>
+                                </div>
+                                <div class=" upgrade__item bgr-green">
+                                    <p class="color--white">100.000 VND/Month</p>
+                                </div>
+                                <div class="upgrade__item upgrade__item--large">
+                                        <p>Lorem ipsum</p>
+                                    </div>
+                            </section>
+                            <section class="upgrade__col">
+                                <div class=" upgrade__item border--blue">
+                                    <p class="color--blue">MEDIUM</p>
+                                </div>
+                                <div class=" upgrade__item ">
+                                    <p>Comming soon</p>
+                                </div>
+                                <div class="upgrade__item upgrade__item--large">
+                                        <p>Lorem ipsum</p>
+                                    </div>
+                            </section>
                             <section class="upgrade__col">
                                 <div class=" upgrade__item border--pink">
-                                    <p>MICRO</p>
+                                    <p class="color--pink">LARGE</p>
                                 </div>
-                            </section>
-                            <section class="upgrade__col">
-                                    <div class=" upgrade__item border--pink">
-                                            <p>MICRO</p>
-                                        </div>
-                            </section>
-                            <section class="upgrade__col">
-                                    <div class=" upgrade__item border--pink">
-                                            <p>MICRO</p>
-                                        </div>
-                            </section>
-                            <section class="upgrade__col">
-                                    <div class=" upgrade__item border--pink">
-                                            <p>MICRO</p>
-                                        </div>
+                                <div class=" upgrade__item ">
+                                    <p>Comming soon</p>
+                                </div>
+                                <div class="upgrade__item upgrade__item--large">
+                                        <p>Lorem ipsum</p>
+                                    </div>
                             </section>
                         </div>
                     </section>
@@ -233,7 +257,7 @@
 
     <script>
         function changeTab(evt, tabID) {
-            // alert(id);
+            // alert(tabID);
             var i, tabcontent;
             tabcontent = document.getElementsByClassName("tab-detail");
             for (i = 0; i < tabcontent.length; i++) {
