@@ -49,7 +49,7 @@ body {
 
 .btn--small {
     width: 68px;
-    height: 30px;
+    height: 32px;
 }
 
 .btn--large {
@@ -59,9 +59,12 @@ body {
 
 .btn--medium {
     width: 150px;
-    height: 30px;
+    height: 32px;
 }
-
+.btn--medium-2 {
+    width: 100px;
+    height: 32px;
+}
 .btn--white {
     background: #F1F1F2;
     color: #B1B1B1;
@@ -103,6 +106,14 @@ body {
     background: #9FD16A;
 }
 
+.bgr-grey
+{
+    background: #F7F7F7 ;
+}
+.bgr-dark-gray
+{
+    background: #D3D3D3;
+}
 .border-left-box {
     border-left: 5px solid transparent;
     display: flex;
@@ -200,7 +211,7 @@ body {
 }
 
 
-.icon-wrap {
+.icon {
     min-width: 30px;
     min-height: 30px;
     display: inline-flex;
@@ -208,11 +219,9 @@ body {
     align-items: center;
     padding: 6px;
     border-radius: 3px;
-}
-
-.icon{
     font-size: 16px;
 }
+
 
 .avatar--small {
     width: 16px;
@@ -232,7 +241,6 @@ body {
 
 .text-box--white {
     resize: none;
-    height: 60px;
     width: 100%;
     padding: 8px 0 8px 14px;
     border: unset;
@@ -245,7 +253,12 @@ body {
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     overflow: hidden;
-    background: white;
+}
+
+.border-grey
+{
+    border: rgba(0, 0, 0, 0.1) solid 1px;
+    border-radius: 5px;
 }
 
 /*OTHERS*/
@@ -370,4 +383,60 @@ body {
 .border-bottom
 {
     border-bottom: 1px solid #F0F0F0;
+}
+.form-group
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+}
+.form-group input
+{
+    margin-right: 15px;
+    width: 50%;
+    height: 100%;
+}
+
+.avatar-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.avatar-row>.avatar {
+    margin: 5px 8px 5px 0;
+}
+
+.table
+{
+    border: #F7F7F7 solid 1px;
+    border-radius: 5px;
+
+}
+.table header
+{
+    font-weight: bold;
+}
+.table__row
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-bottom: #F7F7F7 1px solid;
+    padding: 10px 20px;
+}
+.col-3
+{
+    flex: 1 3 30%;
+}
+.col-4
+{
+    flex:1 4 40%;
+}
+.col-2
+{
+    flex: 1 2 20%;
 }

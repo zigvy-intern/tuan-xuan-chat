@@ -46,45 +46,45 @@
                 <div class="tab-block">
                     <!-- TAB -->
                     <a class="border-box tab__label active-tab-detail" onclick="changeTab(event,'general')">
-                        <div class="icon-wrap bgr-cyan icon-general">
+                        <div class="icon bgr-cyan icon-general">
 
                         </div>
                         <p>General</p>
                     </a>
                     <!-- TAB -->
                     <a class="border-box tab__label" onclick="changeTab(event,'team-member')">
-                        <div class="icon-wrap bgr-pink icon-member">
+                        <div class="icon bgr-pink icon-member">
 
                         </div>
                         <p>Team member</p>
                     </a>
                     <a class="border-box tab__label" onclick="changeTab(event,'messaging')">
-                        <div class="icon-wrap bgr-green icon-messaging ">
+                        <div class="icon bgr-green icon-messaging ">
 
                         </div>
                         <p>Messaging</p>
                     </a>
                     <a class="
                             border-box tab__label" onclick="changeTab(event,'appearance')">
-                        <div class="icon-wrap bgr-blue icon-appearance">
+                        <div class="icon bgr-blue icon-appearance">
 
                         </div>
                         <p>Appearance</p>
                     </a>
                     <a class="border-box tab__label" onclick="changeTab(event,'blocked-people')">
-                        <div class="icon-wrap bgr-red icon-blocked">
+                        <div class="icon bgr-red icon-blocked">
 
                         </div>
                         <p>Blocked people</p>
                     </a>
                     <a class="border-box tab__label" onclick="changeTab(event,'upgrade')">
-                        <div class="icon-wrap bgr-yellow  icon-upgrade">
+                        <div class="icon bgr-yellow  icon-upgrade">
 
                         </div>
                         <p>Upgrade</p>
                     </a>
                     <a class="border-box tab__label" onclick="changeTab(event,'billing')">
-                        <div class="icon-wrap bgr-pink icon-billing">
+                        <div class="icon bgr-pink icon-billing">
 
                         </div>
                         <p>Billing</p>
@@ -116,7 +116,7 @@
                             <p class="border-left__title">App integration</p>
                         </header>
                         <form>
-                            <textarea class="text-box--white" name="" id="" cols="30" rows="10">!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?a(require("jquery")):a(jQuery)}(function(a){function b(a){re- turn h.raw?a:encodeURIComponent(a)}function c(a){return h.raw?a:decodeURIComponent(a)}function d(a){return b(h.json?JSON.stringify(a):String(a))}func- tion e(a){0===a.indexOf('"')&&(a=a.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\"));</textarea>
+                            <textarea class="text-box--white" name="" id="" cols="30" rows="5">!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?a(require("jquery")):a(jQuery)}(function(a){function b(a){re- turn h.raw?a:encodeURIComponent(a)}function c(a){return h.raw?a:decodeURIComponent(a)}function d(a){return b(h.json?JSON.stringify(a):String(a))}func- tion e(a){0===a.indexOf('"')&&(a=a.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\"));</textarea>
                         </form>
                         <div class="connect-status">
                             <p class="inline-p">Connection status: </p>
@@ -131,22 +131,79 @@
                             <p class="border-left__title">Delete app</p>
                         </header>
                         <p class="grey-p">Warning: All your data will be deleted </p>
-                        <button class="btn btn--medium btn--orange">Delete this app</button>
+                        <form class="form-group">
+                            <button class="btn btn--medium btn--orange">Delete this app</button>
+                        </form>
                     </section>
                 </section>
                 <!-- TEAM MEMBER TAB -->
-                <section id="team-member"></section>
+                <section id="team-member" class="tab-detail border-box">
+                    <section class="border-bottom">
+                        <header class="border-left-box border--green ">
+                            <p class="border-left__title">Add member</p>
+                        </header>
+                        <form class="form-group">
+                            <input type="text" class="text-box--white" placeholder="Enter your new member's email">
+                            <button class="btn btn--medium-2 btn--green">Invite</button>
+                        </form>
+                        <p>Pending invites</p>
+                        <!-- Table here -->
+                        <section class="table">
+                            <header class="table__row">
+                                <div class="col-3">
+                                    <p>Email</p>
+                                </div>
+                                <div class="col-4">
+                                    <p>Invitation Date</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>Resend</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>Remove</p>
+                                </div>
+                            </header>
+                        </section>
+                    </section>
+                    <!-- team part -->
+                    <section class="border-bottom">
+                        <header class="border-left-box border--cyan ">
+                            <p class="border-left__title">Team</p>
+                        </header>
+                        <form class="form-group">
+                            <input type="text" class="text-box--white" placeholder="Type your team name">
+                            <button class="btn btn--medium-2 btn--cyan">Create team</button>
+                        </form>
+                    </section>
+                    <!-- organization part -->
+                    <section>
+                        <header class="border-left-box border--pink ">
+                            <p class="border-left__title">Organization</p>
+                        </header>
+                        <section class="border-grey bgr-grey team-box">
+                            
+                            <header class="team-box__header">
+                                    All members
+                                    <span class="icon--dismiss">+</span>
+                            </header>
+                            <div class="avatar-row">
+                                <a class="avatar avatar--medium bgr-cyan" href="#"> H</a>
+                                <a class="avatar avatar--medium bgr-dark-gray btn-plus" href="#">+</a>
+                            </div>
 
+                        </section>
+                    </section>
+                </section>
                 <!-- MESS TAB -->
                 <section id="messaging" class="tab-detail border-box" style="display:none;">
                     <section class="border-bottom">
                         <header class="border-left-box border--blue ">
                             <p class="border-left__title">Begin new message</p>
                         </header>
-                        <form class="app-info__form-group">
-                            <div class="app-info__form">
-                                <input class="text-box--white" type="text" value="Hi {{first name}} !">
-                            </div>
+                        <form class="form-group">
+
+                            <input class="text-box--white" type="text" value="Hi {{first name}} !">
+
                         </form>
                     </section>
 
@@ -156,10 +213,11 @@
                         </header>
                         <form class="checkbox-wrap">
                             <input class="check-box" type="checkbox" name="checkbox" id="checkbox_id" value="value">
-                            <label for="checkbox_id">Automatically show a response when someone asks a question </label>
+                            <label for="checkbox_id">Automatically show a response when someone asks a question
+                            </label>
                         </form>
                         <form>
-                            <textarea class="text-box--white" name="" id="" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+                            <textarea class="text-box--white" name="" id="" cols="30" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
                         </form>
                     </section>
 
@@ -167,11 +225,8 @@
                         <header class=" border-left-box border--pink">
                             <p class="border-left__title">Ask email</p>
                         </header>
-                        <form class="app-info__form-group">
-                            <div class="app-info__form">
-                                <input class="text-box--white" type="text">
-                            </div>
-
+                        <form class="form-group">
+                            <input class="text-box--white" type="text">
                         </form>
                     </section>
 
@@ -179,10 +234,10 @@
                         <header class=" border-left-box border--blue">
                             <p class="border-left__title">Ask phone number</p>
                         </header>
-                        <form class="app-info__form-group">
-                            <div class="app-info__form">
-                                <input class="text-box--white" type="text">
-                            </div>
+                        <form class="form-group">
+
+                            <input class="text-box--white" type="text">
+
 
                         </form>
                     </section>
