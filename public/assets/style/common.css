@@ -178,7 +178,12 @@ body {
     border-radius: 5px;
 
 }
+.avatar--extra-large {
+    width: 147px;
+    height: 147px;
+    margin: 0 auto;
 
+}
 .avatar--large {
     width: 2vw;
     height: 2vw;
