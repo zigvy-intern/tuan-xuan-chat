@@ -61,11 +61,19 @@
 }
 .icon-remove:before {
   content: "\e912";
-  color: #979797;
+  color: #fff;
 }
 .icon-refresh:before {
   content: "\e913";
-  color: #979797;
+  color: #fff;
+}
+.icon-remove-2:before {
+  content: "\e912";
+  color: #CACACA;
+}
+.icon-refresh-2:before {
+  content: "\e913";
+  color: #CACACA;
 }
 .icon-general:before {
   content: "\e914";

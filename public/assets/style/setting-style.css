@@ -1,6 +1,7 @@
+@import url('./font-icomoon.css');
 @import url("./common.css");
 @import url("./nav.css");
-@import url('./font-icomoon.css');
+
 @import url('./style-conversation.css');
 
 
@@ -94,6 +95,7 @@ form {
 .team-box
 {
    padding:15px;
+   margin-bottom: 10px;
    
 }
 .team-box__header
@@ -102,13 +104,11 @@ form {
     margin-bottom: 10px;
     position: relative;
 }
-.team-box .icon--dismiss
+.team-box .icon-remove-2
 {
-
-    color: #D3D3D3;
-    font-size: 25px;
+    font-size: 10px;
     cursor: pointer;
     position: absolute;
-    right: 0;
+    right: -10px;
     top: -10px;
 }

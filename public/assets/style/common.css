@@ -73,46 +73,46 @@ body {
 /*COLORS*/
 .bgr-pink,
 .btn--pink {
-    background: #ED86BE;
+    background: #ED86BE !important;
 }
 
 .bgr-yellow,
 .btn--yellow {
-    background: #FFCD55;
+    background: #FFCD55 !important;
 }
 
 .bgr-blue,
 .btn--blue {
-    background: #4FBFE7;
+    background: #4FBFE7 !important;
 }
 
 .bgr-red,
 .btn--red {
-    background-color: #F26C6C;
+    background-color: #F26C6C !important;
 }
 
 .bgr-orange,
 .btn--orange {
-    background: #F9704F;
+    background: #F9704F !important;
 }
 
 .bgr-cyan,
 .btn--cyan {
-    background: #01CEBB;
+    background: #01CEBB !important;
 }
 
 .bgr-green,
 .btn--green {
-    background: #9FD16A;
+    background: #9FD16A !important;
 }
 
 .bgr-grey
 {
-    background: #F7F7F7 ;
+    background: #F7F7F7 !important;
 }
 .bgr-dark-gray
 {
-    background: #D3D3D3;
+    background: #D3D3D3 !important;
 }
 .border-left-box {
     border-left: 5px solid transparent;
@@ -215,6 +215,8 @@ body {
     padding: 6px;
     border-radius: 3px;
     font-size: 16px;
+    text-decoration: none;
+
 }
 
 
@@ -228,12 +230,15 @@ body {
 .text-box {
     width: 100%;
     padding: 8px 0 8px 14px;
-    color: #979797;
+    /* color: #979797; */
     border: unset;
     border-radius: 5px;
     background: #F7F7F7;
 }
-
+.text-box::placeholder, .text-box--white::placeholder
+{
+    color: #CACACA;
+}
 .text-box--white {
     resize: none;
     width: 100%;
@@ -252,7 +257,7 @@ body {
 
 .border-grey
 {
-    border: rgba(0, 0, 0, 0.1) solid 1px;
+    border: #F7F7F7 solid 1px;
     border-radius: 5px;
 }
 
@@ -392,8 +397,8 @@ body {
     margin-right: 15px;
     width: 50%;
     height: 100%;
+   
 }
-
 .avatar-row {
     display: flex;
     flex-direction: row;
@@ -407,21 +412,28 @@ body {
 
 .table
 {
-    border: #F7F7F7 solid 1px;
+    border: #F7F7F7 solid 1.5px;
     border-radius: 5px;
-
 }
 .table header
 {
     font-weight: bold;
+    margin-top: 10px 0;
+    border-top: unset;
 }
 .table__row
 {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    border-bottom: #F7F7F7 1px solid;
-    padding: 10px 20px;
+    border-top: #F7F7F7 1.5px solid;
+   height: 40px;
+    align-items: center;
+    padding: 0 20px;
+}
+.table__row:not(header) p
+{
+    color: #979797;
 }
 .col-3
 {
