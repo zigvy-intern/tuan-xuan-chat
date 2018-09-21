@@ -13,6 +13,14 @@ body {
     background: #F1F1F2;
 }
 
+.pull-left
+{
+    float: left;
+}
+.pull-right
+{
+    float: right;
+}
 .bold {
     font-weight: bold;
 }

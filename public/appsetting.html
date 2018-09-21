@@ -423,6 +423,11 @@
                         <div class="progress-bar">
                             <div class="progress-bar--active"></div>
                         </div>
+                        <div class="sub-info">
+                            <p>Your subscription starts on <span class="small-date bold">Mar 23, 2016</span> and will
+                                end on <span class="small-date bold">Apr 23, 2016</span></p>
+                            <button class="btn btn--cyan btn--medium-2">REQUEST</button>
+                        </div>
                     </section>
                     <!-- billig part -->
                     <section class="border-bottom">
@@ -440,14 +445,71 @@
                             </form>
                         </div>
                     </section>
-                    <section class="border-bottom">
+                    <!-- invoice part -->
+                    <section class="invoice border-bottom">
                         <header class="border-left-box border--green ">
                             <p class="border-left__title">Invoice</p>
                         </header>
+                        <section class="invoice-table">
+                            <header>
+                                <div class="invoice-table__col">ID</div>
+                                <div class="invoice-table__col">Date </div>
+                                <div class="invoice-table__col">Amount</div>
+                                <div class="invoice-table__col">Status</div>
+                            </header>
+                            <div class="invoice-table__row">
+                                <div class="invoice-table__col">241078</div>
+                                <div class="invoice-table__col">Mar 23, 2016</div>
+                                <div class="invoice-table__col">100.000 VND</div>
+                                <div class="invoice-table__col">PAID </div>
+                            </div>
+                        </section>
+                        <section class="invoice-detail">
+                            <header>
+                                <div class="invoice-table__col">Invoice ID</div>
+                                <div class="invoice-table__col">Invoice Date </div>
+                                <div class="invoice-table__col">App Name</div>
+                                <div class="invoice-table__col">App ID </div>
+                            </header>
+                            <div class="invoice-detail__row">
+                                <div class="invoice-table__col">241078</div>
+                                <div class="invoice-table__col">Mar 23, 2016 </div>
+                                <div class="invoice-table__col">Poppi</div>
+                                <div class="invoice-table__col">bw20dw </div>
+                            </div>
+
+                            <section class="period-detail">
+
+                                <p>
+                                    <span class="period__duration">Mar 23, 2016 - Apr 23, 2016</span>
+                                    <span class="period__sub"> New charges for upcoming month</span>
+                                </p>
+                                <div>
+                                    <div class="period-detail__row">
+                                        <div class="period-detail__col">SUBSCRIPTION</div>
+                                        <div class="period-detail__col">TIME PERIOD</div>
+                                        <div class="period-detail__col">AMOUNT</div>
+                                    </div>
+                                    <div class="period-detail__row">
+                                        <div class="period-detail__col">SMALL</div>
+                                        <div class="period-detail__col">MAR 23, 2016 - APR 23, 2016</div>
+                                        <div class="period-detail__col">100.000 VND</div>
+                                    </div>
+                                </div>
+                            </section>
+                            <footer>
+                              
+                                <button class="btn btn--medium-2 btn--green">PAID</button>
+                                <p>TOTAL</p>
+                                
+                                <div class="invoice-total__price">100.000 VND</div>
+                            </footer>
+                        </section>
                     </section>
                 </section>
             </section>
-            </div>
+        </section>
+        </div>
     </main>
 
     <script>
