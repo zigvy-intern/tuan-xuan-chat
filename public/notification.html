@@ -42,7 +42,11 @@
     <div class="inner-block">
 
       <section class="block--medium">
-
+        <!-- Unread -->
+        <div class="border-box inbox inbox--unread">
+          <p class="bold">UNREAD MESSAGE</p>
+          <span class="inbox__noti">10</span>
+        </div>
         <!-- Inbox -->
         <div class="border-box inbox">
           <section>
@@ -123,11 +127,28 @@
 
       <section class="block--extra-large">
         <section class="conversation__chart">
-          abc
+          <header>
+            <p class="bold">CONVERSATIONS</p>
+            <div class="tab">
+              <button class="tab__link" onclick="openChart(event,'last7days')" id="tab__link--default-open">Last
+                7 days</button>
+              <button class="tab__link" onclick="openChart(event,'last28days')">Last 28 days</button>
+              <button class="tab__link" onclick="openChart(event,'last90days')">Last 90 days</button>
+            </div>
+          </header>
+          <section id="last7days" class="tab__content">
+            <img class="chart__7days" src="./assets/img/SVG/chart.svg" alt="chart7days">
+          </section>
+          <section id="last28days" class="tab__content">
+            <img class="chart__28days" src="./assets/img/SVG/chart.svg" alt="chart28days">
+          </section>
+          <section id="last90days" class="tab__content">
+            <img class="chart__90days" src="./assets/img/SVG/chart.svg" alt="chart90days">
+          </section>
         </section>
-        <section class="convetsation__internal-room">
+        <section class="conversation__internal-room">
           <!-- CHATBOX -->
-          <section class="convetsation__internal-chat-room">
+          <section class="conversation__internal-chat-room">
             <div class="chatbox border-box">
               <header>
                 <p class="bold">INTERNAL CHAT ROOM</p>
@@ -208,49 +229,27 @@
               </section>
             </div>
           </section>
-          <!-- INFO-BOX -->
-          <section class="convetsation__activities">
-            <div class="info border-box">
-              <!-- Add -->
-              <section class="info__add border-bottom">
-                <input class="text-box" type="text" placeholder="Add teammates and team">
-                <p>Assign to teammate</p>
-                <div class="avatar-row">
-                  <a class="avatar avatar--medium bgr-cyan" href="#"> H</a>
-                  <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
-                </div>
-                <p>Assign to team</p>
-                <div class="avatar-row">
-                  <a class="avatar avatar--medium bgr-red" href="#"> H</a>
-
-                </div>
-              </section>
-
-
-              <!-- Detail -->
-              <section class="info__detail border-bottom">
-                <p>Name<span>luuminhtan123@gmail.com</span></p>
-                <p>Location<span>Ho Chi Minh city, Vietnam</span></p>
-                <p>Email<span>luuminhtan123@gmail.com</span></p>
-                <p>First seen<span>0:00 23/03/2016</span></p>
-                <p>Last seen<span>0:00 23/03/2016</span></p>
-                <p>Web sessions<span>10</span></p>
-              </section>
-
-
-              <!-- Tag -->
-              <section class="info__tag border-bottom">
-                <a class="tag" href="#">+ Add tag</a>
-                <a class="tag" href="#"> Business <span class="icon--dismiss">+</span></a>
-              </section>
-
-              <!-- Option -->
-              <section class="info__option">
-                <button class="btn btn--white btn--large">Close this conversation</button>
-                <button class="btn btn--yellow btn--large">Unsubscribe from email</button>
-                <button class="btn btn--red btn--large">Block this person</button>
-              </section>
-
+          <!-- ACTIVITIES -->
+          <section class="conversation__activities border-box">
+            <header>
+              <p class="bold">ACTIVITIES</p>
+            </header>
+            <section>
+              <div class="activities__date"><time>Today</time></div>
+              <ul class="activities__timeline">
+                <li class="activities--mentioned"><a href="#">Hung Vo</a> mentioned you in this <a href="#">conversation</a></li>
+                <li class="activities--assigned"><a href="#">Hung Vo</a> assigned a <a href="#">conversation</a> to you</li>
+                <li class="activities--closed">You closed this <a href="#">conversation</a></li>
+              </ul>
+            </section>
+            <section>
+              <div class="activities__date"><time>12/03/2016 </time></div>
+              <ul class="activities__timeline">
+                <li class="activities--mentioned"><a href="#">Hung Vo</a> mentioned you in this <a href="#">conversation</a></li>
+                <li class="activities--assigned"><a href="#">Hung Vo</a> assigned a <a href="#">conversation</a> to you</li>
+                <li class="activities--closed">You closed this <a href="#">conversation</a></li>
+              </ul>
+            </section>
           </section>
         </section>
 
@@ -258,7 +257,22 @@
 
     </div>
   </main>
-
+  <script>
+    function openChart(evt, day) {
+      var i, tab__content, tab__link;
+      tab__content = document.getElementsByClassName("tab__content");
+      for (i = 0; i < tab__content.length; i++) {
+        tab__content[i].style.display = "none";
+      }
+      tab__link = document.getElementsByClassName("tab__link");
+      for (i = 0; i < tab__link.length; i++) {
+        tab__link[i].className = tab__link[i].className.replace(" tab__link--active", "");
+      }
+      document.getElementById(day).style.display = "block";
+      evt.currentTarget.className += " tab__link--active";
+    }
+    document.getElementById("tab__link--default-open").click();
+  </script>
 </body>
 
 </html>
