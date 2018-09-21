@@ -278,6 +278,7 @@ body {
 /*OTHERS*/
 .inner-addon {
     position: relative;
+    width: 100%;
 }
 
 .inner-addon img {

@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <script src="./assets/js/jquery-3.3.1.min.js"></script>
+  <title>Demo Dchat</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    html,
+    body {
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .demo {
+      height: 100vh;
+      background-color: #21252D;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    a {
+      cursor:unset;
+    }
+    .logo {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 2rem;
+    }
+
+    .button {
+      padding: 10px 20px;
+      background: #01CEBB;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 5px;
+      text-transform: uppercase;
+      position: absolute;
+      top:60%;
+      transition: 0ms;
+    }
+  </style>
 </head>
+
 <body>
-  <a href="./switchapps.html">switchapps</a>
+  <section class="demo">
+    <a href="./notification.html"><img class="logo" src="./assets/img/SVG/logo.svg" alt="logo dchat"></a>
+    <a class="button" href="./notification.html">Dchat demo</a>
+  </section>
 </body>
+<script>
+  $(function () {
+    $(".button").on({
+      mouseover: function () {
+        $(this).css({
+          left: (Math.random() * 50) + "vw",
+          top: (Math.random() * 50) + "vh",
+        });
+      }
+    });
+  });
+</script>
+
 </html>
