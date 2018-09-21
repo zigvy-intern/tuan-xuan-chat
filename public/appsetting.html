@@ -93,22 +93,22 @@
             </section>
             <!-- TAB DETAIL -->
             <section class="block--extra-large">
-                <!-- GENERAL TAB  (nhớ xóa) -->
-                <section id="general" class="tab-detail border-box " style="display:none;">
+                <!-- GENERAL TAB -->
+                <section id="general" class="tab-detail border-box ">
                     <section class="border-bottom">
                         <header class="border-left-box border--yellow ">
                             <p class="border-left__title">Information</p>
                         </header>
-                        <form class="app-info__form-group">
-                            <div class="app-info__form">
+                        <div class="app-info__form-group">
+                            <form class="app-info__form">
                                 <p>Name of your app </p>
                                 <input class="text-box--white" type="text">
-                            </div>
-                            <div class="app-info__form">
+                            </form>
+                            <form class="app-info__form">
                                 <p>Web domain </p>
                                 <input class="text-box--white" type="text">
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </section>
 
                     <section class="border-bottom">
@@ -137,7 +137,7 @@
                     </section>
                 </section>
                 <!-- TEAM MEMBER TAB -->
-                <section id="team-member" class="tab-detail border-box">
+                <section id="team-member" class="tab-detail border-box" style="display:none;">
                     <section class="border-bottom">
                         <header class="border-left-box border--green ">
                             <p class="border-left__title">Add member</p>
@@ -163,6 +163,34 @@
                                     <p>Remove</p>
                                 </div>
                             </header>
+                            <div class="table__row">
+                                <div class="col-3">
+                                    <p>luuminhtan123@gmail.com</p>
+                                </div>
+                                <div class="col-4">
+                                    <p>12:30 AM 12/03/2016</p>
+                                </div>
+                                <div class="col-2">
+                                    <a href="#" class="icon bgr-blue icon-refresh"></a>
+                                </div>
+                                <div class="col-2">
+                                    <a href="#" class="icon bgr-red icon-remove"></a>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="col-3">
+                                    <p>truongvietha@designdevelop.com</p>
+                                </div>
+                                <div class="col-4">
+                                    <p>12:30 AM 12/03/2016</p>
+                                </div>
+                                <div class="col-2">
+                                    <a href="#" class="icon  icon-refresh-2"></a>
+                                </div>
+                                <div class="col-2">
+                                    <a href="#" class="icon icon-remove-2"></a>
+                                </div>
+                            </div>
                         </section>
                     </section>
                     <!-- team part -->
@@ -184,7 +212,32 @@
 
                             <header class="team-box__header">
                                 All members
-                                <span class="icon--dismiss">+</span>
+
+
+                            </header>
+                            <div class="avatar-row">
+                                <a class="avatar avatar--medium bgr-cyan" href="#"> H</a>
+
+                            </div>
+
+                        </section>
+                        <section class="border-grey bgr-grey team-box">
+
+                            <header class="team-box__header">
+                                Business team
+                                <span class="icon icon-remove-2"></span>
+                            </header>
+                            <div class="avatar-row">
+                                <a class="avatar avatar--medium bgr-cyan" href="#"> H</a>
+                                <a class="avatar avatar--medium bgr-dark-gray btn-plus" href="#">+</a>
+                            </div>
+
+                        </section>
+                        <section class="border-grey bgr-grey team-box">
+
+                            <header class="team-box__header">
+                                Marketing team
+                                <span class="icon icon-remove-2"></span>
                             </header>
                             <div class="avatar-row">
                                 <a class="avatar avatar--medium bgr-cyan" href="#"> H</a>
@@ -201,8 +254,7 @@
                             <p class="border-left__title">Begin new message</p>
                         </header>
                         <form class="form-group">
-
-                            <input class="text-box--white" type="text" value="Hi {{first name}} !">
+                            <input type="text" class="text-box--white" value="Hi {{first name}} !">
 
                         </form>
                     </section>
@@ -226,7 +278,8 @@
                             <p class="border-left__title">Ask email</p>
                         </header>
                         <form class="form-group">
-                            <input class="text-box--white" type="text">
+                            <input type="text" class="text-box--white">
+
                         </form>
                     </section>
 
@@ -235,9 +288,7 @@
                             <p class="border-left__title">Ask phone number</p>
                         </header>
                         <form class="form-group">
-
-                            <input class="text-box--white" type="text">
-
+                            <input type="text" class="text-box--white">
 
                         </form>
                     </section>
@@ -248,7 +299,68 @@
 
                 </section>
                 <!-- BLOCK TAB -->
-                <section id="blocked-people"></section>
+                <section id="blocked-people" class="tab-detail border-box" style="display:none;">
+                    <section class="border-bottom">
+                        <header class="border-left-box border--red ">
+                            <p class="border-left__title">Blocked people</p>
+                        </header>
+
+                        <section class="table">
+                            <header class="table__row">
+                                <div class="col-2">
+                                    <p>IP</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>Name</p>
+                                </div>
+                                <div class="col-3">
+                                    <p>Email</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>Blocked date</p>
+                                </div>
+                                <div class="col-1">
+                                    <p>Unblock</p>
+                                </div>
+                            </header>
+                            <div class="table__row">
+                                <div class="col-2">
+                                    <p>168.199.0.23</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>Luu Minh Tan</p>
+                                </div>
+                                <div class="col-3">
+                                    <p>luuminhtan123@gmail.com</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>12/03/2016</p>
+                                </div>
+                                <div class="col-1">
+                                    <span class="icon bgr-yellow icon-refresh"></span>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="col-2">
+                                    <p>168.199.1.11</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>Truong Viet Ha</p>
+                                </div>
+                                <div class="col-3">
+                                    <p>hatruong@gmail.com</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>23/02/2016</p>
+                                </div>
+                                <div class="col-1">
+                                    <span class="icon icon-refresh-2"></span>
+                                </div>
+                            </div>
+
+                        </section>
+                    </section>
+                </section>
                 <!-- UPGRADE TAB -->
                 <section id="upgrade" class="tab-detail border-box" style="display:none;">
                     <section class="border-bottom">
@@ -304,9 +416,101 @@
                     </section>
                 </section>
                 <!-- BILLING TAB -->
-                <section id="billing"></section>
+                <section id="billing" class="tab-detail border-box" style="display:none;">
+                    <section class="border-bottom">
+                        <header class="border-left-box border--cyan ">
+                            <p class="border-left__title">Current Subcription</p>
+                        </header>
+                        <div class="progress-bar">
+                            <div class="progress-bar--active"></div>
+                        </div>
+                        <div class="sub-info">
+                            <p>Your subscription starts on <span class="small-date bold">Mar 23, 2016</span> and will
+                                end on <span class="small-date bold">Apr 23, 2016</span></p>
+                            <button class="btn btn--cyan btn--medium-2">REQUEST</button>
+                        </div>
+                    </section>
+                    <!-- billig part -->
+                    <section class="border-bottom">
+                        <header class="border-left-box border--pink ">
+                            <p class="border-left__title">Billing detail</p>
+                        </header>
+                        <div class="app-info__form-group">
+                            <form class="app-info__form">
+                                <p>Company name </p>
+                                <input class="text-box--white" type="text" value="Poppi">
+                            </form>
+                            <form class="app-info__form">
+                                <p>Billing email </p>
+                                <input class="text-box--white" type="text" value="truongvietha@gmail.com">
+                            </form>
+                        </div>
+                    </section>
+                    <!-- invoice part -->
+                    <section class="invoice border-bottom">
+                        <header class="border-left-box border--green ">
+                            <p class="border-left__title">Invoice</p>
+                        </header>
+                        <section class="invoice-table">
+                            <header>
+                                <div class="invoice-table__col">ID</div>
+                                <div class="invoice-table__col">Date </div>
+                                <div class="invoice-table__col">Amount</div>
+                                <div class="invoice-table__col">Status</div>
+                            </header>
+                            <div class="invoice-table__row">
+                                <div class="invoice-table__col">241078</div>
+                                <div class="invoice-table__col">Mar 23, 2016</div>
+                                <div class="invoice-table__col">100.000 VND</div>
+                                <div class="invoice-table__col">PAID </div>
+                            </div>
+                        </section>
+                        <section class="invoice-detail">
+                            <header>
+                                <div class="invoice-table__col">Invoice ID</div>
+                                <div class="invoice-table__col">Invoice Date </div>
+                                <div class="invoice-table__col">App Name</div>
+                                <div class="invoice-table__col">App ID </div>
+                            </header>
+                            <div class="invoice-detail__row">
+                                <div class="invoice-table__col">241078</div>
+                                <div class="invoice-table__col">Mar 23, 2016 </div>
+                                <div class="invoice-table__col">Poppi</div>
+                                <div class="invoice-table__col">bw20dw </div>
+                            </div>
+
+                            <section class="period-detail">
+
+                                <p>
+                                    <span class="period__duration">Mar 23, 2016 - Apr 23, 2016</span>
+                                    <span class="period__sub"> New charges for upcoming month</span>
+                                </p>
+                                <div>
+                                    <div class="period-detail__row">
+                                        <div class="period-detail__col">SUBSCRIPTION</div>
+                                        <div class="period-detail__col">TIME PERIOD</div>
+                                        <div class="period-detail__col">AMOUNT</div>
+                                    </div>
+                                    <div class="period-detail__row">
+                                        <div class="period-detail__col">SMALL</div>
+                                        <div class="period-detail__col">MAR 23, 2016 - APR 23, 2016</div>
+                                        <div class="period-detail__col">100.000 VND</div>
+                                    </div>
+                                </div>
+                            </section>
+                            <footer>
+                              
+                                <button class="btn btn--medium-2 btn--green">PAID</button>
+                                <p>TOTAL</p>
+                                
+                                <div class="invoice-total__price">100.000 VND</div>
+                            </footer>
+                        </section>
+                    </section>
+                </section>
             </section>
-            </div>
+        </section>
+        </div>
     </main>
 
     <script>
