@@ -365,6 +365,7 @@ body {
     display: inline-block;
     border-radius: 50%;
     vertical-align: middle;
+    margin-right: 10px;
 }
 
 .inline-p {

@@ -23,8 +23,16 @@
     padding: 20px 30px;
 }
 
-
-
+.checkbox-wrap
+{
+    margin-bottom: 10px;
+}
+.check-box
+{
+    margin-right: 15px;
+    display: block;
+    background: black;
+}
 .app-info__form-group {
     display: flex;
     justify-content: space-between;
