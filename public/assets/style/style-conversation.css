@@ -217,17 +217,13 @@
     margin: 15px 0;
 }
 
-.info__tag,
-.avatar-row {
+.info__tag {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 
-.avatar-row>.avatar {
-    margin: 5px 10px 5px 0;
-}
 
 .info__detail p {
     color: #B1B1B1;

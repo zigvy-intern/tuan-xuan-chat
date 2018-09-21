@@ -28,8 +28,12 @@
 
 .inner-block {
     flex-direction: column;
+    justify-content: flex-start;
 }
 
+.inner-block>section {
+    margin-bottom: 15px;
+}
 
 .switch__title {
     display: inline-block;
