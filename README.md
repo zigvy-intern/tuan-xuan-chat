@@ -1,3 +1,3 @@
 # tuan-xuan-chat
 https://test-dchat.firebaseapp.com/
-Test nhánh develop
+Follow: https://trello.com/b/rrFXdzw2/dchat
