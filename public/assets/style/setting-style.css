@@ -3,7 +3,7 @@
 @import url("./nav.css");
 
 @import url('./style-conversation.css');
-
+@import url('./colorpicker.css');
 
 
 .tab__label p {
@@ -256,4 +256,8 @@
 {
     width: 25%;
     text-align: left;
+}
+.poppi-messenger-review {
+    width: 100%;
+    height: auto;
 }
