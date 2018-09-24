@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700');
-@import url('./simplebar.css');
 
 * {
     margin: 0;
@@ -206,6 +205,8 @@ body {
 
 }
 
+
+
 .avatar--extra-large {
     width: 147px;
     height: 147px;
@@ -226,8 +227,39 @@ body {
     width: 24px;
     height: 24px;
     font-size: 14px;
+    position: relative;
 }
 
+.tooltip {
+    visibility: hidden;
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 35px;
+    left: -45px;
+    z-index: 2;
+}
+
+.tooltip:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #333333;
+    position: absolute;
+    z-index: 1;
+    top: 23px;
+    left: 52px;
+}
+
+.avatar--medium:hover .tooltip {
+    visibility: visible;
+    transition: all 0.5s;
+}
 
 .icon {
     min-width: 30px;

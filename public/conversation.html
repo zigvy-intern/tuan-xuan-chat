@@ -7,7 +7,8 @@
   <title>Conversation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="./assets/style/style-conversation.css" />
-  <script src="assets/js/simplebar.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
 </head>
 
 <body>
@@ -57,7 +58,7 @@
   <main>
     <div class="inner-block">
 
-      <section class="block--medium">
+      <section class="block--medium" data-simplebar>
 
           <!-- Inbox -->
           <div class="border-box inbox">
@@ -156,7 +157,7 @@
       </section>
 
       <!-- CHATBOX -->
-      <section class="block--large">
+      <section class="block--large" data-simplebar>
 
         <div class="chatbox border-box">
           <header>
@@ -221,22 +222,6 @@
 
               </div>
             </div>
-            <div class="chat-line__wrap">
-              <div class="chat-line chat-line--send">
-
-                <div class="chat-line__content-wrap">
-                  <p class="inbox__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Odit perferendis explicabo quos, quasi recusandae vel, officiis veniam nisi
-                    laudantium aut, hic temporibus totam? Molestias repellendus saepe illo magnam
-                    in ipsa!</p>
-                  <p class="inbox__time">2 days</p>
-
-
-                </div>
-                <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
-
-              </div>
-            </div>
           </section>
           <!-- Chat input & option -->
           <section class="chatbox__input">
@@ -265,7 +250,7 @@
         </div>
       </section>
       <!-- INFO-BOX -->
-      <section class="block--small">
+      <section class="block--small" data-simplebar>
         <div class="info border-box">
           <!-- Add -->
           <section class="info__add border-bottom">
