@@ -203,7 +203,7 @@
 
 .period__duration {
     font-weight: bold;
-    color: #9FD16A;
+    color: var(--color-green);
 }
 
 .period__sub {

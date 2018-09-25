@@ -41,7 +41,7 @@
 }
 
 .nav__icon-item:hover, .active {
-    background: #01CEBB;
+    background: var(--color-cyan);
     transition: all 0.3s ease-in-out;
 }
 
@@ -60,7 +60,7 @@
     font-size:20px;
 }
 .nav__icon-item:hover span {
-    color:#fff;
+    color:var(--color-white);
 }
 
 
