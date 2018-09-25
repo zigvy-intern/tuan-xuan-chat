@@ -306,9 +306,21 @@
                     </section>
                 </section>
                 <!-- APPEARANCE TAB -->
-                <section id="appearance">
-
-
+                <section id="appearance" class="tab-detail border-box" style="display:none;">
+                    <section class="border-bottom">
+                        <header class="border-left-box border--cyan ">
+                            <p class="border-left__title">Theme Color</p>
+                        </header>
+                        <p id="colorpickerHolder">
+                        </p>
+                        <a class="colorpicker--reset color--blue" href="">Reset Color</a>    
+                    </section>
+                    <section class="border-bottom">
+                        <header class="border-left-box border--yellow ">
+                            <p class="border-left__title">Poppi Messenger Review</p>
+                        </header>
+                        <img class="poppi-messenger-review" src="./assets/img/poppi-messenger-review.jpg" alt="poppi messenger review">
+                    </section>
                 </section>
                 <!-- BLOCK TAB -->
                 <section id="blocked-people" class="tab-detail border-box" style="display:none;">
@@ -541,6 +553,11 @@
             evt.currentTarget.className += " active-tab-detail";
         }
     </script>
+    <script type="text/javascript" src="./assets/js/colorpicker/jquery.js"></script>
+    <script type="text/javascript" src="./assets/js/colorpicker/colorpicker.js"></script>
+    <script type="text/javascript" src="./assets/js/colorpicker/eye.js"></script>
+    <script type="text/javascript" src="./assets/js/colorpicker/layout.js"></script>
 </body>
+
 
 </html>

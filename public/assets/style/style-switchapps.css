@@ -29,10 +29,14 @@
 .inner-block {
     flex-direction: column;
     justify-content: flex-start;
+    overflow-y: auto;
 }
 
 .inner-block>section {
     margin-bottom: 15px;
+}
+.inner-block>* { 
+    overflow: unset;
 }
 
 .switch__title {
@@ -48,7 +52,7 @@
 }
 
 .switch__item {
-    background-color: #fff;
+    background-color: var(--color-white);
     border-radius: 5px;
     width: 15%;
     height: 8vh;
@@ -72,8 +76,8 @@
 }
 
 .switch__item-noti {
-    background-color: #F9704F;
-    color: #fff;
+    background-color: var(--color-orange);
+    color: var(--color-white);
     padding: 4px 12px;
     border-radius: 10px;
     font-size: 11px;
@@ -84,13 +88,13 @@
 
 .switch__item:hover,
 .switch__item:hover .switch__item-title, .switch__item:hover .switch__item-url {
-    background-color: #01CEBB;
-    color: #fff;
+    background-color: var(--color-cyan);
+    color: var(--color-white);
 }
 
 .switch__item:hover .switch__item-noti {
-    background-color: #fff;
-    color: #01CEBB;
+    background-color: var(--color-white);
+    color: var(--color-cyan);
 }
 
 .switch__item--create {

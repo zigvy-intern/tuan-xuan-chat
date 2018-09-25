@@ -59,7 +59,7 @@
 }
 
 .inbox__time {
-    color: #B1B1B1;
+    color: var(--color-grey);
     font-size: 9px;
     margin: 2px;
 }
@@ -150,6 +150,9 @@
     border-bottom: 5px solid transparent;
     z-index: 1;
    
+
+    background-color: var(--color-white);
+
 }
 
 .chat-line--receive {
@@ -202,14 +205,13 @@
 }
 
 .active-tab {
-
-    border-bottom: #01CEBB 2px solid;
+    border-bottom: var(--color-cyan) 2px solid;
 }
 
 .chat__tab ul li a {
 
     font-size: 12px;
-    color: #B1B1B1;
+    color: var(--color-grey);
     display: block;
     text-decoration: none;
     width: 100%;
@@ -217,7 +219,7 @@
 }
 
 .active-tab a {
-    color: #01CEBB !important;
+    color: var(--color-cyan) !important;
     font-weight: bold;
 }
 
@@ -274,7 +276,7 @@
 
 
 .info__detail p {
-    color: #B1B1B1;
+    color: var(--color-grey);
 
 }
 
@@ -321,11 +323,11 @@
     text-decoration: none;
     font-size: 17px;
     margin-right: 13px;
-    color: #B1B1B1;
+    color: var(--color-grey);
 }
 
 .chat__option a:hover {
-    color: #01CEBB;
+    color: var(--color-cyan);
 }
 
 .chat__option ul {

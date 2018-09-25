@@ -3,7 +3,7 @@
 @import url("./nav.css");
 
 @import url('./style-conversation.css');
-
+@import url('./colorpicker.css');
 
 
 .tab__label p {
@@ -203,7 +203,7 @@
 
 .period__duration {
     font-weight: bold;
-    color: #9FD16A;
+    color: var(--color-green);
 }
 
 .period__sub {
@@ -256,4 +256,8 @@
 {
     width: 25%;
     text-align: left;
+}
+.poppi-messenger-review {
+    width: 100%;
+    height: auto;
 }
