@@ -43,8 +43,12 @@
 .nav__icon-item:hover, .active {
     background: var(--color-cyan);
     transition: all 0.3s ease-in-out;
+  
 }
-
+.nav__icon-item:hover span, .active span
+{
+    color: white !important;
+}
 .nav__icon-item a {
     padding: 5px;
     width: inherit;
@@ -59,9 +63,11 @@
     padding: 1vw;
     font-size:20px;
 }
+
 .nav__icon-item:hover span {
     color:var(--color-white);
 }
+
 
 
 .aside__avatar {
