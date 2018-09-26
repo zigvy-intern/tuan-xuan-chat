@@ -147,3 +147,9 @@
 .activities--closed::before {
     background-color: var(--color-orange);
 }
+
+@media (max-width:600px) {
+    .aside-nav {
+        display: none;
+    }
+}

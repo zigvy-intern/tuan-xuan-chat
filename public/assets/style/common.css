@@ -509,6 +509,9 @@ body {
 
 @media(max-width:411px) {
     .inner-block {
+        padding: 0px;
+    }
+    .inner-block {
         max-width: 100%;
         height: 85vh;
         display: flex;
@@ -518,8 +521,8 @@ body {
         padding: 5px;
     }
     
-    .inner-block>* {
-        margin-right: 23px;
+    .inner-block > * {
+        margin-right: 0px;
     }
     
     .block--medium {
