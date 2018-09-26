@@ -429,14 +429,6 @@ body {
     overflow-y: auto;
 }
 
-.line {
-    height: 1px;
-    background: #F0F0F0;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
 .dot {
     width: 12px;
     height: 12px;
