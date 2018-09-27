@@ -177,8 +177,6 @@
     width: 80%;
 }
 
-.grid-container.open-menu #menu .menu-line {}
-
 .grid-container.open-menu #menu .menu-line-2 {
     opacity: 0;
 }
@@ -190,9 +188,17 @@
 .grid-container.open-menu #menu .menu-line-3 {
     width: 100%;
     transform: translateY(-7px) translateY(50%) rotate(45deg);
-
 }
-
+/* Style inbox*/
+.inbox {
+    min-height: 100px;
+}
+.inbox .inbox__content {
+    width: 90%;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
 /* Style chatbox*/
 .chatbox {
     display:grid;
