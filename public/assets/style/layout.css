@@ -196,13 +196,22 @@
 /* Style chatbox*/
 .chatbox {
     display:grid;
-    height: 70%;
-    grid-template-rows: 10% 80% 20%; 
+    height: 100%;
+    max-height: 1200px;
+    grid-template-rows: 5vh auto minmax(155px,15%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)!important;
+    border-radius: 5px!important;
+}
+.chatbox.border-box {
+    background:unset;
+    border: unset;
+    box-shadow: unset;
+    height: auto;
 }
 .chatbox-header {
     display: flex;
     background-color: #fff;
-    height: 30px;
+    height: 100%;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -224,7 +233,7 @@
     width: inherit;
     padding: 10px;
     background: #F7F7F7;
-    /* min-height: 400px; */
+    height: auto;
     overflow: auto;
 
 }
@@ -296,10 +305,6 @@
     border-left: 5px solid white;
     border-bottom: 5px solid transparent;
     z-index: 1;
-
-
-    background-color: var(--color-white);
-
 }
 
 .chat-line--receive {
@@ -332,6 +337,11 @@
 
 }
 
+/* Chat input */
+.chatbox__input {
+    background-color:var(--color-white);
+    height: 100%;
+}
 .chat__tab {
     border-bottom: #F0F0F0 1px solid;
 }
@@ -417,10 +427,12 @@
         display: none;
     }
 
-    .menu-burgger {
+    .menu-burger {
         display: block;
     }
-
+    .chatbox {
+        height: 100%;
+    }
     .open-menu {
         grid-template-columns: minmax(75px, 5vw) 95vw;
         grid-template-rows: minmax(50px, 5vw) minmax(auto, calc(100vh - 5vw));

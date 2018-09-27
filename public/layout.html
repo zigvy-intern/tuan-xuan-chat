@@ -16,44 +16,44 @@
 <body>
     <div class="grid-container">
         <header class="header-container">
-            
-                <div class="menu-burger" id="menu">
-                    <span class="menu-line menu-line-1"></span>
-                    <span class="menu-line menu-line-2"></span>
-                    <span class="menu-line menu-line-3"></span>
-                </div>
-    
-                <div class="notification">
-                    <ul class="noti__list">
-                        <li class="noti__item">
-                            <a class="avatar avatar--medium bgr-cyan" href="#">T</a>
-                            <a class="noti__label" href="#">Me&nbsp;<span class="noti bgr-red">5</span></a>
-                        </li>
-                        <li class="noti__item">
-                            <a class="noti__label" href="#">Unassigned&nbsp;<span class="noti invisible">15</span></a>
-                        </li>
-                        <li class="noti__item">
-                            <a class="noti__label" href="#">All&nbsp;<span class="noti bgr-red">10</span></a>
-                        </li>
-                        <li class="noti__item hidden-md">
-                            <a class="noti__label" href="#"><span class="icon-bell"></span><span class="noti bgr-red">22</span></a>
-                        </li>
-                        <li class="noti__item hidden-md">
-                            <a class="noti__label" href="#">Online&nbsp;<span class="noti bgr-green">22</span></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="search-bar">
-                    <form action="" class="inner-addon">
-                       <span class="right-addon icon-search"></span>
-                        <input type="text" class="text-box">
-                    </form>
-                    <ul>
-                        <li class="noti__item">
-                            <a class="noti__label" href="#">Online&nbsp;<span class="noti bgr-green">22</span></a></li>
-                    </ul>
-                </div>
-            </header>
+
+            <div class="menu-burger" id="menu">
+                <span class="menu-line menu-line-1"></span>
+                <span class="menu-line menu-line-2"></span>
+                <span class="menu-line menu-line-3"></span>
+            </div>
+
+            <div class="notification">
+                <ul class="noti__list">
+                    <li class="noti__item">
+                        <a class="avatar avatar--medium bgr-cyan" href="#">T</a>
+                        <a class="noti__label" href="#">Me&nbsp;<span class="noti bgr-red">5</span></a>
+                    </li>
+                    <li class="noti__item">
+                        <a class="noti__label" href="#">Unassigned&nbsp;<span class="noti invisible">15</span></a>
+                    </li>
+                    <li class="noti__item">
+                        <a class="noti__label" href="#">All&nbsp;<span class="noti bgr-red">10</span></a>
+                    </li>
+                    <li class="noti__item hidden-md">
+                        <a class="noti__label" href="#"><span class="icon-bell"></span><span class="noti bgr-red">22</span></a>
+                    </li>
+                    <li class="noti__item hidden-md">
+                        <a class="noti__label" href="#">Online&nbsp;<span class="noti bgr-green">22</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-bar">
+                <form action="" class="inner-addon">
+                    <span class="right-addon icon-search"></span>
+                    <input type="text" class="text-box">
+                </form>
+                <ul>
+                    <li class="noti__item">
+                        <a class="noti__label" href="#">Online&nbsp;<span class="noti bgr-green">22</span></a></li>
+                </ul>
+            </div>
+        </header>
 
         <aside class="menu-container">
             <div class="aside-nav">
@@ -79,7 +79,7 @@
         </aside>
 
         <main class="main-container">
-            <div class="inbox-container" data-simplebar>
+            <div class="inbox-container">
                 <div class="border-box inbox">
                     <section>
                         <a class="avatar avatar--medium bgr-pink avatar--responsive" href="#"> H</a>
@@ -173,85 +173,112 @@
 
             </div>
 
-            <div class="chatbox-container">
-                <div class="chatbox border-box">
-                    <header class="chatbox-header">
-                        <div class="chatbox-header__main bold">
-                            tquoctuan@gmail.com
-                        </div>
-                        <div class="chatbox-header__right" onclick="openInfo()">
-                            <i class="fas fa-ellipsis-h"></i>
-                        </div>
-                    </header>
-                    <!-- Show mess part-->
-                    <section class="chatbox__content">
-                        <!-- One line -->
-                        <div class="chat-line__wrap">
-                            <div class="chat-line chat-line--receive">
-                                <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
-                                <div class="chat-line__content-wrap">
-                                    <div class="chat-line__content">
-                                        <p class="inbox__content">Lorem ipsum dolor sit amet consectetur adipisicing
-                                            elit.
-                                            Odit perferendis explicabo quos, quasi recusandae vel, officiis veniam nisi
-                                            laudantium aut, hic temporibus totam? Molestias repellendus saepe illo
-                                            magnam
-                                            in ipsa!</p>
-                                        <p class="inbox__time">2 days</p>
-                                    </div>
+            <div class="chatbox-container chatbox border-box">
+                <header class="chatbox-header">
+                    <div class="chatbox-header__main bold">
+                        tquoctuan@gmail.com
+                    </div>
+                    <div class="chatbox-header__right" onclick="openInfo()">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </header>
+                <!-- Show mess part-->
+                <section class="chatbox__content">
+                    <!-- One line -->
+                    <div class="chat-line__wrap">
+                        <div class="chat-line chat-line--receive">
+                            <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
+                            <div class="chat-line__content-wrap">
+                                <div class="chat-line__content">
+                                    <p class="inbox__content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Odit perferendis explicabo quos, quasi recusandae vel, officiis veniam nisi
+                                        laudantium aut, hic temporibus totam? Molestias repellendus saepe illo
+                                        magnam
+                                        in ipsa!</p>
+                                    <p class="inbox__time">2 days</p>
                                 </div>
                             </div>
                         </div>
-                        <!-- One line -->
-                        <div class="chat-line__wrap">
-                            <div class="chat-line chat-line--send">
-
-                                <div class="chat-line__content-wrap">
-                                    <div class="chat-line__content">
-                                        <p class="inbox__content">Lorem ipsum dolor sit amet consectetur adipisicing
-                                            elit.
-                                            Odit perferendis explicabo quos, quasi recusandae vel, officiis veniam nisi
-                                            laudantium aut, hic temporibus totam? Molestias repellendus saepe illo
-                                            magnam
-                                            in ipsa!</p>
-                                        <p class="inbox__time">2 days</p>
-                                    </div>
+                    </div>
+                    <!-- One line -->
+                    <div class="chat-line__wrap">
+                        <div class="chat-line chat-line--receive">
+                            <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
+                            <div class="chat-line__content-wrap">
+                                <div class="chat-line__content">
+                                    <p class="inbox__content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Odit perferendis explicabo quos, quasi recusandae vel, officiis veniam nisi
+                                        laudantium aut, hic temporibus totam? Molestias repellendus saepe illo
+                                        magnam
+                                        in ipsa!</p>
+                                    <p class="inbox__time">2 days</p>
                                 </div>
-                                <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
                             </div>
                         </div>
-                    </section>
-                    <!-- Chat input & option -->
-                    <section class="chatbox__input">
-                        <!-- Features -->
-                        <header class="chat__tab">
-                            <ul>
-                                <li class="active-tab"><a href="">Reply</a></li>
-                                <li><a href="">Note</a></li>
-                            </ul>
-                        </header>
-                        <!-- Input space -->
-                        <textarea class="chat__text-box" type="text" placeholder="Enter your message here"></textarea>
-                        <!-- More input options -->
-                        <footer class="chat__option">
-                            <ul>
-                                <li><a href="#">Aa</a></li>
-                                <li><a href="#" class="icon-attachment"></a></li>
-                                <li><a href="#" class="icon-picture"></a></li>
-                                <li><a href="#" class="icon-emoji"></a></li>
-                            </ul>
-                            <button class="btn btn--small btn--cyan">
-                                Send
-                            </button>
-                        </footer>
-                    </section>
-                </div>
-                <section>
+                    </div>
+                    <!-- One line -->
+                    <div class="chat-line__wrap">
+                        <div class="chat-line chat-line--receive">
+                            <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
+                            <div class="chat-line__content-wrap">
+                                <div class="chat-line__content">
+                                    <p class="inbox__content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Odit perferendis explicabo quos, quasi recusandae vel, officiis veniam nisi
+                                        laudantium aut, hic temporibus totam? Molestias repellendus saepe illo
+                                        magnam
+                                        in ipsa!</p>
+                                    <p class="inbox__time">2 days</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- One line -->
+                    <div class="chat-line__wrap">
+                        <div class="chat-line chat-line--send">
+
+                            <div class="chat-line__content-wrap">
+                                <div class="chat-line__content">
+                                    <p class="inbox__content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Odit perferendis explicabo quos, quasi recusandae vel, officiis veniam nisi
+                                        laudantium aut, hic temporibus totam? Molestias repellendus saepe illo
+                                        magnam
+                                        in ipsa!</p>
+                                    <p class="inbox__time">2 days</p>
+                                </div>
+                            </div>
+                            <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
+                        </div>
+                    </div>
                 </section>
-                <footer>
-
-                </footer>
+                <!-- Chat input & option -->
+                <section class="chatbox__input">
+                    <!-- Features -->
+                    <header class="chat__tab">
+                        <ul>
+                            <li class="active-tab"><a href="">Reply</a></li>
+                            <li><a href="">Note</a></li>
+                        </ul>
+                    </header>
+                    <!-- Input space -->
+                    <textarea class="chat__text-box" type="text" placeholder="Enter your message here"></textarea>
+                    <!-- More input options -->
+                    <footer class="chat__option">
+                        <ul>
+                            <li><a href="#">Aa</a></li>
+                            <li><a href="#" class="icon-attachment"></a></li>
+                            <li><a href="#" class="icon-picture"></a></li>
+                            <li><a href="#" class="icon-emoji"></a></li>
+                        </ul>
+                        <button class="btn btn--small btn--cyan">
+                            Send
+                        </button>
+                    </footer>
+                </section>
             </div>
 
             <div class="info-container">
