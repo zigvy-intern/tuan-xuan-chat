@@ -448,6 +448,12 @@
 }
 
 @media (max-width:768px) {
+    .main-container {
+        height: 90vh;
+    }
+    .header-container {
+        border-bottom: rgba(0, 0, 0, 0.1) solid 1px;
+    }
     .noti__item.hidden-md {
         display: flex;
     }
@@ -506,7 +512,12 @@
         grid-row: 1;
         height: var(--main-height);
     }
-
+    .chatbox.border-box {
+        background: unset;
+        border-left: rgba(0, 0, 0, 0.1) solid 1px;
+        box-shadow: unset!important;
+        border-radius: 0!important;
+    }
     .info-container {
         display: none;
     }
