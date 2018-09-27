@@ -14,6 +14,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: all 0.5s;
 }
 
 /* Set layout */
@@ -138,7 +139,12 @@
 .search-bar {
     margin: 0 15px;
 }
-
+.search-bar .icon-search
+{
+   
+    z-index: 10;
+    margin: 8px;
+}
 /* Style menu*/
 .menu-burger {
     position: relative;
@@ -263,12 +269,7 @@
         background: #F7F7F7;
         color: #979797;
     }
-    .search-bar .icon-search
-    {
-       
-        z-index: 10;
-        margin: 8px;
-    }
+
     .menu-burger {
         display: block;
     }
