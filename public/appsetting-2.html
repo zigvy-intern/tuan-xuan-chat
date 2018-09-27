@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/style/layout.css">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
+    <title>App Setting</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header-container">
+
+            <div class="menu-burger" id="menu">
+                <span class="menu-line menu-line-1"></span>
+                <span class="menu-line menu-line-2"></span>
+                <span class="menu-line menu-line-3"></span>
+            </div>
+
+            <h1 class="header__heading">App Setting</h1>
+        </header>
+
+        <aside class="menu-container">
+            <div class="aside-nav">
+                <div class="aside__logo center-inner">
+                    <a href="#"><img src="./assets/img/SVG/logo.svg" alt="logo"></a>
+                </div>
+
+                <nav>
+                    <ul class="nav__container">
+                        <li class="nav__icon-item"><a href="#"><span class="icon-bell"></span></a></li>
+                        <li class="nav__icon-item"><a href="#"><span class="icon-user"></span></a></li>
+                        <li class="nav__icon-item"><a href="#"><span class="icon-chat"></span></a></li>
+                        <li class="nav__icon-item"><a href="#"><span class="icon-setting"></span></a></li>
+                        <li class="nav__icon-item"><a href="#"><span class="icon-switch"></span></a></li>
+                    </ul>
+                </nav>
+                <div class="center-inner">
+                    <div class="aside__avatar"> <a class="avatar avatar--large bgr-cyan" href="profile-member.html"> T
+                        </a></div>
+                </div>
+
+            </div>
+        </aside>
+
+        <main class="main-container">
+           <section class="tab-container">
+                <!-- TAB -->
+                <a class="border-box tab__label active-tab-detail" onclick="changeTab(event,'general')">
+                        <div class="icon bgr-cyan icon-general">
+
+                        </div>
+                        <p>General</p>
+                    </a>
+                    <!-- TAB -->
+                    <a class="border-box tab__label" onclick="changeTab(event,'team-member')">
+                        <div class="icon bgr-pink icon-member">
+
+                        </div>
+                        <p>Team member</p>
+                    </a>
+                    <a class="border-box tab__label" onclick="changeTab(event,'messaging')">
+                        <div class="icon bgr-green icon-messaging ">
+
+                        </div>
+                        <p>Messaging</p>
+                    </a>
+                    <a class="
+                            border-box tab__label" onclick="changeTab(event,'appearance')">
+                        <div class="icon bgr-blue icon-appearance">
+
+                        </div>
+                        <p>Appearance</p>
+                    </a>
+                    <a class="border-box tab__label" onclick="changeTab(event,'blocked-people')">
+                        <div class="icon bgr-red icon-blocked">
+
+                        </div>
+                        <p>Blocked people</p>
+                    </a>
+                    <a class="border-box tab__label" onclick="changeTab(event,'upgrade')">
+                        <div class="icon bgr-yellow  icon-upgrade">
+
+                        </div>
+                        <p>Upgrade</p>
+                    </a>
+                    <a class="border-box tab__label" onclick="changeTab(event,'billing')">
+                        <div class="icon bgr-pink icon-billing">
+
+                        </div>
+                        <p>Billing</p>
+                    </a>
+           </section>
+           <section class="tab-detail-container">
+
+           </section>
+        </main>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#menu").click(function () {
+            $(".grid-container").toggleClass("open-menu");
+        })
+    });
+
+    function openInfo() {
+        $(".info-container").addClass("open-info");
+    }
+
+    function closeInfo() {
+        $(".info-container").removeClass("open-info");
+    }
+</script>
+
+</html>
