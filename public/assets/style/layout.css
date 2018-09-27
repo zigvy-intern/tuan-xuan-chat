@@ -16,7 +16,7 @@
     box-sizing: border-box;
 }
 
-/* Set layout */
+/* Set layout website */
 .grid-container {
     display: grid;
     grid-template-columns: minmax(75px, 5vmax) 95vw;
@@ -38,14 +38,13 @@
     grid-area: menu;
     background-color: aqua;
 }
-
+/* Set layout Main Container */
 .main-container {
     grid-area: main;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-gap: var(--padding-and-gap);
     padding: var(--padding-and-gap);
-    /* grid-template-rows: min-content; */
 }
 
 .inbox-container {
@@ -64,6 +63,10 @@
     grid-column: 8/11;
 }
 
+.chart-container {
+    
+}
+
 /* Style header*/
 .header-container {
     padding-left: var(--padding-and-gap);
@@ -74,17 +77,23 @@
     overflow: hidden;
 }
 
+.header__heading {
+    text-transform: uppercase;
+    margin-right: auto;
+}
+
 .notification,
 .search-bar {
     width: 50%;
 
 }
-.search-bar .icon-search
-{
-   
+
+.search-bar .icon-search {
+
     z-index: 10;
     margin: 8px;
 }
+
 .noti__list,
 .search-bar {
 
@@ -177,8 +186,6 @@
     width: 80%;
 }
 
-.grid-container.open-menu #menu .menu-line {}
-
 .grid-container.open-menu #menu .menu-line-2 {
     opacity: 0;
 }
@@ -190,24 +197,37 @@
 .grid-container.open-menu #menu .menu-line-3 {
     width: 100%;
     transform: translateY(-7px) translateY(50%) rotate(45deg);
-
 }
 
-/* Style chatbox*/
+/* Style inbox of Conversation*/
+.inbox {
+    min-height: 100px;
+}
+
+.inbox .inbox__content {
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Style chatbox of Conversation*/
 .chatbox {
-    display:grid;
+    display: grid;
     height: 100%;
     max-height: 1200px;
-    grid-template-rows: 5vh auto minmax(155px,15%);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)!important;
-    border-radius: 5px!important;
+    grid-template-rows: 5vh auto minmax(155px, 15%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 5px !important;
 }
+
 .chatbox.border-box {
-    background:unset;
+    background: unset;
     border: unset;
     box-shadow: unset;
     height: auto;
 }
+
 .chatbox-header {
     display: flex;
     background-color: #fff;
@@ -216,8 +236,6 @@
     align-items: center;
     position: relative;
 }
-
-.chatbox-header__main {}
 
 .chatbox-header__right {
     position: absolute;
@@ -330,18 +348,18 @@
     justify-self: left;
 }
 
-
 .chat-line--send {
     display: grid;
     grid-template-columns: 90% 10%;
 
 }
 
-/* Chat input */
+/* Chat input of Chatbox */
 .chatbox__input {
-    background-color:var(--color-white);
+    background-color: var(--color-white);
     height: 100%;
 }
+
 .chat__tab {
     border-bottom: #F0F0F0 1px solid;
 }
@@ -402,7 +420,7 @@
     list-style: none;
 }
 
-/* Style info*/
+/* Style info of Conversation*/
 .info-container {
     position: relative;
     overflow-y: auto;
@@ -423,6 +441,7 @@
             'main';
     }
 
+    /* Menu Responsive*/
     .menu-container {
         display: none;
     }
@@ -430,9 +449,7 @@
     .menu-burger {
         display: block;
     }
-    .chatbox {
-        height: 100%;
-    }
+
     .open-menu {
         grid-template-columns: minmax(75px, 5vw) 95vw;
         grid-template-rows: minmax(50px, 5vw) minmax(auto, calc(100vh - 5vw));
@@ -445,15 +462,26 @@
     .grid-container.open-menu .menu-container {
         display: block;
     }
+
+    /* Chatbox Responsive*/
+    .chatbox {
+        height: 100%;
+    }
 }
 
 @media (max-width:768px) {
     .main-container {
         height: 90vh;
+        grid-gap: 0px;
+        padding: 0px;
+        position: relative;
     }
+
+    /* Header Resposve*/
     .header-container {
         border-bottom: rgba(0, 0, 0, 0.1) solid 1px;
     }
+
     .noti__item.hidden-md {
         display: flex;
     }
@@ -479,10 +507,9 @@
         background: transparent;
     }
 
-    .search-bar .text-box:focus
-    {
-        width:100%;
-        border:yellowgreen 1px solid;
+    .search-bar .text-box:focus {
+        width: 100%;
+        border: yellowgreen 1px solid;
         background: #F7F7F7;
         color: #979797;
     }
@@ -490,12 +517,10 @@
     .menu-burger {
         display: block;
     }
-    .main-container {
-        grid-gap: 0px;
-        padding: 0px;
-        position: relative;
-    }
 
+
+
+    /* Resposive Inbox*/
     .inbox-container {
         grid-gap: 0px;
     }
@@ -506,23 +531,6 @@
         height: var(--main-height);
     }
 
-    .chatbox-container {
-        grid-column: 3/11;
-        height: 300px;
-        grid-row: 1;
-        height: var(--main-height);
-    }
-    .chatbox.border-box {
-        background: unset;
-        border-left: rgba(0, 0, 0, 0.1) solid 1px;
-        box-shadow: unset!important;
-        border-radius: 0!important;
-    }
-    .info-container {
-        display: none;
-    }
-
-    /* Resposive Inbox*/
     .inbox-container .border-box {
         margin: 0;
         border: unset;
@@ -559,10 +567,29 @@
         padding: 0;
     }
 
+    /* Chatbox responsive*/
+    .chatbox-container {
+        grid-column: 3/11;
+        height: 300px;
+        grid-row: 1;
+        height: var(--main-height);
+    }
+
+    .chatbox.border-box {
+        background: unset;
+        border-left: rgba(0, 0, 0, 0.1) solid 1px;
+        box-shadow: unset !important;
+        border-radius: 0 !important;
+    }
 
     .chatbox-header__right,
     .info-header__right {
         display: block;
+    }
+
+    /* Toggle Open Responsive Info*/
+    .info-container {
+        display: none;
     }
 
     .open-info {
@@ -576,9 +603,6 @@
         z-index: 1;
     }
 
-    .simplebar-content {
-        padding: 0px !important;
-    }
 }
 
 /*Small devices (landscape phones, 576px and up)*/
