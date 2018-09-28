@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/style/layout.css">
+    <link rel="stylesheet" href="./assets/style/colorpicker.css">
     <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -49,57 +50,524 @@
             </div>
         </aside>
 
-        <main class="main-container">
-           <section class="tab-container">
+        <main class="main-container appsetting">
+            <section class="tab-container">
                 <!-- TAB -->
                 <a class="border-box tab__label active-tab-detail" onclick="changeTab(event,'general')">
-                        <div class="icon bgr-cyan icon-general">
+                    <div class="icon bgr-cyan icon-general">
 
+                    </div>
+                    <p>General</p>
+                </a>
+                <!-- TAB -->
+                <a class="border-box tab__label" onclick="changeTab(event,'team-member')">
+                    <div class="icon bgr-pink icon-member">
+
+                    </div>
+                    <p>Team member</p>
+                </a>
+                <a class="border-box tab__label" onclick="changeTab(event,'messaging')">
+                    <div class="icon bgr-green icon-messaging ">
+
+                    </div>
+                    <p>Messaging</p>
+                </a>
+                <a class=" border-box tab__label" onclick="changeTab(event,'appearance')">
+                    <div class="icon bgr-blue icon-appearance">
+
+                    </div>
+                    <p>Appearance</p>
+                </a>
+                <a class="border-box tab__label" onclick="changeTab(event,'blocked-people')">
+                    <div class="icon bgr-red icon-blocked">
+
+                    </div>
+                    <p>Blocked people</p>
+                </a>
+                <a class="border-box tab__label" onclick="changeTab(event,'upgrade')">
+                    <div class="icon bgr-yellow  icon-upgrade">
+
+                    </div>
+                    <p>Upgrade</p>
+                </a>
+                <a class="border-box tab__label" onclick="changeTab(event,'billing')">
+                    <div class="icon bgr-pink icon-billing">
+
+                    </div>
+                    <p>Billing</p>
+                </a>
+            </section>
+            <section class="tab-detail-container">
+
+                <!-- GENERAL TAB -->
+                <section id="general" class="tab-detail border-box ">
+                    <section class="border-bottom">
+                        <header class="border-left-box border--yellow ">
+                            <p class="border-left__title">Information</p>
+                        </header>
+                        <div class="app-info__form-group">
+                            <form class="app-info__form">
+                                <p>Name of your app </p>
+                                <input class="text-box--white" type="text">
+                            </form>
+                            <form class="app-info__form">
+                                <p>Web domain </p>
+                                <input class="text-box--white" type="text">
+                            </form>
                         </div>
-                        <p>General</p>
-                    </a>
-                    <!-- TAB -->
-                    <a class="border-box tab__label" onclick="changeTab(event,'team-member')">
-                        <div class="icon bgr-pink icon-member">
+                    </section>
 
+                    <section class="border-bottom">
+                        <header class="border-left-box border--green">
+                            <p class="border-left__title">App integration</p>
+                        </header>
+                        <form>
+                            <textarea class="text-box--white" name="" id="" cols="30" rows="5">!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?a(require("jquery")):a(jQuery)}(function(a){function b(a){re- turn h.raw?a:encodeURIComponent(a)}function c(a){return h.raw?a:decodeURIComponent(a)}function d(a){return b(h.json?JSON.stringify(a):String(a))}func- tion e(a){0===a.indexOf('"')&&(a=a.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\"));</textarea>
+                        </form>
+                        <div class="connect-status">
+                            <p class="inline-p">Connection status: </p>
+                            <div class="dot bgr-green"></div>
+                            <p class="inline-p">Connected</p>
                         </div>
-                        <p>Team member</p>
-                    </a>
-                    <a class="border-box tab__label" onclick="changeTab(event,'messaging')">
-                        <div class="icon bgr-green icon-messaging ">
 
+                    </section>
+
+                    <section>
+                        <header class=" border-left-box border--red">
+                            <p class="border-left__title">Delete app</p>
+                        </header>
+                        <p class="grey-p">Warning: All your data will be deleted </p>
+                        <form class="form-group">
+                            <button class="btn btn--medium btn--orange">Delete this app</button>
+                        </form>
+                    </section>
+                </section>
+                <!-- TEAM MEMBER TAB -->
+                <section id="team-member" class="tab-detail border-box" style="display:none;">
+                    <section class="border-bottom">
+                        <header class="border-left-box border--green ">
+                            <p class="border-left__title">Add member</p>
+                        </header>
+                        <form class="form-group">
+                            <input type="text" class="text-box--white" placeholder="Enter your new member's email">
+                            <button class="btn btn--medium-2 btn--green">Invite</button>
+                        </form>
+                        <p>Pending invites</p>
+                        <!-- Table here -->
+                        <section class="table-wrap">
+                            <section class="table">
+                                <header class="table__row">
+                                    <div class="col-3">
+                                        <p>Email</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <p>Invitation Date</p>
+                                    </div>
+                                    <div class="col-2">
+                                        <p>Resend</p>
+                                    </div>
+                                    <div class="col-2">
+                                        <p>Remove</p>
+                                    </div>
+                                </header>
+                                <div class="table__row">
+                                    <div class="col-3">
+                                        <p>luuminhtan123@gmail.com</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <p>12:30 AM 12/03/2016</p>
+                                    </div>
+                                    <div class="col-2">
+                                        <a href="#" class="icon bgr-blue icon-refresh"></a>
+                                    </div>
+                                    <div class="col-2">
+                                        <a href="#" class="icon bgr-red icon-remove"></a>
+                                    </div>
+                                </div>
+                                <div class="table__row">
+                                    <div class="col-3">
+                                        <p>truongvietha@designdevelop.com</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <p>12:30 AM 12/03/2016</p>
+                                    </div>
+                                    <div class="col-2">
+                                        <a href="#" class="icon  icon-refresh-2"></a>
+                                    </div>
+                                    <div class="col-2">
+                                        <a href="#" class="icon icon-remove-2"></a>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                    </section>
+                    <!-- team part -->
+                    <section class="border-bottom">
+                        <header class="border-left-box border--cyan ">
+                            <p class="border-left__title">Team</p>
+                        </header>
+                        <form class="form-group">
+                            <input type="text" class="text-box--white" placeholder="Type your team name">
+                            <button class="btn btn--medium-2 btn--cyan">Create team</button>
+                        </form>
+                    </section>
+                    <!-- organization part -->
+                    <section>
+                        <header class="border-left-box border--pink ">
+                            <p class="border-left__title">Organization</p>
+                        </header>
+                        <section class="border-grey bgr-grey team-box">
+
+                            <header class="team-box__header">
+                                All members
+
+
+                            </header>
+                            <div class="avatar-row">
+                                <a class="avatar avatar--medium bgr-cyan" href="#"> H
+                                    <div class="tooltip">tranxuan1096@gmail.com</div>
+                                </a>
+
+                            </div>
+
+                        </section>
+                        <section class="border-grey bgr-grey team-box">
+
+                            <header class="team-box__header">
+                                Business team
+                                <span class="icon icon-remove-2"></span>
+                            </header>
+                            <div class="avatar-row">
+                                <a class="avatar avatar--medium bgr-cyan" href="#"> H
+                                    <div class="tooltip">tranxuan1096@gmail.com</div>
+                                </a>
+                                <a class="avatar avatar--medium bgr-dark-gray btn-plus" href="#">+</a>
+                            </div>
+
+                        </section>
+                        <section class="border-grey bgr-grey team-box">
+
+                            <header class="team-box__header">
+                                Marketing team
+                                <span class="icon icon-remove-2"></span>
+                            </header>
+                            <div class="avatar-row">
+                                <a class="avatar avatar--medium bgr-cyan" href="#"> H
+                                    <div class="tooltip">tranxuan1096@gmail.com</div>
+                                </a>
+                                <a class="avatar avatar--medium bgr-yellow" href="#"> H
+                                    <div class="tooltip">tranxuan1096@gmail.com</div>
+                                </a>
+                                <a class="avatar avatar--medium bgr-red" href="#"> H
+                                    <div class="tooltip">tranxuan1096@gmail.com</div>
+                                </a>
+                                <a class="avatar avatar--medium bgr-dark-gray btn-plus" href="#">+</a>
+                            </div>
+
+                        </section>
+                    </section>
+                </section>
+                <!-- MESS TAB -->
+                <section id="messaging" class="tab-detail border-box" style="display:none;">
+                    <section class="border-bottom">
+                        <header class="border-left-box border--blue ">
+                            <p class="border-left__title">Begin new message</p>
+                        </header>
+                        <form class="form-group">
+                            <input type="text" class="text-box--white" value="Hi {{first name}} !">
+
+                        </form>
+                    </section>
+
+                    <section class="border-bottom">
+                        <header class="border-left-box border--yellow">
+                            <p class="border-left__title">MESSAGE RESPONDER FOR WEB</p>
+                        </header>
+                        <form class="checkbox-wrap">
+                            <input class="check-box" type="checkbox" name="checkbox" id="checkbox_id" value="value">
+                            <label for="checkbox_id">Automatically show a response when someone asks a question
+                            </label>
+                        </form>
+                        <form>
+                            <textarea class="text-box--white" name="" id="" cols="30" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+                        </form>
+                    </section>
+
+                    <section class="border-bottom">
+                        <header class=" border-left-box border--pink">
+                            <p class="border-left__title">Ask email</p>
+                        </header>
+                        <form class="form-group">
+                            <input type="text" class="text-box--white">
+
+                        </form>
+                    </section>
+
+                    <section>
+                        <header class=" border-left-box border--blue">
+                            <p class="border-left__title">Ask phone number</p>
+                        </header>
+                        <form class="form-group">
+                            <input type="text" class="text-box--white">
+
+                        </form>
+                    </section>
+                </section>
+                <!-- APPEARANCE TAB -->
+                <section id="appearance" class="tab-detail border-box" style="display:none;">
+                    <section class="border-bottom">
+                        <header class="border-left-box border--cyan ">
+                            <p class="border-left__title">Theme Color</p>
+                        </header>
+                        <p id="colorpickerHolder">
+                        </p>
+                        <a class="colorpicker--reset color--blue" href="">Reset Color</a>
+                    </section>
+                    <section class="border-bottom">
+                        <header class="border-left-box border--yellow ">
+                            <p class="border-left__title">Poppi Messenger Review</p>
+                        </header>
+                        <img class="poppi-messenger-review" src="./assets/img/poppi-messenger-review.jpg" alt="poppi messenger review">
+                    </section>
+                </section>
+                <!-- BLOCK TAB -->
+                <section id="blocked-people" class="tab-detail border-box" style="display:none;">
+                    <section class="border-bottom">
+                        <header class="border-left-box border--red ">
+                            <p class="border-left__title">Blocked people</p>
+                        </header>
+
+                        <section class="table">
+                            <header class="table__row">
+                                <div class="col-2">
+                                    <p>IP</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>Name</p>
+                                </div>
+                                <div class="col-3">
+                                    <p>Email</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>Blocked date</p>
+                                </div>
+                                <div class="col-1">
+                                    <p>Unblock</p>
+                                </div>
+                            </header>
+                            <div class="table__row">
+                                <div class="col-2">
+                                    <p>168.199.0.23</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>Luu Minh Tan</p>
+                                </div>
+                                <div class="col-3">
+                                    <p>luuminhtan123@gmail.com</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>12/03/2016</p>
+                                </div>
+                                <div class="col-1">
+                                    <span class="icon bgr-yellow icon-refresh"></span>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="col-2">
+                                    <p>168.199.1.11</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>Truong Viet Ha</p>
+                                </div>
+                                <div class="col-3">
+                                    <p>hatruong@gmail.com</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>23/02/2016</p>
+                                </div>
+                                <div class="col-1">
+                                    <span class="icon icon-refresh-2"></span>
+                                </div>
+                            </div>
+
+                        </section>
+                    </section>
+                </section>
+                <!-- UPGRADE TAB -->
+                <section id="upgrade" class="tab-detail border-box" style="display:none;">
+                    <section class="border-bottom">
+                        <header class="border-left-box border--yellow ">
+                            <p class="border-left__title">Upgrade</p>
+                        </header>
+                        <div class="upgrade__wrap">
+                            <section class="upgrade__row">
+                                <section class="upgrade__col">
+                                    <div class=" upgrade__item border--yellow">
+                                        <p class="color--yellow">MICRO</p>
+                                    </div>
+                                </section>
+                                <section class="upgrade__col">
+                                    <div class=" upgrade__item border--green">
+                                        <p class="color--green">SMALL</p>
+                                    </div>
+                                </section>
+                                <section class="upgrade__col">
+                                    <div class=" upgrade__item border--blue">
+                                        <p class="color--blue">MEDIUM</p>
+                                    </div>
+                                </section>
+                                <section class="upgrade__col">
+                                    <div class=" upgrade__item border--pink">
+                                        <p class="color--pink">LARGE</p>
+                                    </div>
+                                </section>
+                            </section>
+                            <section class="upgrade__row">
+                                <section class="upgrade__col">
+                                    <div class=" upgrade__item ">
+                                        <p>Free</p>
+                                    </div>
+                                </section>
+                                <section class="upgrade__col">
+                                    <div class=" upgrade__item bgr-green">
+                                        <p class="color--white">100.000 VND/Month</p>
+                                    </div>
+                                </section>
+                                <section class="upgrade__col">
+                                    <div class=" upgrade__item ">
+                                        <p>Comming soon</p>
+                                    </div>
+                                </section>
+
+                                <section class="upgrade__col">
+                                    <div class=" upgrade__item ">
+                                        <p>Comming soon</p>
+                                    </div>
+                                </section>
+                            </section>
+
+                            <section class="upgrade__row">
+                                <section class="upgrade__col">
+                                    <div class="upgrade__item upgrade__item--large">
+                                        <p>Lorem ipsum</p>
+                                    </div>
+                                </section>
+                                <section class="upgrade__col">
+                                    <div class="upgrade__item upgrade__item--large">
+                                        <p>Lorem ipsum</p>
+                                    </div>
+                                </section>
+                                <section class="upgrade__col">
+
+                                    <div class="upgrade__item upgrade__item--large">
+                                        <p>Lorem ipsum</p>
+                                    </div>
+                                </section>
+
+                                <section class="upgrade__col">
+                                    <div class="upgrade__item upgrade__item--large">
+                                        <p>Lorem ipsum</p>
+                                    </div>
+                                </section>
+                            </section>
                         </div>
-                        <p>Messaging</p>
-                    </a>
-                    <a class="
-                            border-box tab__label" onclick="changeTab(event,'appearance')">
-                        <div class="icon bgr-blue icon-appearance">
-
+                    </section>
+                </section>
+                <!-- BILLING TAB -->
+                <section id="billing" class="tab-detail border-box" style="display:none;">
+                    <section class="border-bottom">
+                        <header class="border-left-box border--cyan ">
+                            <p class="border-left__title">Current Subcription</p>
+                        </header>
+                        <div class="progress-bar">
+                            <div class="progress-bar--active"></div>
                         </div>
-                        <p>Appearance</p>
-                    </a>
-                    <a class="border-box tab__label" onclick="changeTab(event,'blocked-people')">
-                        <div class="icon bgr-red icon-blocked">
-
+                        <div class="sub-info">
+                            <p>Your subscription starts on <span class="small-date bold">Mar 23, 2016</span> and will
+                                end on <span class="small-date bold">Apr 23, 2016</span></p>
+                            <button class="btn btn--cyan btn--medium-2">REQUEST</button>
                         </div>
-                        <p>Blocked people</p>
-                    </a>
-                    <a class="border-box tab__label" onclick="changeTab(event,'upgrade')">
-                        <div class="icon bgr-yellow  icon-upgrade">
-
+                    </section>
+                    <!-- billig part -->
+                    <section class="border-bottom">
+                        <header class="border-left-box border--pink ">
+                            <p class="border-left__title">Billing detail</p>
+                        </header>
+                        <div class="app-info__form-group">
+                            <form class="app-info__form">
+                                <p>Company name </p>
+                                <input class="text-box--white" type="text" value="Poppi">
+                            </form>
+                            <form class="app-info__form">
+                                <p>Billing email </p>
+                                <input class="text-box--white" type="text" value="truongvietha@gmail.com">
+                            </form>
                         </div>
-                        <p>Upgrade</p>
-                    </a>
-                    <a class="border-box tab__label" onclick="changeTab(event,'billing')">
-                        <div class="icon bgr-pink icon-billing">
+                    </section>
+                    <!-- invoice part -->
+                    <section class="invoice border-bottom">
+                        <header class="border-left-box border--green ">
+                            <p class="border-left__title">Invoice</p>
+                        </header>
+                        <section class="invoice-table">
+                            <header>
+                                <div class="invoice-table__col">ID</div>
+                                <div class="invoice-table__col">Date </div>
+                                <div class="invoice-table__col">Amount</div>
+                                <div class="invoice-table__col">Status</div>
+                            </header>
+                            <div class="invoice-table__row">
+                                <div class="invoice-table__col">241078</div>
+                                <div class="invoice-table__col">Mar 23, 2016</div>
+                                <div class="invoice-table__col">100.000 VND</div>
+                                <div class="invoice-table__col">PAID </div>
+                            </div>
+                        </section>
+                        <section class="invoice-detail">
+                            <header>
+                                <div class="invoice-table__col">Invoice ID</div>
+                                <div class="invoice-table__col">Invoice Date </div>
+                                <div class="invoice-table__col">App Name</div>
+                                <div class="invoice-table__col">App ID </div>
+                            </header>
+                            <div class="invoice-detail__row">
+                                <div class="invoice-table__col">241078</div>
+                                <div class="invoice-table__col">Mar 23, 2016 </div>
+                                <div class="invoice-table__col">Poppi</div>
+                                <div class="invoice-table__col">bw20dw </div>
+                            </div>
 
-                        </div>
-                        <p>Billing</p>
-                    </a>
-           </section>
-           <section class="tab-detail-container">
+                            <section class="period-detail">
 
-           </section>
+                                <p>
+                                    <span class="period__duration">Mar 23, 2016 - Apr 23, 2016</span>
+                                    <span class="period__sub"> New charges for upcoming month</span>
+                                </p>
+                                <div>
+                                    <div class="period-detail__row">
+                                        <div class="period-detail__col">SUBSCRIPTION</div>
+                                        <div class="period-detail__col">TIME PERIOD</div>
+                                        <div class="period-detail__col">AMOUNT</div>
+                                    </div>
+                                    <div class="period-detail__row">
+                                        <div class="period-detail__col">SMALL</div>
+                                        <div class="period-detail__col">MAR 23, 2016 - APR 23, 2016</div>
+                                        <div class="period-detail__col">100.000 VND</div>
+                                    </div>
+                                </div>
+                            </section>
+                            <footer>
+
+                                <button class="btn btn--medium-2 btn--green">PAID</button>
+                                <p>TOTAL</p>
+
+                                <div class="invoice-total__price">100.000 VND</div>
+                            </footer>
+                        </section>
+                    </section>
+                </section>
+
+            </section>
         </main>
     </div>
 </body>
@@ -117,6 +585,25 @@
     function closeInfo() {
         $(".info-container").removeClass("open-info");
     }
+
+    function changeTab(evt, tabID) {
+        // alert(tabID);
+        var i, tabcontent;
+        tabcontent = document.getElementsByClassName("tab-detail");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab__label");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active-tab-detail", "");
+        }
+        document.getElementById(tabID).style.display = "inherit";
+        evt.currentTarget.className += " active-tab-detail";
+    }
 </script>
+<script type="text/javascript" src="./assets/js/colorpicker/jquery.js"></script>
+<script type="text/javascript" src="./assets/js/colorpicker/colorpicker.js"></script>
+<script type="text/javascript" src="./assets/js/colorpicker/eye.js"></script>
+<script type="text/javascript" src="./assets/js/colorpicker/layout.js"></script>
 
 </html>
