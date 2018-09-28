@@ -475,7 +475,10 @@ body {
 .avatar-row>.avatar {
     margin: 5px 8px 5px 0;
 }
-
+.table-wrap
+{
+  
+}
 .table {
     border: #F7F7F7 solid 1.5px;
     border-radius: 5px;
