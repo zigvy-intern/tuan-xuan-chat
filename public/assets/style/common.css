@@ -30,7 +30,7 @@
     color: var(--color-text-normal);
     font-size: var(--fs-regular);
     box-sizing: border-box;
-    transition: all 0.5s;
+    transition: width 0.5s, height 0.5s, padding 0.5s, margin 0.5s;
 }
 
 body {
