@@ -1,0 +1,147 @@
+@import url('./font-icomoon.css');
+@import url('./common.css');
+@import url('./nav.css');
+@import url('./layout.css');
+
+.inbox--unread {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+}
+
+.inbox__noti {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 8px;
+    margin-left: 14px;
+}
+
+.conversation__chart {
+    background-color: var(--color-white);
+    margin-bottom: 14px;
+    padding: 15px;
+}
+
+.conversation__chart header {
+    display: flex;
+}
+
+.tab {
+    margin-left: auto;
+}
+
+.tab__link {
+    color: #CACACA;
+    border: unset;
+    background-color: var(--color-white);
+    padding: 3px 18px;
+    margin-left: 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.tab__link--active {
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+
+.tab__content {
+    margin-top: 28px;
+    width: 100%;
+    height: auto;
+}
+
+.chart__28days {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.chart__90days {
+    transform: scaleY(-1);
+}
+
+.conversation__internal-room {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.conversation__internal-chat-room {
+    flex: 1 6 60%;
+}
+
+.conversation__activities {
+    flex: 1 40 40%;
+    margin-left: 22px;
+    height: 100%;
+}
+
+.avatar-row {
+    margin: 14px 0px 7px 13px;
+}
+
+/* Style Activities*/
+.conversation__activities header p {
+    margin: 20px auto 10px auto;
+    text-align: center;
+}
+
+.conversation__activities a {
+    text-decoration: none;
+    color: var(--color-cyan);
+}
+
+.activities__date {
+    margin: 0px 23px;
+    margin-bottom: 15px;
+}
+
+.activities__timeline {
+    margin: 12px 23px;
+    position: relative;
+}
+
+.activities__timeline::before {
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background-color: #979797;
+    top: 0;
+    left: 15px;
+}
+
+.activities__timeline li {
+    margin-bottom: 35px;
+    list-style: none;
+    position: relative;
+    padding-left: 66px;
+}
+
+.activities__timeline li::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    left: 0%;
+    transform: translate(0, -20%);
+    position: absolute;
+    border-radius: 50%;
+
+}
+
+.activities--mentioned::before {
+    background-color: var(--color-yellow);
+}
+
+.activities--assigned::before {
+    background-color: var(--color-green);
+}
+
+.activities--closed::before {
+    background-color: var(--color-orange);
+}

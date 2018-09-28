@@ -38,6 +38,7 @@
     grid-area: menu;
     background-color: aqua;
 }
+
 /* Set layout Main Container */
 .main-container {
     grid-area: main;
@@ -63,8 +64,33 @@
     grid-column: 8/11;
 }
 
+/* Set layout Chart and chat room */
+.chart-and-chat-room-container {
+    grid-column: 4/11;
+    background-color: red;
+    display: grid;
+    grid-template-areas:
+        'chart chart'
+        'chatroom activities';
+    grid-template-columns: 70% auto;
+    grid-template-rows: auto 60%;
+    grid-gap: var(--padding-and-gap);
+}
+
 .chart-container {
-    
+    grid-area: chart;
+    background-color: aqua;
+}
+
+.chatroom-container {
+    grid-area: chatroom;
+
+    background-color: hotpink;
+}
+
+.activities-container {
+    grid-area: activities;
+    background-color: yellow;
 }
 
 /* Style header*/

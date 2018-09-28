@@ -7,6 +7,7 @@
   <title>Conversation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="./assets/style/notification-style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -245,6 +246,15 @@
     </div>
   </main>
   <script>
+    $(document).ready(function () {
+        $("#menu").click(function () {
+            $(".grid-container").toggleClass("open-menu");
+        })
+        // var bodyHeight = $('body').innerHeight();
+        // alert($('body').innerHeight());
+        alert($(window).height());
+    });
+
     function openChart(evt, day) {
       var i, tab__content, tab__link;
       tab__content = document.getElementsByClassName("tab__content");
