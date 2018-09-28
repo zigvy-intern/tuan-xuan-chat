@@ -26,6 +26,7 @@
         'menu main';
     height: 100vh;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 
@@ -65,32 +66,33 @@
 }
 
 /* Set layout Chart and chat room */
-.chart-and-chat-room-container {
+.noti-right-container {
     grid-column: 4/11;
-    background-color: red;
     display: grid;
+    height: 80vh;
+    width: 100%;
+    grid-gap: var(--padding-and-gap);
+    padding-right: var(--padding-and-gap);
     grid-template-areas:
         'chart chart'
         'chatroom activities';
-    grid-template-columns: 70% auto;
-    grid-template-rows: auto 60%;
-    grid-gap: var(--padding-and-gap);
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 30% minmax(400px,70%);
+    
 }
 
 .chart-container {
     grid-area: chart;
-    background-color: aqua;
+
 }
 
 .chatroom-container {
     grid-area: chatroom;
-
-    background-color: hotpink;
+    padding-bottom: var(--padding-and-gap);
 }
 
 .activities-container {
     grid-area: activities;
-    background-color: yellow;
 }
 
 /* Style header*/
@@ -503,7 +505,7 @@
         position: relative;
     }
 
-    /* Header Resposve*/
+    /* Header Responsive*/
     .header-container {
         border-bottom: rgba(0, 0, 0, 0.1) solid 1px;
     }
@@ -544,14 +546,9 @@
         display: block;
     }
 
-
-
     /* Resposive Inbox*/
     .inbox-container {
         grid-gap: 0px;
-    }
-
-    .inbox-container {
         grid-column: 1/3;
         grid-row: 1;
         height: var(--main-height);
@@ -562,19 +559,20 @@
         border: unset;
         border-radius: 0;
     }
-
-    .inbox section {
+    
+    /* Resposive Inbox in Conversation*/
+    .conversation-wrapper .inbox section {
         grid-template-columns: 100%;
         justify-items: center;
         align-items: center;
     }
 
-    .inbox section:last-child,
-    .inbox .inbox__email {
+    .conversation-wrapper .inbox section:last-child,
+    .conversation-wrapper .inbox .inbox__email {
         display: none;
     }
 
-    .inbox section .avatar--medium.avatar--responsive {
+    .conversation-wrapper .inbox section .avatar--medium.avatar--responsive {
         width: 2vw;
         height: 2vw;
         min-width: 40px;
@@ -584,7 +582,7 @@
         justify-self: center;
     }
 
-    .inbox p {
+    .conversation-wrapper .inbox p {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -628,7 +626,33 @@
         top: 0;
         z-index: 1;
     }
-
+    /* Notification--right Responsive*/
+    .main-container.noti-wrapper {
+        padding: var(--padding-and-gap);
+        grid-template-columns: 100%;
+        grid-gap: var(--padding-and-gap);
+    }
+    .noti-wrapper .inbox-container {
+        grid-column: unset;
+        overflow: unset;
+        height: auto;
+    }
+    
+    .noti-right-container {
+        padding: unset;
+        grid-column: unset;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2,auto);
+        grid-template-areas: 
+            'chart'
+            'activities'
+            'chatroom';
+    }
+    .conversation__chart .tab {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+    }
 }
 
 /*Small devices (landscape phones, 576px and up)*/

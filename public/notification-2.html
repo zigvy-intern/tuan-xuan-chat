@@ -49,7 +49,7 @@
             </div>
         </aside>
 
-        <main class="main-container">
+        <main class="main-container noti-wrapper">
             <div class="inbox-container">
                 <!-- Unread -->
                 <div class="border-box inbox inbox--unread">
@@ -148,15 +148,131 @@
                 </div>
 
             </div>
-            <div class="chart-and-chat-room-container">
+            <div class="noti-right-container">
                 <div class="chart-container">
-
+                    <section class="conversation__chart">
+                        <header>
+                            <p class="bold">CONVERSATIONS</p>
+                            <div class="tab">
+                                <button class="tab__link" onclick="openChart(event,'last7days')" id="tab__link--default-open">Last
+                                    7 days</button>
+                                <button class="tab__link" onclick="openChart(event,'last28days')">Last 28 days</button>
+                                <button class="tab__link" onclick="openChart(event,'last90days')">Last 90 days</button>
+                            </div>
+                        </header>
+                        <section id="last7days" class="tab__content">
+                            <img class="chart__7days" src="./assets/img/SVG/chart.svg" alt="chart7days">
+                        </section>
+                        <section id="last28days" class="tab__content">
+                            <img class="chart__28days" src="./assets/img/SVG/chart.svg" alt="chart28days">
+                        </section>
+                        <section id="last90days" class="tab__content">
+                            <img class="chart__90days" src="./assets/img/SVG/chart.svg" alt="chart90days">
+                        </section>
+                    </section>
                 </div>
                 <div class="chatroom-container">
+                    <section class="conversation__internal-chat-room">
+                        <div class="chatbox border-box">
+                            <header>
+                                <p class="bold">INTERNAL CHAT ROOM</p>
+                                <div class="avatar-row">
+                                    <a class="avatar avatar--medium bgr-blue" href="#">H</a>
+                                    <a class="avatar avatar--medium bgr-yellow" href="#">H</a>
+                                    <a class="avatar avatar--medium bgr-cyan" href="#">H</a>
+                                    <a class="avatar avatar--medium bgr-green" href="#">H</a>
+                                    <a class="avatar avatar--medium bgr-pink" href="#">H</a>
+                                    <a class="avatar avatar--medium bgr-orange" href="#">H</a>
+                                </div>
+                            </header>
+                            <!-- Show mess part-->
+                            <section class="chatbox__content">
+                                <!-- One line -->
+                                <div class="chat-line__wrap">
+                                    <div class="chat-line chat-line--receive">
+                                        <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
+                                        <div class="chat-line__content-wrap">
+                                            <div class="chat-line__content">
+                                                <p class="inbox__content">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing elit.
+                                                    Odit perferendis explicabo quos, quasi recusandae vel, officiis
+                                                    veniam nisi
+                                                    laudantium aut, hic temporibus totam? Molestias repellendus saepe
+                                                    illo magnam
+                                                    in ipsa!</p>
+                                                <p class="inbox__time">2 days</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- One line -->
+                                <div class="chat-line__wrap">
+                                    <div class="chat-line chat-line--send">
 
+                                        <div class="chat-line__content-wrap">
+                                            <div class="chat-line__content">
+                                                <p class="inbox__content">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing elit.
+                                                    Odit perferendis explicabo quos, quasi recusandae vel, officiis
+                                                    veniam nisi
+                                                    laudantium aut, hic temporibus totam? Molestias repellendus saepe
+                                                    illo magnam
+                                                    in ipsa!</p>
+                                                <p class="inbox__time">2 days</p>
+                                            </div>
+                                        </div>
+                                        <a class="avatar avatar--medium bgr-pink" href="#"> H</a>
+                                    </div>
+                                </div>
+
+
+                            </section>
+                            <!-- Chat input & option -->
+                            <section class="chatbox__input">
+                                <!-- Input space -->
+                                <textarea class="chat__text-box" type="text" placeholder="Enter your message here"></textarea>
+                                <!-- More input options -->
+                                <footer class="chat__option">
+                                    <ul>
+                                        <li><a href="#">Aa</a></li>
+                                        <li><a href="#" class="icon-attachment"></a></li>
+                                        <li><a href="#" class="icon-picture"></a></li>
+                                        <li><a href="#" class="icon-emoji"></a></li>
+                                    </ul>
+                                    <button class="btn btn--small btn--cyan">
+                                        Send
+                                    </button>
+                                </footer>
+                            </section>
+                        </div>
+                    </section>
                 </div>
+
+                <!-- ACTIVITIES -->
                 <div class="activities-container">
-                    
+                    <section class="conversation__activities border-box">
+                        <header>
+                            <p class="bold">ACTIVITIES</p>
+                        </header>
+                        <section>
+                            <div class="activities__date"><time>Today</time></div>
+                            <ul class="activities__timeline">
+                                <li class="activities--mentioned"><a href="#">Hung Vo</a> mentioned you in this <a href="#">conversation</a></li>
+                                <li class="activities--assigned"><a href="#">Hung Vo</a> assigned a <a href="#">conversation</a>
+                                    to you</li>
+                                <li class="activities--closed">You closed this <a href="#">conversation</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <div class="activities__date"><time>12/03/2016 </time></div>
+                            <ul class="activities__timeline">
+                                <li class="activities--mentioned"><a href="#">Hung Vo</a> mentioned you in this <a href="#">conversation</a></li>
+                                <li class="activities--assigned"><a href="#">Hung Vo</a> assigned a <a href="#">conversation</a>
+                                    to you</li>
+                                <li class="activities--closed">You closed this <a href="#">conversation</a></li>
+                            </ul>
+                        </section>
+                    </section>
                 </div>
             </div>
         </main>
@@ -176,6 +292,21 @@
     function closeInfo() {
         $(".info-container").removeClass("open-info");
     }
+
+    function openChart(evt, day) {
+        var i, tab__content, tab__link;
+        tab__content = document.getElementsByClassName("tab__content");
+        for (i = 0; i < tab__content.length; i++) {
+            tab__content[i].style.display = "none";
+        }
+        tab__link = document.getElementsByClassName("tab__link");
+        for (i = 0; i < tab__link.length; i++) {
+            tab__link[i].className = tab__link[i].className.replace(" tab__link--active", "");
+        }
+        document.getElementById(day).style.display = "block";
+        evt.currentTarget.className += " tab__link--active";
+    }
+    document.getElementById("tab__link--default-open").click();
 </script>
 
 </html>

@@ -21,8 +21,8 @@
 
 .conversation__chart {
     background-color: var(--color-white);
-    margin-bottom: 14px;
     padding: 15px;
+    height: 100%;
 }
 
 .conversation__chart header {
@@ -30,6 +30,7 @@
 }
 
 .tab {
+    display: flex;
     margin-left: auto;
 }
 
@@ -72,13 +73,22 @@
 }
 
 .conversation__internal-chat-room {
-    flex: 1 6 60%;
+    height: 100%;
+}
+
+.conversation__internal-chat-room .chatbox {
+    grid-template-rows:unset;
+    background-color: #fff;
+    max-height: var(--main-height);
+}
+.conversation__internal-chat-room .chatbox__content {
+    height: 30vh;
+    min-height: 250px;
 }
 
 .conversation__activities {
-    flex: 1 40 40%;
-    margin-left: 22px;
-    height: 100%;
+    height: 80%;
+    overflow-y: auto;
 }
 
 .avatar-row {
