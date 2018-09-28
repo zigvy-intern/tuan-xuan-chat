@@ -77,8 +77,8 @@
         'chart chart'
         'chatroom activities';
     grid-template-columns: 60% 40%;
-    grid-template-rows: 30% minmax(400px,70%);
-    
+    grid-template-rows: 30% minmax(400px, 70%);
+
 }
 
 .chart-container {
@@ -121,10 +121,11 @@
     z-index: 10;
     margin: 8px;
 }
-.search-bar .noti__item
-{
+
+.search-bar .noti__item {
     margin: 0 15px;
 }
+
 .noti__list,
 .search-bar {
 
@@ -463,23 +464,24 @@
     right: 5%;
     display: none;
 }
+
 /* *************************App setting*************************** */
-.tab-container
-{
+.tab-container {
     grid-column: 1/3;
 
 }
-.tab-detail-container
-{
+
+.tab-detail-container {
     grid-column: 3/11;
     overflow: auto;
 }
 
-.tab__label:hover, .active-tab-detail
-{
+.tab__label:hover,
+.active-tab-detail {
     background-color: #F7F7F7;
     cursor: pointer;
 }
+
 .tab__label p {
     margin-left: 5%;
 }
@@ -497,16 +499,16 @@
     padding: 20px 30px;
 }
 
-.checkbox-wrap
-{
+.checkbox-wrap {
     margin-bottom: 10px;
 }
-.check-box
-{
+
+.check-box {
     margin-right: 15px;
     display: block;
     background: black;
 }
+
 .app-info__form-group {
     display: flex;
     justify-content: space-between;
@@ -546,18 +548,19 @@
     text-transform: uppercase;
 }
 
-.upgrade__wrap{
+.upgrade__wrap {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
 }
-.upgrade__row
-{
+
+.upgrade__row {
     display: flex;
     align-content: stretch;
 
 }
+
 .upgrade__col {
     width: 24%;
     /* min-width: 95px; */
@@ -570,7 +573,7 @@
     margin-bottom: 10px;
     text-align: center;
     border: solid 1px #F1F1F2;
-   
+
 }
 
 .upgrade__item--large {
@@ -657,7 +660,7 @@
 .invoice-table__row>*:not(header),
 .invoice-detail>header *,
 .period__sub,
-.invoice-detail footer p  {
+.invoice-detail footer p {
     color: #979797;
 
 }
@@ -672,7 +675,8 @@
     overflow: hidden;
 }
 
-.invoice-detail__row>*:not(header), .invoice-total__price {
+.invoice-detail__row>*:not(header),
+.invoice-total__price {
     font-weight: bold;
     font-size: 13px;
 }
@@ -712,33 +716,34 @@
     text-transform: uppercase;
     height: 30px;
     display: flex;
-   align-items: center;
+    align-items: center;
 }
-.period-detail__col
-{
+
+.period-detail__col {
     flex: 3 1;
 }
-.period-detail__col:nth-of-type(3)
-{
-    flex:2 1;
+
+.period-detail__col:nth-of-type(3) {
+    flex: 2 1;
 }
-.invoice-detail footer
-{
-    display: flex; 
+
+.invoice-detail footer {
+    display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: flex-end;
     align-items: center;
 }
-.invoice-detail footer>*
-{
+
+.invoice-detail footer>* {
     margin-left: 30px;
 }
-.invoice-total__price
-{
+
+.invoice-total__price {
     width: 25%;
     text-align: left;
 }
+
 .poppi-messenger-review {
     width: 100%;
     height: auto;
@@ -843,7 +848,7 @@
         border: unset;
         border-radius: 0;
     }
-    
+
     /* Resposive Inbox in Conversation*/
     .conversation-wrapper .inbox section {
         grid-template-columns: 100%;
@@ -910,31 +915,32 @@
         top: 0;
         z-index: 1;
     }
-/* Appsetting */
-/* Team memmber */
-.appsetting .col-3 {
-    flex: 1 1 30%;
-    min-width: 200px;
-    word-break: break-all;
-    text-overflow: ellipsis;
-}
 
-.appsetting .col-4 {
-    flex: 1 1 40%;
-    min-width: 200px;
-    word-break: break-all;
-    text-overflow: ellipsis;
-}
+    /* Appsetting */
+    /* Team memmber */
+    .appsetting .col-3 {
+        flex: 1 1 30%;
+        min-width: 200px;
+        word-break: break-all;
+        text-overflow: ellipsis;
+    }
 
-.appsetting .col-2 {
-    flex: 1 1 20%;
-    min-width: 100px;
-}
+    .appsetting .col-4 {
+        flex: 1 1 40%;
+        min-width: 200px;
+        word-break: break-all;
+        text-overflow: ellipsis;
+    }
 
-.appsetting .col-1 {
-    flex: 1 1 10%;
-    min-width: 80px;
-}
+    .appsetting .col-2 {
+        flex: 1 1 20%;
+        min-width: 100px;
+    }
+
+    .appsetting .col-1 {
+        flex: 1 1 10%;
+        min-width: 80px;
+    }
 
     /* Notification--right Responsive*/
     .main-container.noti-wrapper {
@@ -942,22 +948,24 @@
         grid-template-columns: 100%;
         grid-gap: var(--padding-and-gap);
     }
+
     .noti-wrapper .inbox-container {
         grid-column: unset;
         overflow: unset;
         height: auto;
     }
-    
+
     .noti-right-container {
         padding: unset;
         grid-column: unset;
         grid-template-columns: 100%;
-        grid-template-rows: repeat(2,auto);
-        grid-template-areas: 
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
             'chart'
             'activities'
             'chatroom';
     }
+
     .conversation__chart .tab {
         display: flex;
         flex-direction: column;
@@ -968,50 +976,49 @@
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
-    
-/* **************App setting*************** */
-.main-container
-{
-    grid-template-rows: 20% 80%;
-}
-.tab-detail .btn--medium-2
-{
-    font-size: 9.5px !important;
-}
-.tab-container
-{
-    grid-column: 1/11;
-    grid-row: 1;
-    overflow: auto;
-    margin: 0;
-    margin-bottom: 10px;
-}
-.tab-detail-container
-{
-    grid-column: 1/11;
-    grid-row: 2;
-    overflow: auto;
-    margin: unset;
-}
-.tab-detail>section
-{
-    padding:20px ;
-}
-.upgrade__wrap *
-{
-    font-size: 10px;
-}
-.upgrade__item
-{
-    max-height: 100%;
-}
 
-/* Mess */
-.appsetting .form-group input
-{
-    width: 100%;
-}
-/* ***************************** */
+    /* **************App setting*************** */
+    .main-container.appsetting {
+        grid-template-rows: 20% 80%;
+    }
+
+    .tab-detail .btn--medium-2 {
+        font-size: 9.5px !important;
+    }
+
+    .tab-container {
+        grid-column: 1/11;
+        grid-row: 1;
+        overflow: auto;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .tab-detail-container {
+        grid-column: 1/11;
+        grid-row: 2;
+        overflow: auto;
+        margin: unset;
+    }
+
+    .tab-detail>section {
+        padding: 20px;
+    }
+
+    .upgrade__wrap * {
+        font-size: 10px;
+    }
+
+    .upgrade__item {
+        max-height: 100%;
+    }
+
+    /* Mess */
+    .appsetting .form-group input {
+        width: 100%;
+    }
+
+    /* ***************************** */
 
 
 
