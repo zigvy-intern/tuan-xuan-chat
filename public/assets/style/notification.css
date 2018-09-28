@@ -29,12 +29,12 @@
     display: flex;
 }
 
-.tab {
+.conversation__chart .tab {
     display: flex;
     margin-left: auto;
 }
 
-.tab__link {
+.conversation__chart .tab__link {
     color: #CACACA;
     border: unset;
     background-color: var(--color-white);
@@ -45,12 +45,12 @@
     cursor: pointer;
 }
 
-.tab__link--active {
+.conversation__chart .tab__link--active {
     background-color: var(--color-green);
     color: var(--color-white);
 }
 
-.tab__content {
+.conversation__chart .tab__content {
     margin-top: 28px;
     width: 100%;
     height: auto;
