@@ -25,6 +25,25 @@
             </div>
 
             <h1 class="header__heading">App Setting</h1>
+     
+                <select class= "selection-container" name="tab-setting" id="tab-setting" style="display:none;">
+                    <option value="general">
+                        General</option>
+                    <option value="team-member">
+                        Team member</option>
+                    <option value="messaging">
+                        Messaging</option>
+                    <option value="appearance">
+                        Appearance</option>
+                    <option value="blocked-people">
+                        Blocked people
+                    </option>
+                    <option value="upgrade">
+                        Upgrade</option>
+                    <option value="billing">
+                        Billing</option>
+                </select>
+
         </header>
 
         <aside class="menu-container">
@@ -576,6 +595,11 @@
         $("#menu").click(function () {
             $(".grid-container").toggleClass("open-menu");
         })
+        $('#tab-setting').change(
+            function () {
+                var tabID= $('#tab-setting').val();
+                changeTab(null, tabID);
+            });
     });
 
     function openInfo() {
