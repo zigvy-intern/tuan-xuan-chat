@@ -919,7 +919,21 @@
 /* **************App setting*************** */
 .main-container
 {
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 100%;
+}
+.selection-container
+{
+    display: inherit !important;
+    width: 40%;
+    outline: none;
+    margin-right: var(--padding-and-gap);
+    border: #F1F1F2 1px solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.selection-container:focus>*
+{
+    outline: none !important;
 }
 .tab-detail .btn--medium-2
 {
@@ -927,18 +941,14 @@
 }
 .tab-container
 {
-    grid-column: 1/11;
-    grid-row: 1;
-    overflow: auto;
-    margin: 0;
-    margin-bottom: 10px;
+    display: none;
 }
 .tab-detail-container
 {
     grid-column: 1/11;
-    grid-row: 2;
+    grid-row: 1;
     overflow: auto;
-    margin: unset;
+    margin-bottom: 0px;
 }
 .tab-detail>section
 {
