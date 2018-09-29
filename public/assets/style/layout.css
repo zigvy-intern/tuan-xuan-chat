@@ -1088,7 +1088,8 @@
         height: var(--main-height);
     }
 
-    .inbox-container .border-box {
+    .conversation-wrapper .inbox-container .border-box,
+    .noti-wrapper .inbox-container .border-box {
         margin: 0;
         border: unset;
         border-radius: 0;

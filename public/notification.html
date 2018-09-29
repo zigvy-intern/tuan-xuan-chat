@@ -292,6 +292,10 @@
     function closeInfo() {
         $(".info-container").removeClass("open-info");
     }
+    
+    $(".chat__text-box").focus(function () {
+        $(".main-container").css("padding-bottom",200);
+    });
 
     function openChart(evt, day) {
         var i, tab__content, tab__link;
