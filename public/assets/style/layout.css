@@ -904,6 +904,55 @@
     background-color: var(--color-orange);
 }
 
+/* ********************************PROFILE GUEST******************************* */
+.main-container.guest,
+.main-container.member {
+    /* grid-gap: var(--padding-and-gap); */
+}
+
+.guest .info,
+.member .info {
+    grid-column: 3/6;
+    grid-row: 1;
+    height: fit-content;
+}
+
+.member .info.border-box {
+    padding: var(--padding-and-gap);
+}
+
+.guest .inbox-container,
+.member .inbox-container {
+    grid-column: 6/9;
+    grid-row: 1;
+}
+
+.member .inbox-container {
+    display: flex;
+}
+
+/* member */
+.info-user {
+    padding: 0px 16px;
+    margin-bottom: var(--padding-and-gap);
+}
+
+.info-user .text-box {
+    margin-bottom: 10px;
+}
+
+.info-user .text-box:nth-of-type(1) {
+    margin-top: var(--padding-and-gap);
+}
+
+.info-user .text-box:nth-last-of-type(1) {
+    margin-bottom: var(--padding-and-gap);
+}
+
+.info-user p.form__label {
+    margin-top: var(--padding-and-gap);
+}
+
 /* ************************* Switchapps *************************** */
 .switchapps-container {
     padding: var(--padding-and-gap);
@@ -1031,6 +1080,25 @@
     /* Chatbox Responsive*/
     .chatbox {
         height: 100%;
+    }
+
+    .main-container.guest,
+    .main-container.member {
+        padding: var(--padding-and-gap);
+        grid-gap: var(--padding-and-gap);
+    }
+
+    .guest .info,
+    .member .info {
+        grid-column: 1/5;
+        grid-row: 1;
+
+    }
+
+    .guest .inbox-container,
+    .member .inbox-container {
+        grid-column: 5/11;
+        grid-row: 1;
     }
 }
 
@@ -1286,6 +1354,8 @@
         /* ***************************** */
         .main-container.guest,
         .main-container.member {
+            padding: var(--padding-and-gap);
+            grid-gap: var(--padding-and-gap);
             grid-template-columns: 100%;
             grid-template-rows: fit-content fit-content;
 
