@@ -1225,54 +1225,85 @@
 /*Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
 
-    /* **************App setting*************** */
-    .main-container.appsetting {
-        grid-template-rows: 100%;
-    }
+    @media (max-width: 576px) {
 
-    .selection-container {
-        display: inherit !important;
-        width: 40%;
-        outline: none;
-        margin-right: var(--padding-and-gap);
-        border: #F1F1F2 1px solid;
-        border-radius: 5px;
-        padding: 5px 10px;
-    }
+        /* **************App setting*************** */
+        .main-container.appsetting {
+            grid-template-rows: 100%;
+        }
 
-    .selection-container:focus>* {
-        outline: none !important;
-    }
+        .selection-container {
+            display: inherit !important;
+            width: 40%;
+            outline: none;
+            margin-right: var(--padding-and-gap);
+            border: #F1F1F2 1px solid;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
 
-    .tab-detail .btn--medium-2 {
-        font-size: 9.5px !important;
-    }
+        .selection-container:focus>* {
+            outline: none !important;
+        }
 
-    .tab-container {
-        display: none;
-    }
+        .tab-detail .btn--medium-2 {
+            font-size: 9.5px !important;
+        }
 
-    .tab-detail-container {
-        grid-column: 1/11;
-        grid-row: 1;
-        overflow: auto;
-        margin-bottom: 0px;
-    }
+        .appsetting .tab-container {
+            display: none;
+        }
 
-    .tab-detail>section {
-        padding: 20px;
-    }
+        .appsetting .tab-detail-container {
+            grid-column: 1/11;
+            grid-row: 1;
+            overflow: auto;
+            margin: unset;
 
-    .upgrade__wrap * {
-        font-size: 10px;
-    }
+        }
 
-    .upgrade__item {
-        max-height: 100%;
-    }
+        .appsetting .tab-detail {
+            border-radius: unset;
+        }
 
-    /* Mess */
-    .appsetting .form-group input {
-        width: 100%;
+        .appsetting .tab-detail>section {
+            padding: 20px;
+        }
+
+        .upgrade__wrap * {
+            font-size: 10px;
+        }
+
+        .upgrade__item {
+            max-height: 100%;
+        }
+
+        /* Mess */
+        .appsetting .form-group input {
+            width: 100%;
+        }
+
+        /* ***************************** */
+        .main-container.guest,
+        .main-container.member {
+            grid-template-columns: 100%;
+            grid-template-rows: fit-content fit-content;
+
+        }
+
+        .guest .info,
+        .member .info {
+            grid-column: unset;
+            grid-row: 1;
+
+        }
+
+        .guest .inbox-container,
+        .member .inbox-container {
+            grid-row: 2;
+            grid-column: unset;
+            margin-bottom: var(--padding-and-gap);
+        }
+
     }
 }
