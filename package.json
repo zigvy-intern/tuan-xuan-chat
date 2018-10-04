@@ -1,0 +1,29 @@
+{
+  "name": "tuan-xuan-chat",
+  "version": "1.0.0",
+  "description": "Link demo: https://test-dchat.firebaseapp.com/<br/>\r Follow: https://trello.com/b/rrFXdzw2/dchat",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.1.2",
+    "meteor-node-stubs": "^0.4.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zigvy-intern/tuan-xuan-chat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zigvy-intern/tuan-xuan-chat/issues"
+  },
+  "homepage": "https://github.com/zigvy-intern/tuan-xuan-chat#readme"
+}
