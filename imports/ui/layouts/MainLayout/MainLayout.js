@@ -5,7 +5,7 @@ import Menu from "../menu/Menu";
 import Header from "../header/Header";
 
 // App component - represents the whole app
-export default class App extends Component {
+export default class MainLayout extends Component {
   // getTasks() {
   //   return [
   //     { _id: 1, text: "This is task 1" },
