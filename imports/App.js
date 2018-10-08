@@ -6,11 +6,13 @@ import MainContent from './ui/layouts/MainContent/MainContent';
 import Inbox from './ui/components/elements/Inbox/Inbox';
 import MemberContainer from './ui/containers/MemberContainer/MemberContainer';
 import SwitchContainer from './ui/containers/SwitchContainer/SwitchContainer';
+import ConversationContainer from './ui/containers/ConversationContainer/ConversationContainer';
 
 class App extends Component {
     state = {  }
 
     render() { 
+        let mainClass="main-container "
         return (
             
             MainLayout(
@@ -19,7 +21,9 @@ class App extends Component {
 
             <MenuSide/>,
 
-            MainContent({children:<SwitchContainer/>, class:"switchapps"})
+            // MainContent({children:<SwitchContainer/>, class:"switchapps"})
+            // MainContent({children:<MemberContainer/>, class:mainClass+"member"})
+            MainContent({children:<ConversationContainer/>, class:mainClass+"conversation-wrapper"})
             
             )
         );

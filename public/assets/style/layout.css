@@ -67,6 +67,10 @@ a {
 .info-container {
     grid-column: 8/11;
 }
+.info-container > *
+{
+    padding: var(--padding-and-gap);
+}
 
 /* Set layout Chart and chat room */
 .noti-right-container {
