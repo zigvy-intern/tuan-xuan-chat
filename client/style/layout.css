@@ -1145,7 +1145,7 @@ a {
 }
 
 /* ************************* Switchapps *************************** */
-.switchapps-container {
+.switchapps {
     padding: var(--padding-and-gap);
 }
 
@@ -1156,7 +1156,7 @@ a {
     color: #808080;
 }
 
-.switchapps-container>* {
+.switchapps>* {
     margin-bottom: 10px;
 }
 
