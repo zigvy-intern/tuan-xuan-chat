@@ -1,18 +1,10 @@
 import React, { Component } from 'react';
 import Button from '../Button/Button';
 import ChatLine from '../ChatLine/ChatLine';
+import InputBox from '../InputBox/InputBox';
 
 class ChatBox extends Component {
     state = {  }
-
-    openInfo() {
-        $(".info-container").addClass("open-info");
-    }
-
-    closeInfo() {
-        $(".info-container").removeClass("open-info");
-    }
-
     render() { 
         return ( 
             <React.Fragment>
@@ -34,27 +26,7 @@ class ChatBox extends Component {
                 
             </section>
             {/* Chat input & option */}
-            <section className="chatbox__input">
-                {/* Features */}
-                <header className="chat__tab">
-                <ul>
-                    <li className="active-tab"><a href>Reply</a></li>
-                    <li><a href>Note</a></li>
-                </ul>
-                </header>
-                {/* Input space */}
-                <textarea className="chat__text-box" type="text" placeholder="Enter your message here" defaultValue={""} />
-                {/* More input options */}
-                <footer className="chat__option">
-                <ul>
-                    <li><a href="#">Aa</a></li>
-                    <li><a href="#" className="icon-attachment" /></li>
-                    <li><a href="#" className="icon-picture" /></li>
-                    <li><a href="#" className="icon-emoji" /></li>
-                </ul>
-                <Button size="small" color="cyan" name="Send"/>
-                </footer>
-            </section>
+            <InputBox tab="1"/>
             </div>
 
             </React.Fragment>

@@ -8,6 +8,7 @@ import MemberContainer from './ui/containers/MemberContainer/MemberContainer';
 import SwitchContainer from './ui/containers/SwitchContainer/SwitchContainer';
 import ConversationContainer from './ui/containers/ConversationContainer/ConversationContainer';
 import NotificationContainer from './ui/containers/NotificationContainer/NotificationContainer';
+import PeopleContainer from './ui/containers/PeopleContainer/PeopleContainer';
 
 class App extends Component {
     state = {  }
@@ -25,8 +26,8 @@ class App extends Component {
             // MainContent({children:<SwitchContainer/>, class:"switchapps"})
             // MainContent({children:<MemberContainer/>, class:mainClass+"member"})
             // MainContent({children:<ConversationContainer/>, class:mainClass+"conversation-wrapper"})
-            MainContent({children:<NotificationContainer/>, class:mainClass+"noti-wrapper"})
-            
+            // MainContent({children:<NotificationContainer/>, class:mainClass+"noti-wrapper"})
+            MainContent({children:<PeopleContainer/>, class:mainClass+"people-wrapper"})
             )
         );
 

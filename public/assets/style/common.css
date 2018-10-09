@@ -161,7 +161,6 @@ body {
     display: flex;
     align-items: center;
     min-height: 20px;
-    margin-bottom: 20px;
 }
 
 .border-left__title {
