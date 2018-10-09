@@ -5,6 +5,7 @@ class NotificationContainer extends Component {
     state = {  }
     render() { 
         return ( 
+            <React.Fragment>
             <div className="inbox-container">
 
 
@@ -23,7 +24,7 @@ class NotificationContainer extends Component {
                 </div>
 
             </div>
-           
+           </React.Fragment>
          );
     }
 }
