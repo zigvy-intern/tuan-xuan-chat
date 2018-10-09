@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ChatLine from '../ChatLine/ChatLine';
+import Avatar from '../Avatar/Avatar';
 
 class ChatRoom extends Component {
     state = {  }
@@ -9,12 +10,11 @@ class ChatRoom extends Component {
           <header>
             <p className="bold">INTERNAL CHAT ROOM</p>
             <div className="avatar-row">
-              <a className="avatar avatar--medium bgr-blue" href="#">H</a>
-              <a className="avatar avatar--medium bgr-yellow" href="#">H</a>
-              <a className="avatar avatar--medium bgr-cyan" href="#">H</a>
-              <a className="avatar avatar--medium bgr-green" href="#">H</a>
-              <a className="avatar avatar--medium bgr-pink" href="#">H</a>
-              <a className="avatar avatar--medium bgr-orange" href="#">H</a>
+              <Avatar color="green" size="medium" name="U"/>
+              <Avatar color="pink" size="medium" name="T"/>
+              <Avatar color="red" size="medium" name="A"/>
+              <Avatar color="blue" size="medium" name="X"/>
+              <Avatar color="cyan" size="medium" name="N"/>
             </div>
           </header>
           {/* Show mess part*/}

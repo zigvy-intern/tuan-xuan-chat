@@ -847,7 +847,7 @@ a {
     overflow-y: auto;
 }
 
-.notification .avatar-row {
+.noti-wrapper .avatar-row {
     margin: 14px 0px 7px 13px;
 }
 
