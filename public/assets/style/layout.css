@@ -29,6 +29,7 @@ a {
         'menu header'
         'menu main';
     height: 100vh;
+    width: 100vw;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -242,6 +243,7 @@ a {
 /* Style inbox of Conversation*/
 .inbox {
     min-height: 100px;
+    cursor: pointer;
 }
 
 .inbox .inbox__content {
@@ -249,6 +251,9 @@ a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.inbox-container .inbox:hover {
+    background-color: var(--color-gray-light);
 }
 
 /* Style chatbox of Conversation*/
