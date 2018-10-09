@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
+import Button from '../Button/Button';
 
 class InputBox extends Component {
     state = {  }
+
     render() { 
+        let tab;
+        if (this.props.tab=="1")
+        {
+            tab=<header className="chat__tab">
+            <ul>
+                <li className="active-tab"><a href>Reply</a></li>
+                <li><a href>Note</a></li>
+            </ul>
+            </header>
+        }
+        else
+        {
+            tab=null
+        }
         return ( 
-            <React.Fragment>>
+            <React.Fragment>
             <section className="chatbox__input">
                 {/* Features */}
-                <header className="chat__tab">
-                <ul>
-                    <li className="active-tab"><a href>Reply</a></li>
-                    <li><a href>Note</a></li>
-                </ul>
-                </header>
+                {tab}
                 {/* Input space */}
                 <textarea className="chat__text-box" type="text" placeholder="Enter your message here" defaultValue={""} />
                 {/* More input options */}
