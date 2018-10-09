@@ -4,20 +4,31 @@ import ChatLine from '../ChatLine/ChatLine';
 
 class ChatBox extends Component {
     state = {  }
+
+    openInfo() {
+        $(".info-container").addClass("open-info");
+    }
+
+    closeInfo() {
+        $(".info-container").removeClass("open-info");
+    }
+
     render() { 
         return ( 
             <React.Fragment>
         <div className="chatbox-container chatbox border-box">
             <header className="chatbox-header">
                 <div className="chatbox-header__main bold">
-                tquoctuan@gmail.com
+                {this.props.email}
                 </div>
-                <div className="chatbox-header__right" onClick="openInfo()">
+                <div className="chatbox-header__right" onClick={this.openInfo()}>
                 <i className="fas fa-ellipsis-h" />
                 </div>
             </header>
             {/* Show mess part*/}
             <section className="chatbox__content">
+                <ChatLine type="send"/>
+                <ChatLine type="receive"/>
                 <ChatLine type="send"/>
                 <ChatLine type="receive"/>
                 

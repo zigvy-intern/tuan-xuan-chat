@@ -7,7 +7,7 @@ class ChatLine extends Component {
         let chatline;
         if(this.props.type=="send")
         {
-            chatline= <div className="chat-line chat-line--send" key="1">
+            chatline= <div className="chat-line chat-line--send" key={Math.random()}>
             <div className="chat-line__content-wrap">
             <div className="chat-line__content">
                 <p className="inbox__content">{this.props.content}</p>
@@ -20,7 +20,7 @@ class ChatLine extends Component {
         }
         else if(this.props.type=="receive")
         {
-            chatline= <div className="chat-line chat-line--receive" key="2">
+            chatline= <div className="chat-line chat-line--receive" key={Math.random()}>
                    <Avatar size="medium" color="orange" url="" name="A"/>
                     <div className="chat-line__content-wrap">
                     <div className="chat-line__content">
