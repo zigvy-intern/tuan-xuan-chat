@@ -29,7 +29,7 @@ class NotificationContainer extends Component {
     render() { 
         return ( 
             <React.Fragment>
-            <div className="inbox-container">
+            <div className="inbox-container" data-simplebar>
             <div className="border-box inbox inbox--unread">
                 <p className="bold">UNREAD MESSAGE</p>
                 <span className="inbox__noti">10</span>
@@ -37,7 +37,7 @@ class NotificationContainer extends Component {
                 {this.renderInboxList()}
 
             </div>
-            <div className="noti-right-container">
+            <div className="noti-right-container" data-simplebar>
                 <div className="chart-container">
                     <Chart/>
 
@@ -46,7 +46,7 @@ class NotificationContainer extends Component {
                     <ChatRoom/>
 
                 </div>
-                <div className="activities-container">
+                <div className="activities-container" data-simplebar>
                     <ActivitiesBox/>
                 </div>
 

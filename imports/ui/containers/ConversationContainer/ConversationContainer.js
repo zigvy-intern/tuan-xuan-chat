@@ -9,10 +9,18 @@ class ConversationContainer extends Component {
     renderInboxList()
     {
         let inboxList =[
-            {id:1, sender:'X', receiver:"H", email:"tranxuan.1096@gmail.com", time:"300 days", content:"Hello, long time no see"},
-            {id:2, sender:'X', receiver:"T", email:"quoctuanit.1096@gmail.com", time:"30 mins", content:"How are you today?"},
-            {id:3, sender:'X', receiver:"H", email:"thanhhang@gmail.com", time:"now", content:"Lend me back my books"},
-            {id:4, sender:'X', receiver:"A", email:"phuonganh@gmail.com", time:"1 day", content:'I dont have money!'},
+            {id:Math.random(), sender:'X', receiver:"H", email:"tranxuan.1096@gmail.com", time:"300 days", content:"Hello, long time no see"},
+            {id:Math.random(), sender:'X', receiver:"T", email:"quoctuanit.1096@gmail.com", time:"30 mins", content:"How are you today?"},
+            {id:Math.random(), sender:'X', receiver:"H", email:"thanhhang@gmail.com", time:"now", content:"Lend me back my books"},
+            {id:Math.random(), sender:'X', receiver:"A", email:"phuonganh@gmail.com", time:"1 day", content:'I dont have money!'},
+            {id:Math.random(), sender:'X', receiver:"H", email:"tranxuan.1096@gmail.com", time:"300 days", content:"Hello, long time no see"},
+            {id:Math.random(), sender:'X', receiver:"T", email:"quoctuanit.1096@gmail.com", time:"30 mins", content:"How are you today?"},
+            {id:Math.random(), sender:'X', receiver:"H", email:"thanhhang@gmail.com", time:"now", content:"Lend me back my books"},
+            {id:Math.random(), sender:'X', receiver:"A", email:"phuonganh@gmail.com", time:"1 day", content:'I dont have money!'},
+            {id:Math.random(), sender:'X', receiver:"H", email:"tranxuan.1096@gmail.com", time:"300 days", content:"Hello, long time no see"},
+            {id:Math.random(), sender:'X', receiver:"T", email:"quoctuanit.1096@gmail.com", time:"30 mins", content:"How are you today?"},
+            {id:Math.random(), sender:'X', receiver:"H", email:"thanhhang@gmail.com", time:"now", content:"Lend me back my books"},
+            {id:Math.random(), sender:'X', receiver:"A", email:"phuonganh@gmail.com", time:"1 day", content:'I dont have money!'},
         ];
         
          const list= inboxList.map(inbox =>
@@ -29,7 +37,7 @@ class ConversationContainer extends Component {
     render() { 
         return ( 
             <React.Fragment>
-            <div className="inbox-container">
+            <div className="inbox-container" data-simplebar>
              {this.renderInboxList()}
             </div>
             <ChatBox/>

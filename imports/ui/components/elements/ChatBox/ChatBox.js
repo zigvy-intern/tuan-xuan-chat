@@ -13,12 +13,12 @@ class ChatBox extends Component {
                 <div className="chatbox-header__main bold">
                 {this.props.email}
                 </div>
-                <div className="chatbox-header__right" onClick={this.openInfo()}>
+                <div className="chatbox-header__right">
                 <i className="fas fa-ellipsis-h" />
                 </div>
             </header>
             {/* Show mess part*/}
-            <section className="chatbox__content">
+            <section className="chatbox__content" data-simplebar>
                 <ChatLine type="send"/>
                 <ChatLine type="receive"/>
                 <ChatLine type="send"/>

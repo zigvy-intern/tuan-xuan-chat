@@ -7,7 +7,7 @@ class PeopleContainer extends Component {
     render() { 
         return ( 
             <React.Fragment>
-            <section className="tab-container people">
+            <section className="tab-container people" data-simplebar>
             <TabStrip color="cyan" title="Name"/>
             <TabStrip color="pink" title="Email" tab="1"/>
             <TabStrip color="green" title="Location"/>
