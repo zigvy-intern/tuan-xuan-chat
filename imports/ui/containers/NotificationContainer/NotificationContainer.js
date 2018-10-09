@@ -30,6 +30,10 @@ class NotificationContainer extends Component {
         return ( 
             <React.Fragment>
             <div className="inbox-container">
+            <div className="border-box inbox inbox--unread">
+                <p className="bold">UNREAD MESSAGE</p>
+                <span className="inbox__noti">10</span>
+            </div>
                 {this.renderInboxList()}
 
             </div>
