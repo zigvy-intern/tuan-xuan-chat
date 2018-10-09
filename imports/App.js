@@ -26,8 +26,8 @@ class App extends Component {
             // MainContent({children:<SwitchContainer/>, class:"switchapps"})
             // MainContent({children:<MemberContainer/>, class:mainClass+"member"})
             // MainContent({children:<ConversationContainer/>, class:mainClass+"conversation-wrapper"})
-            // MainContent({children:<NotificationContainer/>, class:mainClass+"noti-wrapper"})
-            MainContent({children:<PeopleContainer/>, class:mainClass+"people-wrapper"})
+            MainContent({children:<NotificationContainer/>, class:mainClass+"noti-wrapper"})
+            // MainContent({children:<PeopleContainer/>, class:mainClass+"people-wrapper"})
             )
         );
 

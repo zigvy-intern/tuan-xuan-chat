@@ -843,8 +843,9 @@ a {
 }
 
 .conversation__internal-chat-room .chatbox__content {
-    height: 30vh;
-    min-height: 250px;
+    height:25vh;   
+    /* height: 30vh;
+        min-height: 250px; */
 }
 
 .conversation__activities {
