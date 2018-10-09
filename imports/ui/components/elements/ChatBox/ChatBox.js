@@ -18,11 +18,11 @@ class ChatBox extends Component {
                 </div>
             </header>
             {/* Show mess part*/}
-            <section className="chatbox__content" data-simplebar>
-                <ChatLine type="send"/>
-                <ChatLine type="receive"/>
-                <ChatLine type="send"/>
-                <ChatLine type="receive"/>
+            <section className="chatbox__content">
+                <ChatLine type="send" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit perferendis explicabo quos, quasi recusandae vel, officiis veniam nisi laudantium aut, hic temporibus totam? Molestias repellendus saepe illo magnam in ipsa!"/>
+                <ChatLine type="receive" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit perferendis explicabo quos, quasi recusandae vel, officiis veniam nisi laudantium aut, hic temporibus totam? Molestias repellendus saepe illo magnam in ipsa!"/>
+                <ChatLine type="send" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit perferendis explicabo quos, quasi recusandae vel, officiis veniam nisi laudantium aut, hic temporibus totam? Molestias repellendus saepe illo magnam in ipsa!"/>
+                <ChatLine type="receive" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit perferendis explicabo quos, quasi recusandae vel, officiis veniam nisi laudantium aut, hic temporibus totam? Molestias repellendus saepe illo magnam in ipsa!"/>
                 
             </section>
             {/* Chat input & option */}

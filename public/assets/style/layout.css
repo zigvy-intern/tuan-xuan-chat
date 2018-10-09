@@ -20,6 +20,28 @@ a {
     text-decoration: none;
 }
 
+/* */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background:transparent;
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #d8d8d8; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #848484; 
+}
+
 /* Set layout website */
 .grid-container {
     display: grid;
@@ -71,6 +93,10 @@ a {
 .info-container > *
 {
     padding: var(--padding-and-gap);
+}
+.info>section
+{
+    padding: 10px 0;
 }
 
 /* Set layout Chart and chat room */

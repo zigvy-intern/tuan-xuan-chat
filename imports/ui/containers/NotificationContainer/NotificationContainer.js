@@ -37,7 +37,7 @@ class NotificationContainer extends Component {
                 {this.renderInboxList()}
 
             </div>
-            <div className="noti-right-container" data-simplebar>
+            <div className="noti-right-container">
                 <div className="chart-container">
                     <Chart/>
 
@@ -46,7 +46,7 @@ class NotificationContainer extends Component {
                     <ChatRoom/>
 
                 </div>
-                <div className="activities-container" data-simplebar>
+                <div className="activities-container">
                     <ActivitiesBox/>
                 </div>
 

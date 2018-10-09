@@ -15,7 +15,7 @@ class AppsettingContainer extends Component {
                 <IconStrip title="Billing" color="pink" icon="billing"/>
 
             </section>
-            <section className="tab-detail-container">
+            <section className="tab-detail-container" data-simplebar>
                 {/* Bunch of tabs here */}
             </section>
             </React.Fragment>

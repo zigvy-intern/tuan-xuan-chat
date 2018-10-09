@@ -40,7 +40,7 @@ class ConversationContainer extends Component {
             <div className="inbox-container" data-simplebar>
              {this.renderInboxList()}
             </div>
-            <ChatBox/>
+            <ChatBox email="tranxuan.1096@gmail.com"/>
             <InfoBox/>
             </React.Fragment>
          );

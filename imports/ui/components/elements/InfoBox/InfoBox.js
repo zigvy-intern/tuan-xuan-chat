@@ -8,7 +8,8 @@ class InfoBox extends Component {
     render() { 
         return ( 
             <React.Fragment>
-            <div className="info-container" data-simplebar>
+            
+            <div className="info-container" >
                 <header className="info-header__right">
                     <i className="fas fa-times" />
                 </header>
