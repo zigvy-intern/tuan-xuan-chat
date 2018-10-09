@@ -57,7 +57,7 @@ class GuestContainer extends Component {
                         <button className="btn btn--blue btn--large">Unsubcribe from email</button>
                     </section>
              </div>
-            <div className="inbox-container">
+            <div className="inbox-container" data-simplebar>
                 {this.renderInboxList()}
 
             </div>

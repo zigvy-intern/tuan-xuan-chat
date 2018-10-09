@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Avatar from '../../Avatar/Avatar';
 class SettingMemberTab extends Component {
     state = {  }
     render() { 
@@ -82,9 +82,7 @@ class SettingMemberTab extends Component {
                         All members
                     </header>
                     <div className="avatar-row">
-                        <a className="avatar avatar--medium bgr-cyan" href="#"> H
-                        <div className="tooltip">tranxuan1096@gmail.com</div>
-                        </a>
+                    <Avatar email="tranxuan1096@gmail.com" color="cyan" size="medium" name="X"/>
                     </div>
                     </section>
                     <section className="border-grey bgr-grey team-box">
@@ -93,10 +91,8 @@ class SettingMemberTab extends Component {
                         <span className="icon icon-remove-2" />
                     </header>
                     <div className="avatar-row">
-                        <a className="avatar avatar--medium bgr-cyan" href="#"> H
-                        <div className="tooltip">tranxuan1096@gmail.com</div>
-                        </a>
-                        <a className="avatar avatar--medium bgr-dark-gray btn-plus" href="#">+</a>
+                    <Avatar email="tranxuan1096@gmail.com" color="cyan" size="medium" name="X"/>
+                    <a className="avatar avatar--medium bgr-dark-gray btn-plus" href="#">+</a>
                     </div>
                     </section>
                     <section className="border-grey bgr-grey team-box">
@@ -105,15 +101,9 @@ class SettingMemberTab extends Component {
                         <span className="icon icon-remove-2" />
                     </header>
                     <div className="avatar-row">
-                        <a className="avatar avatar--medium bgr-cyan" href="#"> H
-                        <div className="tooltip">tranxuan1096@gmail.com</div>
-                        </a>
-                        <a className="avatar avatar--medium bgr-yellow" href="#"> H
-                        <div className="tooltip">tranxuan1096@gmail.com</div>
-                        </a>
-                        <a className="avatar avatar--medium bgr-red" href="#"> H
-                        <div className="tooltip">tranxuan1096@gmail.com</div>
-                        </a>
+                    <Avatar email="tranxuan1096@gmail.com" color="cyan" size="medium" name="X"/>
+                    <Avatar email="tranxuan1096@gmail.com" color="cyan" size="medium" name="X" />
+                    <Avatar email="tranxuan1096@gmail.com" color="cyan" size="medium" name="X"/>
                         <a className="avatar avatar--medium bgr-dark-gray btn-plus" href="#">+</a>
                     </div>
                     </section>
