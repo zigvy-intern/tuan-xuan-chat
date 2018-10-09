@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import IconStrip from '../../components/elements/IconStrip/IconStrip';
+import SettingGeneralTab from '../../components/elements/SettingTab/elements/SettingGeneralTab';
+import SettingMemberTab from '../../components/elements/SettingTab/elements/SettingMemberTab';
+import SettingMessagingTab from '../../components/elements/SettingTab/elements/SettingMessagingTab';
+import SettingAppearanceTab from '../../components/elements/SettingTab/elements/SettingAppearanceTab';
+import SettingBlockedTab from '../../components/elements/SettingTab/elements/SettingBlockedTab';
+import SettingUpgradeTab from '../../components/elements/SettingTab/elements/SettingUpgradeTab';
+import SettingBillingTab from '../../components/elements/SettingTab/elements/SettingBillingTab';
 class AppsettingContainer extends Component {
     state = {  }
     render() { 
@@ -16,6 +23,13 @@ class AppsettingContainer extends Component {
 
             </section>
             <section className="tab-detail-container" data-simplebar>
+               <SettingGeneralTab/>
+               <SettingMemberTab/>
+               <SettingMessagingTab/>
+               <SettingAppearanceTab/>
+               <SettingBlockedTab/>
+               <SettingUpgradeTab/>
+               <SettingBillingTab/>
                 {/* Bunch of tabs here */}
             </section>
             </React.Fragment>

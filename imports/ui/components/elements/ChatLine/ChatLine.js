@@ -4,7 +4,7 @@ import Avatar from '../Avatar/Avatar';
 class ChatLine extends Component {
     state = {  }
     render() { 
-        let chatline;
+        let chatline=null;
         if(this.props.type=="send")
         {
             chatline= <div className="chat-line chat-line--send" key={Math.random()}>

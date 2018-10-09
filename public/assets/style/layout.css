@@ -537,7 +537,10 @@ a {
 .tab-detail>section {
     padding: 20px 30px;
 }
-
+.tab-detail>section>*
+{
+    margin-bottom: 15px;
+}
 .checkbox-wrap {
     margin-bottom: 10px;
 }
@@ -578,7 +581,6 @@ a {
 }
 
 .connect-status {
-    margin-top: 15px;
     display: inline-flex;
     align-items: center;
 }

@@ -4,7 +4,7 @@ import FormInput from '../FromInput/FromInput';
 class TabStrip extends Component {
     state = {  }
     render() { 
-        let filter;
+        let filter=null;
         if(this.props.tab=="2")
         {
             filter= 
@@ -19,8 +19,6 @@ class TabStrip extends Component {
         {
             filter=<FormInput type="email" placeholder={this.props.placeholder}/>
         }
-        else
-        filter=null;
         return ( 
             <div className="tab__label border-box">
                 <div className={"border-left-box border--"+this.props.color}>

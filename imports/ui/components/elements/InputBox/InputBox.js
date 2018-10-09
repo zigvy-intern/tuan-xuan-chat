@@ -5,7 +5,7 @@ class InputBox extends Component {
     state = {  }
 
     render() { 
-        let tab;
+        let tab=null;
         if (this.props.tab=="1")
         {
             tab=<header className="chat__tab">
@@ -14,10 +14,6 @@ class InputBox extends Component {
                 <li><a href>Note</a></li>
             </ul>
             </header>
-        }
-        else
-        {
-            tab=null
         }
         return ( 
             <React.Fragment>

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class SwitchTab extends Component {
     state = {  }
     render() { 
-        let tab;
+        let tab=null;
 
         if(this.props.type =="create")
     {
