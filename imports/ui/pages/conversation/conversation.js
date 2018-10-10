@@ -3,16 +3,16 @@ import MainLayout from '../../layouts/MainLayout/MainLayout';
 import TopHeader from '../../layouts/TopHeader/TopHeader';
 import MainContent from '../../layouts/MainContent/MainContent';
 import MenuSide from '../../layouts/MenuSide/MenuSide';
-import MemberContainer from '../../containers/MemberContainer/MemberContainer';
+import ConversationContainer from '../../containers/ConversationContainer/ConversationContainer';
 
-const MemberPage = () => {
+const ConversationPage = () => {
     return ( 
         MainLayout(
-            <TopHeader group="name" name="profile"/>,
+            <TopHeader group="conversation"/>,
             <MenuSide/>,
-            MainContent({children:<MemberContainer/>, class:"main-container "+"member"})
+            MainContent({children:<ConversationContainer/>, class:"main-container "+"conversation-wrapper"})
         )
      );
 }
  
-export default MemberPage;
+export default ConversationPage;

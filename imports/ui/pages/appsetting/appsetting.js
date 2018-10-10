@@ -3,16 +3,17 @@ import MainLayout from '../../layouts/MainLayout/MainLayout';
 import TopHeader from '../../layouts/TopHeader/TopHeader';
 import MainContent from '../../layouts/MainContent/MainContent';
 import MenuSide from '../../layouts/MenuSide/MenuSide';
-import MemberContainer from '../../containers/MemberContainer/MemberContainer';
+import AppsettingContainer from '../../containers/AppsettingContainer/AppsettingContainer';
 
-const MemberPage = () => {
+
+const AppsettingPage = () => {
     return ( 
         MainLayout(
-            <TopHeader group="name" name="profile"/>,
+            <TopHeader group="name" name="app setting"/>,
             <MenuSide/>,
-            MainContent({children:<MemberContainer/>, class:"main-container "+"member"})
+            MainContent({children:<AppsettingContainer/>, class:"main-container "+"appsetting"})
         )
      );
 }
  
-export default MemberPage;
+export default AppsettingPage;
