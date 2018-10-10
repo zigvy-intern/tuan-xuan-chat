@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import IconButton from '../../IconButton/IconButton';
 class SettingBlockedTab extends Component {
     state = {  }
     render() { 
@@ -41,7 +41,8 @@ class SettingBlockedTab extends Component {
                     <p>12/03/2016</p>
                     </div>
                     <div className="col-1">
-                    <span className="icon bgr-yellow icon-refresh" />
+                    <IconButton href="#" color="yellow" icon="refresh"/>
+                    
                     </div>
                 </div>
                 <div className="table__row">
@@ -58,7 +59,7 @@ class SettingBlockedTab extends Component {
                     <p>23/02/2016</p>
                     </div>
                     <div className="col-1">
-                    <span className="icon icon-refresh-2" />
+                    <IconButton href="#" icon="refresh-2"/>
                     </div>
                 </div>
                 </section>

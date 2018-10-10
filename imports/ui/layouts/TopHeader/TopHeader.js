@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FormInput from '../../components/elements/FromInput/FromInput';
 class TopHeader extends Component {
   state = {}
   render() {
@@ -49,6 +50,17 @@ class TopHeader extends Component {
               </li>
             </ul>
           </div>
+          <div className="search-bar">
+            <form action className="inner-addon">
+              <span className="right-addon icon-search" />
+              <FormInput placeholder="Search history in all conversation"/>
+            </form>
+            <ul>
+              <li className="noti__item">
+                <a className="noti__label" href="#">Online&nbsp;<span className="noti bgr-green">22</span></a></li>
+            </ul>
+          </div>
+
         </React.Fragment>
     }
     return (
