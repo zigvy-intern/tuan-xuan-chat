@@ -8,11 +8,13 @@ import AppsettingContainer from '../../containers/AppsettingContainer/Appsetting
 
 const AppsettingPage = () => {
     return ( 
-        MainLayout(
-            <TopHeader group="name" name="app setting"/>,
-            <MenuSide/>,
-            MainContent({children:<AppsettingContainer/>, class:"main-container "+"appsetting"})
-        )
+       <MainLayout>
+            <TopHeader group="name" name="app setting"/>
+            <MenuSide/>
+            <MainContent class={"main-container "+"appsetting"}>
+                <AppsettingContainer/>
+            </MainContent>
+       </MainLayout>
      );
 }
  

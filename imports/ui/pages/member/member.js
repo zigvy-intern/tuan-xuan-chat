@@ -7,11 +7,13 @@ import MemberContainer from '../../containers/MemberContainer/MemberContainer';
 
 const MemberPage = () => {
     return ( 
-        MainLayout(
-            <TopHeader group="name" name="profile"/>,
-            <MenuSide/>,
-            MainContent({children:<MemberContainer/>, class:"main-container "+"member"})
-        )
+        <MainLayout>
+             <TopHeader group="name" name="profile"/>,
+            <MenuSide/>
+            <MainContent class={"main-container "+"member"}>
+                <MemberContainer/>
+            </MainContent>
+       </MainLayout>
      );
 }
  

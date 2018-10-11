@@ -12,6 +12,13 @@ const SwitchappsPage = () => {
             <MenuSide/>,
             MainContent({children:<SwitchContainer/>, class:"switchapps"})
         )
+        <MainLayout>
+        <TopHeader group="name" name="switch apps"/>,
+        <MenuSide/>
+        <MainContent class={"switchapps"}>
+            <SwitchContainer/>
+        </MainContent>
+    </MainLayout>
       );
 }
  

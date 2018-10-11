@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 
-const MainLayout = (...props) => {
+const MainLayout = (props) => {
   return (
     <div className="grid-container">
-          {props}
+          {props.children}
       </div>
     );
 }

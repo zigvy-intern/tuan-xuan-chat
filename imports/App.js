@@ -16,7 +16,7 @@ class App extends Component {
         return (
         <Router>
             <Switch>
-                <Route path={`/${thisUrl}/notification`} exact render={() => <NotificationPage/>} />
+                <Route path={`/`} exact render={() => <NotificationPage/>} />
                 <Route path={`/${thisUrl}/people`} render={() => <PeoplePage/>} />
                 <Route path={`/${thisUrl}/conversation`} render={() => <ConversationPage/>} />
                 <Route path={`/${thisUrl}/appsetting`} render={() => <AppsettingPage/>} />

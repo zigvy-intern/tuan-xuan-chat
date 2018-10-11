@@ -7,11 +7,13 @@ import NotificationContainer from '../../containers/NotificationContainer/Notifi
 
 const NotificationPage = () => {
     return (
-        MainLayout(
-            <TopHeader group="name" name="notification"/>,
-            <MenuSide/>,
-            MainContent({children:<NotificationContainer/>, class:"main-container "+"noti-wrapper"})
-        )
+        <MainLayout>
+             <TopHeader group="name" name="notification"/>,
+            <MenuSide/>
+            <MainContent class={"main-container "+"noti-wrapper"}>
+                <NotificationContainer/>
+            </MainContent>
+       </MainLayout>
       );
 }
  

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const MainContent = ({...props}) => {
+const MainContent = (props) => {
     return ( 
         <main className={ props.class} >
             {props.children}

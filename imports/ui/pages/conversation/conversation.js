@@ -7,10 +7,13 @@ import ConversationContainer from '../../containers/ConversationContainer/Conver
 
 const ConversationPage = () => {
     return ( 
-        MainLayout(
-            <TopHeader group="conversation"/>,
-            <MenuSide/>,
-            MainContent({children:<ConversationContainer/>, class:"main-container "+"conversation-wrapper"})
+        <MainLayout>
+            <TopHeader group="conversation"/>
+            <MenuSide/>
+            <MainContent class={"main-container "+"conversation-wrapper"}>
+                <ConversationContainer/>
+            </MainContent>
+       </MainLayout>
         )
      );
 }

@@ -16,7 +16,7 @@ class MenuSide extends Component {
           </div>
           <nav>
             <ul className="nav__container">
-            <Link to={`/${thisUrl}/notification`}>
+            <Link to={`/`}>
               <li className="nav__icon-item">
                 <div>
                   <span className="icon-bell" />

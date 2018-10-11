@@ -6,11 +6,14 @@ import MenuSide from '../../layouts/MenuSide/MenuSide';
 import PeopleContainer from '../../containers/PeopleContainer/PeopleContainer';
 
 const PeoplePage = () => {
-    return (  MainLayout(
-        <TopHeader group="people"/>,
-        <MenuSide/>,
-        MainContent({children:<PeopleContainer/>, class:"main-container "+"people-wrapper"})
-        
+    return ( 
+        <MainLayout>
+            <TopHeader group="people"/>,
+            <MenuSide/>
+            <MainContent class={"main-container "+"people-wrapper"}>
+                <PeopleContainer/>
+            </MainContent>
+        </MainLayout>
     )
     );
 }
