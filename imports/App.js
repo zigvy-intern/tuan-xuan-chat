@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import AppsettingPage from './ui/pages/appsetting/appsetting';
-import NotificationPage from './ui/pages/notification/notification';
-import MemberPage from './ui/pages/member/member';
-import GuestPage from './ui/pages/guest/guest';
-import ConversationPage from './ui/pages/conversation/conversation';
-import SwitchappsPage from './ui/pages/switchapps/switchapps';
-import PeoplePage from './ui/pages/people/people';
+import AppsettingPage from './ui/pages/dchat/appsetting/appsetting';
+import NotificationPage from './ui/pages/dchat/notification/notification';
+import MemberPage from './ui/pages/dchat/member/member';
+import GuestPage from './ui/pages/dchat/guest/guest';
+import ConversationPage from './ui/pages/dchat/conversation/conversation';
+import SwitchappsPage from './ui/pages/dchat/switchapps/switchapps';
+import PeoplePage from './ui/pages/dchat/people/people';
 import {Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 
 class App extends Component {
