@@ -23,6 +23,7 @@ a {
 /* */
 ::-webkit-scrollbar {
     width: 8px;
+    height:5px;
 }
 
 /* Track */
@@ -409,7 +410,10 @@ a {
 .chat-line--send .inbox__time {
     text-align: right;
 }
-
+.inbox__time
+{
+    color: #B1B1B1;
+}
 .chat-line--send {
     grid-template-columns: 90% 10%;
     align-self: flex-end;
