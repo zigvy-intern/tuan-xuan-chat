@@ -1,70 +1,95 @@
 import React, { Component } from 'react';
 import Avatar from '../../components/elements/Avatar/Avatar';
-import {Link} from 'react-router-dom';
+import {Link, Route} from 'react-router-dom';
+
+const mainURL="dchat";
+const listMenu = [
+  {
+    name: 'Notification',
+    to: '/notification',
+    icon: 'icon-bell',
+    exact: false
+  },
+  {
+    name: 'People',
+    to:  '/people',
+    icon: 'icon-user',
+    exact: false
+  },
+  {
+    name: 'Conversation',
+    to:  '/conversation',
+    icon: 'icon-chat',
+    exact: false
+  },
+  {
+    name: 'App Setting',
+    to: '/appsetting',
+    icon: 'icon-setting',
+    exact: false
+  },
+  {
+    name: 'Switch Apps',
+    to: '/switchapps',
+    icon: 'icon-switch',
+    exact: false
+  },
+];
+
+const MenuLink = ({to, icon, activeOnlyWhenExact}) => {
+  return(
+    <Route
+      path={to}
+      exact={activeOnlyWhenExact}
+      children={({match})=>{
+        var active = match ? 'active' : '';
+        return(
+          <li className={`nav__icon-item ${active}`}>
+                <Link to={to}>
+                  <span className={icon} />
+                </Link>
+          </li>
+        );
+      }}
+    />
+  );
+}
 class MenuSide extends Component {
     state = {  }
-    render() { 
-      var thisUrl="dchat";
-        return (  
-        <aside className="menu-container" key="nav">
-        <div className="aside-nav">
-          <div className="aside__logo center-inner">
-            <div>
-              <img src="./assets/img/SVG/logo.svg" alt="logo" />
-            </div>
-          </div>
-          <nav>
-            <ul className="nav__container">
-           
-              <li className="nav__icon-item">
-              <Link to={`/`}>
-                <div>
-                  <span className="icon-bell" />
-                </div>
-                </Link>
-              </li>
-             
-             
-              <li className="nav__icon-item">
-              <Link to={`/${thisUrl}/people`}>
-                <div>
-                  <span className="icon-user" />
-                </div>
-                </Link>
-              </li>
-             
-              
-              <li className="nav__icon-item">
-              <Link to={`/${thisUrl}/conversation`}>
-                <div>
-                  <span className="icon-chat" />
-                </div>
-                </Link>
-              </li>
-            
-             
-              <li className="nav__icon-item">
-              <Link to={`/${thisUrl}/appsetting`}>
-                <div>
-                  <span className="icon-setting" />
+   
+      showMenu = (listMenu) => {
+        var result = null;
+        if(listMenu.length > 0){
+          result = listMenu.map((menu,index)=>{
+            return(
+              <MenuLink
+                key={index}
+                to={menu.to}
+                icon={menu.icon}
+                exact={menu.exact}
+              />
+            );
+          });
+        }
+        return result;
+      }
+      render() {
+        return (
+          <aside className="menu-container">
+            <div className="aside-nav">
+              <div className="aside__logo center-inner">
+                <a href="#">
+                  <img src="./assets/img/SVG/logo.svg" alt="logo" />
+                </a>
               </div>
-              </Link>
-              </li>
-             
-              
-              <li className="nav__icon-item">
-              <Link to={`/${thisUrl}/switchapp`}>
-                <div>
-                  <span className="icon-switch" />
-                </div>
-              </Link>
-              </li>
-             
-            </ul>
-          </nav>
+              <nav>
+                <ul className="nav__container">
+                  {this.showMenu(listMenu)}
+                </ul>
+              </nav>
           <div className="center-inner">
             <div className="aside__avatar">
-            <Link to={`/${thisUrl}/profile`}>
+            <Link to={`/profile`}>
               <Avatar color="pink" size="large" name="P"/>
               </Link>
             </div>
