@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import IconStrip from '../../components/elements/IconStrip/IconStrip';
 import SettingGeneralTab from '../../components/elements/SettingTab/elements/SettingGeneralTab';
 import SettingMemberTab from '../../components/elements/SettingTab/elements/SettingMemberTab';
@@ -11,28 +12,58 @@ class AppsettingContainer extends Component {
     state = {  }
     render() { 
         return ( 
-            <React.Fragment>
-            <section className="tab-container">
-                <IconStrip title="General" color="cyan" icon="general"/>
-                <IconStrip title="Team member" color="pink" icon="member"/>
-                <IconStrip title="Messaging" color="green" icon="messaging"/>
-                <IconStrip title="Appearance" color="blue" icon="appearance"/>
-                <IconStrip title="Blocked people" color="red" icon="blocked"/>
-                <IconStrip title="Upgrade" color="yellow" icon="upgrade"/>
-                <IconStrip title="Billing" color="pink" icon="billing"/>
-
-            </section>
-            <section className="tab-detail-container" data-simplebar>
-               <SettingGeneralTab/>
-               <SettingMemberTab/>
-               <SettingMessagingTab/>
-               <SettingAppearanceTab/>
-               <SettingBlockedTab/>
-               <SettingUpgradeTab/>
-               <SettingBillingTab/>
-                {/* Bunch of tabs here */}
-            </section>
-            </React.Fragment>
+            <Tabs>
+            {/* <section className="tab-container"> */}
+                  <TabList>
+                      <Tab>
+                      <IconStrip title="General" color="cyan" icon="general"/>
+                      </Tab>
+                      <Tab>
+                      <IconStrip title="Team member" color="pink" icon="member"/>
+                      </Tab>
+                      <Tab>
+                        <IconStrip title="Messaging" color="green" icon="messaging"/>
+                      </Tab>
+                      <Tab>
+                      <IconStrip title="Appearance" color="blue" icon="appearance"/>
+                      </Tab>
+                      <Tab>
+                      <IconStrip title="Blocked people" color="red" icon="blocked"/>
+                      </Tab>
+                      <Tab>
+                      <IconStrip title="Upgrade" color="yellow" icon="upgrade"/>
+                      </Tab>
+                      <Tab>
+                      <IconStrip title="Billing" color="pink" icon="billing"/>
+                      </Tab>
+                  </TabList>
+              {/* </section> 
+                      <section className="tab-detail-container" data-simplebar> */}
+              
+                  <TabPanel>
+                       <SettingGeneralTab/>
+                  </TabPanel>
+                  <TabPanel>
+                       <SettingMemberTab/>
+                  </TabPanel>
+                  <TabPanel>
+                       <SettingMessagingTab/>
+                  </TabPanel>
+                  <TabPanel>
+                         <SettingAppearanceTab/>
+                  </TabPanel>
+                  <TabPanel>
+                       <SettingBlockedTab/>
+                  </TabPanel>
+                  <TabPanel>
+                      <SettingUpgradeTab/>
+                  </TabPanel>
+                  <TabPanel>
+                       <SettingBillingTab/>
+                  </TabPanel>
+                  {/* </section> */}
+           </Tabs>
+        
          );
     }
 }
