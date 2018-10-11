@@ -14,7 +14,7 @@ const PeoplePage = () => {
                 <PeopleContainer/>
             </MainContent>
         </MainLayout>
-    )
+    
     );
 }
  

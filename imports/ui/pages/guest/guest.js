@@ -8,7 +8,7 @@ import GuestContainer from '../../containers/GuestContainer/GuestContainer';
 const GuestPage = () => {
     return ( 
         <MainLayout>
-             <TopHeader group="name" name="profile"/>,
+             <TopHeader group="name" name="profile"/>
             <MenuSide/>
             <MainContent class={"main-container "+"guest"}>
                 <GuestContainer/>

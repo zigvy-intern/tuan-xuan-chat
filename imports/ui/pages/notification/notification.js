@@ -8,7 +8,7 @@ import NotificationContainer from '../../containers/NotificationContainer/Notifi
 const NotificationPage = () => {
     return (
         <MainLayout>
-             <TopHeader group="name" name="notification"/>,
+             <TopHeader group="name" name="notification"/>
             <MenuSide/>
             <MainContent class={"main-container "+"noti-wrapper"}>
                 <NotificationContainer/>

@@ -7,18 +7,13 @@ import SwitchContainer from '../../containers/SwitchContainer/SwitchContainer';
 
 const SwitchappsPage = () => {
     return (    
-        MainLayout(
-            <TopHeader group="name" name="switch apps"/>,
-            <MenuSide/>,
-            MainContent({children:<SwitchContainer/>, class:"switchapps"})
-        )
         <MainLayout>
-        <TopHeader group="name" name="switch apps"/>,
+        <TopHeader group="name" name="switch apps"/>
         <MenuSide/>
-        <MainContent class={"switchapps"}>
+        <MainContent class="switchapps">
             <SwitchContainer/>
         </MainContent>
-    </MainLayout>
+        </MainLayout>
       );
 }
  

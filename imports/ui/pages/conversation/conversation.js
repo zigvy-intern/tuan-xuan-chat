@@ -14,7 +14,7 @@ const ConversationPage = () => {
                 <ConversationContainer/>
             </MainContent>
        </MainLayout>
-        )
+        
      );
 }
  
