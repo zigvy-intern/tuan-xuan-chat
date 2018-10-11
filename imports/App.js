@@ -18,17 +18,17 @@ class App extends Component {
         var thisUrl="dchat";
         return (
         <Router>
-            <MainLayout>
+            <div className="grid-container">
             <MenuSide/>
             <Switch>
-                <Route path={`/`} component={NotificationPage} />
-                <Route path={`/${thisUrl}/people`} component={PeoplePage}  />
-                <Route path={`/${thisUrl}/conversation`} component={ConversationPage} />
-                <Route path={`/${thisUrl}/appsetting`} component={AppsettingPage} />
-                <Route path={`/${thisUrl}/profile`} component={MemberPage}/>
-                <Route path={`/${thisUrl}/switchapp`} component={SwitchappsPage} />
+                <Route path={`/`} exact component={NotificationPage} />
+                <Route path={`/${thisUrl}/people`} exact component={PeoplePage}  />
+                <Route path={`/${thisUrl}/conversation`} exact component={ConversationPage} />
+                <Route path={`/${thisUrl}/appsetting`} exact component={AppsettingPage} />
+                <Route path={`/${thisUrl}/profile`} exact component={MemberPage}/>
+                <Route path={`/${thisUrl}/switchapp`} exact component={SwitchappsPage} />
             </Switch>
-            </MainLayout>
+            </div>
         </Router>
         );
 

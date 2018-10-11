@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Avatar from '../../components/elements/Avatar/Avatar';
-import {Router, Route, Link, NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 class MenuSide extends Component {
     state = {  }
     render() { 
