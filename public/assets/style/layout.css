@@ -517,7 +517,7 @@
 }
 
 .tab__label:hover,
-.active-tab-detail {
+.active-tab-detail >.tab__label {
     background-color: #F7F7F7;
     cursor: pointer;
 }

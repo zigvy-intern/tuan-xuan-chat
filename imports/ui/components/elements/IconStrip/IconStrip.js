@@ -5,7 +5,7 @@ class IconStrip extends Component {
     render() { 
         return ( 
             <React.Fragment>
-                <a className="border-box tab__label">
+                <a className="border-box tab__label  active-tab-detail">
                     <IconButton icon={this.props.icon} color={this.props.color}/>
                     <p>{this.props.title}</p>
                 </a>
