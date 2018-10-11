@@ -46,6 +46,9 @@ a {
 body {
     background: #F1F1F2;
 }
+li {
+    list-style: none;
+}
 
 .pull-left {
     float: left;
