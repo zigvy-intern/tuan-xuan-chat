@@ -6,16 +6,24 @@ import GuestPage from './ui/pages/guest/guest';
 import ConversationPage from './ui/pages/conversation/conversation';
 import SwitchappsPage from './ui/pages/switchapps/switchapps';
 import PeoplePage from './ui/pages/people/people';
+import {Switch, Route, BrowserRouter as Router} from 'react-router-dom';
 
 class App extends Component {
     state = {  }
 
     render() { 
-       
+        var thisUrl="dchat";
         return (
-            
-            <AppsettingPage/>
-            
+        <Router>
+            <Switch>
+                <Route path={`/${thisUrl}/notification`} exact render={() => <NotificationPage/>} />
+                <Route path={`/${thisUrl}/people`} render={() => <PeoplePage/>} />
+                <Route path={`/${thisUrl}/conversation`} render={() => <ConversationPage/>} />
+                <Route path={`/${thisUrl}/appsetting`} render={() => <AppsettingPage/>} />
+                <Route path={`/${thisUrl}/profile`} render={() => <MemberPage/>} />
+                <Route path={`/${thisUrl}/switchapp`} render={() => <SwitchappsPage/>} />
+            </Switch>
+        </Router>
         );
 
     }

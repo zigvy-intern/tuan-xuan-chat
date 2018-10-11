@@ -49,7 +49,7 @@
 {
     color: white !important;
 }
-.nav__icon-item a {
+.nav__icon-item div {
     padding: 5px;
     width: inherit;
     height: inherit;

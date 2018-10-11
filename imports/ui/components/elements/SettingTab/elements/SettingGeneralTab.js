@@ -26,7 +26,7 @@ class SettingGeneralTab extends Component {
                 <p className="border-left__title">App integration</p>
                 </header>
                 <form>
-                <textarea className="text-box--white" name id cols={30} rows={5} defaultValue={"!function(a){\"function\"==typeof define&&define.amd?define([\"jquery\"],a):\"object\"==typeof exports?a(require(\"jquery\")):a(jQuery)}(function(a){function b(a){re- turn h.raw?a:encodeURIComponent(a)}function c(a){return h.raw?a:decodeURIComponent(a)}function d(a){return b(h.json?JSON.stringify(a):String(a))}func- tion e(a){0===a.indexOf('\"')&&(a=a.slice(1,-1).replace(/\\\\\"/g,'\"').replace(/\\\\\\\\/g,\"\\\\\"));"} />
+                <textarea className="text-box--white" cols={30} rows={5} defaultValue={"!function(a){\"function\"==typeof define&&define.amd?define([\"jquery\"],a):\"object\"==typeof exports?a(require(\"jquery\")):a(jQuery)}(function(a){function b(a){re- turn h.raw?a:encodeURIComponent(a)}function c(a){return h.raw?a:decodeURIComponent(a)}function d(a){return b(h.json?JSON.stringify(a):String(a))}func- tion e(a){0===a.indexOf('\"')&&(a=a.slice(1,-1).replace(/\\\\\"/g,'\"').replace(/\\\\\\\\/g,\"\\\\\"));"} />
                 </form>
                 <div className="connect-status">
                 <p className="inline-p">Connection status: </p>

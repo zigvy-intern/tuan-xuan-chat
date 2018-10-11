@@ -1,51 +1,68 @@
 import React, { Component } from 'react';
 import Avatar from '../../components/elements/Avatar/Avatar';
+import {BrowserRouter as Router, Route, Link, NavLink} from 'react-router-dom';
 class MenuSide extends Component {
     state = {  }
     render() { 
-        return (  <aside className="menu-container" key="nav">
+      var thisUrl="dchat";
+        return (  
+        <Router>
+        <aside className="menu-container" key="nav">
         <div className="aside-nav">
           <div className="aside__logo center-inner">
-            <a href="#">
+            <div>
               <img src="./assets/img/SVG/logo.svg" alt="logo" />
-            </a>
+            </div>
           </div>
           <nav>
             <ul className="nav__container">
+            <Link to={`/${thisUrl}/notification`}>
               <li className="nav__icon-item">
-                <a href="#">
+                <div>
                   <span className="icon-bell" />
-                </a>
+                </div>
               </li>
+              </Link>
+              <Link to={`/${thisUrl}/people`}>
               <li className="nav__icon-item">
-                <a href="#">
+                <div>
                   <span className="icon-user" />
-                </a>
+                </div>
               </li>
+              </Link>
+              <Link to={`/${thisUrl}/conversation`}>
               <li className="nav__icon-item">
-                <a href="#">
+                <div>
                   <span className="icon-chat" />
-                </a>
+                </div>
               </li>
+              </Link>
+              <Link to={`/${thisUrl}/appsetting`}>
               <li className="nav__icon-item">
-                <a href="#">
+                <div>
                   <span className="icon-setting" />
-                </a>
+              </div>
               </li>
-              <li className="nav__icon-item active">
-                <a href="#">
+              </Link>
+              <Link to={`/${thisUrl}/switchapp`}>
+              <li className="nav__icon-item">
+                <div>
                   <span className="icon-switch" />
-                </a>
+                </div>
               </li>
+              </Link>
             </ul>
           </nav>
           <div className="center-inner">
             <div className="aside__avatar">
+            <Link to={`/${thisUrl}/profile`}>
               <Avatar color="pink" size="large" name="P"/>
+              </Link>
             </div>
           </div>
         </div>
       </aside>
+      </Router>
        );
     }
 }

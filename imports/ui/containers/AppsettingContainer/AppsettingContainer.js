@@ -12,7 +12,7 @@ class AppsettingContainer extends Component {
   state = {};
   render() {
     return (
-      <Tabs>
+      <Tabs selectedTabClassName="active-tab-detail">
         <section className="tab-container">
           <TabList>
             <Tab>

@@ -23,7 +23,7 @@ class SettingMessagingTab extends Component {
                 </label>
                 </form>
                 <form>
-                <textarea className="text-box--white" name id cols={30} rows={5} defaultValue={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."} />
+                <textarea className="text-box--white" cols={30} rows={5} defaultValue={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."} />
                 </form>
             </section>
             <section className="border-bottom">
