@@ -17,7 +17,7 @@ class NotificationContainer extends Component {
         
          const list= inboxList.map(inbox =>
                 <Inbox
-                id={inbox.id}
+                key={inbox.id}
                 sender={inbox.sender}
                 receiver={inbox.receiver}
                 email={inbox.email}
@@ -25,7 +25,7 @@ class NotificationContainer extends Component {
                 inboxContent={inbox.content}/>
             );
       return list;
-         }
+    }
     render() { 
         return ( 
             <React.Fragment>
