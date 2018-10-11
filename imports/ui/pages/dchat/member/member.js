@@ -7,13 +7,13 @@ import MemberContainer from '../../../containers/MemberContainer/MemberContainer
 
 const MemberPage = () => {
     return ( 
-        <MainLayout>
+        <React.Fragment>
              <TopHeader group="name" name="profile"/>
-            <MenuSide/>
+        
             <MainContent class={"main-container "+"member"}>
                 <MemberContainer/>
             </MainContent>
-       </MainLayout>
+       </React.Fragment>
      );
 }
  

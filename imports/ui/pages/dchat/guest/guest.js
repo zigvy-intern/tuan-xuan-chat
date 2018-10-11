@@ -7,13 +7,15 @@ import GuestContainer from '../../../containers/GuestContainer/GuestContainer';
 
 const GuestPage = () => {
     return ( 
-        <MainLayout>
+        <React.Fragment>
+
              <TopHeader group="name" name="profile"/>
-            <MenuSide/>
+
             <MainContent class={"main-container "+"guest"}>
                 <GuestContainer/>
             </MainContent>
-       </MainLayout>
+
+       </React.Fragment>
      );
 }
  

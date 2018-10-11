@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import Avatar from '../../components/elements/Avatar/Avatar';
-import {BrowserRouter as Router, Route, Link, NavLink} from 'react-router-dom';
+import {Router, Route, Link, NavLink} from 'react-router-dom';
 class MenuSide extends Component {
     state = {  }
     render() { 
       var thisUrl="dchat";
         return (  
-        <Router>
         <aside className="menu-container" key="nav">
         <div className="aside-nav">
           <div className="aside__logo center-inner">
@@ -16,41 +15,51 @@ class MenuSide extends Component {
           </div>
           <nav>
             <ul className="nav__container">
-            <Link to={`/`}>
+           
               <li className="nav__icon-item">
+              <Link to={`/`}>
                 <div>
                   <span className="icon-bell" />
                 </div>
+                </Link>
               </li>
-              </Link>
-              <Link to={`/${thisUrl}/people`}>
+             
+             
               <li className="nav__icon-item">
+              <Link to={`/${thisUrl}/people`}>
                 <div>
                   <span className="icon-user" />
                 </div>
+                </Link>
               </li>
-              </Link>
-              <Link to={`/${thisUrl}/conversation`}>
+             
+              
               <li className="nav__icon-item">
+              <Link to={`/${thisUrl}/conversation`}>
                 <div>
                   <span className="icon-chat" />
                 </div>
+                </Link>
               </li>
-              </Link>
-              <Link to={`/${thisUrl}/appsetting`}>
+            
+             
               <li className="nav__icon-item">
+              <Link to={`/${thisUrl}/appsetting`}>
                 <div>
                   <span className="icon-setting" />
               </div>
-              </li>
               </Link>
-              <Link to={`/${thisUrl}/switchapp`}>
+              </li>
+             
+              
               <li className="nav__icon-item">
+              <Link to={`/${thisUrl}/switchapp`}>
                 <div>
                   <span className="icon-switch" />
                 </div>
-              </li>
               </Link>
+              </li>
+             
             </ul>
           </nav>
           <div className="center-inner">
@@ -62,7 +71,6 @@ class MenuSide extends Component {
           </div>
         </div>
       </aside>
-      </Router>
        );
     }
 }

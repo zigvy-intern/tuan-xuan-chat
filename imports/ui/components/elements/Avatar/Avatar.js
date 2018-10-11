@@ -10,10 +10,10 @@ class Avatar extends Component {
         }
         return (
             <React.Fragment>
-            <a className={"avatar avatar--" + this.props.size + " bgr-"+this.props.color+ " avatar--responsive"} 
-                href={this.props.url}>{this.props.name}
+            <div className={"avatar avatar--" + this.props.size + " bgr-"+this.props.color+ " avatar--responsive"} 
+                url={this.props.url}>{this.props.name}
                        {tooltip}
-            </a>
+            </div>
             </React.Fragment>
           );
     }

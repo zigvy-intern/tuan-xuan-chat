@@ -9,13 +9,13 @@ import AppsettingContainer from '../../../containers/AppsettingContainer/Appsett
 
 const AppsettingPage = () => {
     return ( 
-       <MainLayout>
+            <React.Fragment>
             <TopHeader group="name" name="app setting"/>
-            <MenuSide/>
+
             <MainContent class={"main-container "+"appsetting"}>
                 <AppsettingContainer/>
             </MainContent>
-       </MainLayout>
+            </React.Fragment>
      );
 }
  
