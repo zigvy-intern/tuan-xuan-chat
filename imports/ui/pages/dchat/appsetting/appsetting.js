@@ -10,7 +10,7 @@ import AppsettingContainer from '../../../containers/AppsettingContainer/Appsett
 const AppsettingPage = () => {
     return ( 
             <React.Fragment>
-            <TopHeader group="name" name="app setting"/>
+            <TopHeader group="appsetting"/>
 
             <MainContent class={"main-container "+"appsetting"}>
                 <AppsettingContainer/>

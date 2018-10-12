@@ -63,6 +63,32 @@ class TopHeader extends Component {
 
         </React.Fragment>
     }
+    else if (this.props.group=="appsetting")
+    {
+      group=
+      <React.Fragment>
+      <h1 className="header__heading">App Setting</h1>
+
+        <select className="selection-container" style={{display: 'none'}}>
+        <option value="general">
+          General</option>
+        <option value="team-member">
+          Team member</option>
+        <option value="messaging">
+          Messaging</option>
+        <option value="appearance">
+          Appearance</option>
+        <option value="blocked-people">
+          Blocked people
+        </option>
+        <option value="upgrade">
+          Upgrade</option>
+        <option value="billing">
+          Billing</option>
+      </select>
+
+      </React.Fragment>
+    }
     return (
       <header className="header-container" key="header">
         <div className="menu-burger" id="menu">

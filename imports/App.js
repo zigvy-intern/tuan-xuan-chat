@@ -18,7 +18,7 @@ class App extends Component {
 
         return (
         <Router>
-            <div className="grid-container">
+            <MainLayout>
             <MenuSide/>
             <Switch>
                 <Route path={`/notification`} exact component={NotificationPage} />
@@ -28,7 +28,7 @@ class App extends Component {
                 <Route path={`/profile`} exact component={MemberPage}/>
                 <Route path={`/switchapps`} exact component={SwitchappsPage} />
             </Switch>
-            </div>
+            </MainLayout>
         </Router>
         );
 
