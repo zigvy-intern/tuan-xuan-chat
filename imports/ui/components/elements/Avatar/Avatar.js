@@ -8,10 +8,11 @@ class Avatar extends Component {
         {
             tooltip= <div className="tooltip">{this.props.email}</div>
         }
+        let name=this.props.name.slice(0,1)
         return (
             <React.Fragment>
             <div className={"avatar avatar--" + this.props.size + " bgr-"+this.props.color+ " avatar--responsive"} 
-                url={this.props.url}>{this.props.name}
+                url={this.props.url}>{name}
                        {tooltip}
             </div>
             </React.Fragment>

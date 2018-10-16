@@ -2,49 +2,53 @@ import React, { Component } from 'react';
 import Inbox from '../../components/elements/Inbox/Inbox';
 import ChatBox from '../../components/elements/ChatBox/ChatBox';
 import InfoBox from '../../components/elements/InfoBox/InfoBox';
-
-
+import InboxList from '../../components/elements/InboxList/InboxList';
+import Chatkit from '@pusher/chatkit'
+import { tokenUrl, instanceLocator } from './config'
 class ConversationContainer extends Component {
-    state = {  }
-    renderInboxList()
-    {
-        let inboxList =[
-            {id:Math.random(), sender:'X', receiver:"H", email:"tranxuan.1096@gmail.com", time:"300 days", content:"Hello, long time no see"},
-            {id:Math.random(), sender:'X', receiver:"T", email:"quoctuanit.1096@gmail.com", time:"30 mins", content:"How are you today?"},
-            {id:Math.random(), sender:'X', receiver:"H", email:"thanhhang@gmail.com", time:"now", content:"Lend me back my books"},
-            {id:Math.random(), sender:'X', receiver:"A", email:"phuonganh@gmail.com", time:"1 day", content:'I dont have money!'},
-            {id:Math.random(), sender:'X', receiver:"H", email:"tranxuan.1096@gmail.com", time:"300 days", content:"Hello, long time no see"},
-            {id:Math.random(), sender:'X', receiver:"T", email:"quoctuanit.1096@gmail.com", time:"30 mins", content:"How are you today?"},
-            {id:Math.random(), sender:'X', receiver:"H", email:"thanhhang@gmail.com", time:"now", content:"Lend me back my books"},
-            {id:Math.random(), sender:'X', receiver:"A", email:"phuonganh@gmail.com", time:"1 day", content:'I dont have money!'},
-            {id:Math.random(), sender:'X', receiver:"H", email:"tranxuan.1096@gmail.com", time:"300 days", content:"Hello, long time no see"},
-            {id:Math.random(), sender:'X', receiver:"T", email:"quoctuanit.1096@gmail.com", time:"30 mins", content:"How are you today?"},
-            {id:Math.random(), sender:'X', receiver:"H", email:"thanhhang@gmail.com", time:"now", content:"Lend me back my books"},
-            {id:Math.random(), sender:'X', receiver:"A", email:"phuonganh@gmail.com", time:"1 day", content:'I dont have money!'},
-        ];
-        
-         const list= inboxList.map(inbox =>
-                <Inbox
-                id={inbox.id}
-                sender={inbox.sender}
-                receiver={inbox.receiver}
-                email={inbox.email}
-                time={inbox.time}
-                inboxContent={inbox.content}/>
-            );
-      return list;
-         }
-    render() { 
-        return ( 
+    constructor() {
+        super()
+        this.state = {
+            messages: [],
+            user:{}
+        }
+    }
+
+    componentDidMount() {
+        const chatManager = new Chatkit.ChatManager({
+            instanceLocator,
+            userId: 'xuanne', /** swap out */
+            tokenProvider: new Chatkit.TokenProvider({
+                url: tokenUrl
+            })
+        })
+
+        chatManager.connect()
+            .then(currentUser => {
+                this.state.user=currentUser
+                currentUser.subscribeToRoom({
+                    roomId: 18698926, /** swap out */
+                    hooks: {
+                        onNewMessage: message => {
+                            this.setState({
+                                messages: [...this.state.messages, message]
+                            })
+                        }
+                    }
+                })
+            })
+    }
+
+    render() {
+
+        return (
             <React.Fragment>
-            <div className="inbox-container" data-simplebar>
-             {this.renderInboxList()}
-            </div>
-            <ChatBox email="tranxuan.1096@gmail.com"/>
-            <InfoBox/>
+                <InboxList />
+                <ChatBox messages={this.state.messages} currentUser={this.state.user}/>
+                <InfoBox />
             </React.Fragment>
-         );
+        );
     }
 }
- 
+
 export default ConversationContainer;
