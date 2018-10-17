@@ -14,14 +14,14 @@ class ChatLine extends Component {
                 <p className="inbox__time">{this.props.time}</p>
             </div>
             </div>
-            <Avatar size="medium" color="red" url="" name={this.props.currentUser.name}/>
+            <Avatar size="medium" color="pink" url="" name={this.props.currentUser.name}/>
         </div>
 
         }
         else
         {
             chatline= <div className="chat-line chat-line--receive">
-                   <Avatar size="medium" color="orange" url="" name={this.props.sender.name}/>
+                   <Avatar size="medium" color="yellow" url="" name={this.props.sender.name}/>
                     <div className="chat-line__content-wrap">
                     <div className="chat-line__content">
                         <p className="inbox__content">{this.props.content}</p>

@@ -4,8 +4,8 @@ class Button extends Component {
     state = {  }
     render() { 
         return ( 
-            <button className={"btn btn--"+this.props.color+" btn--"+this.props.size}>{this.props.name}</button>
-         );
+            <input type="submit" className={"btn btn--"+this.props.color+" btn--"+this.props.size} value={this.props.name}/>
+                    );
     }
 }
  

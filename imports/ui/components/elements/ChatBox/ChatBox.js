@@ -23,13 +23,15 @@ class ChatBox extends Component {
                 this.props.messages.map((mess,index) =>
                 {
                     return(
-                    <ChatLine key={index} type="send" time={mess.createAt} content={mess.text} sender={mess.sender} currentUser={this.props.currentUser}/>
+                    <ChatLine key={index} type="send" time={mess.createdAt} content={mess.text} sender={mess.sender} currentUser={this.props.currentUser}/>
                     )
                 })
             }   
             </section>
             {/* Chat input & option */}
-            <InputBox tab="1"/>
+            <InputBox tab="1"
+                currentUser={this.props.currentUser}
+            />
             </div>
 
             </React.Fragment>

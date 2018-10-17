@@ -39,12 +39,20 @@ class ConversationContainer extends Component {
             })
     }
 
+    // sendMessage(text)
+    // {
+    //     this.state.user.sendMessage({
+    //         text,
+    //         roomId:18698926
+    //     })
+    // }
     render() {
 
         return (
             <React.Fragment>
-                <InboxList />
-                <ChatBox messages={this.state.messages} currentUser={this.state.user}/>
+                <InboxList currentUser={this.state.user}/>
+                <ChatBox messages={this.state.messages} currentUser={this.state.user}
+                />
                 <InfoBox />
             </React.Fragment>
         );
