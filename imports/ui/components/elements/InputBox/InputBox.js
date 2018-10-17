@@ -51,7 +51,7 @@ class InputBox extends Component {
                 {/* Features */}
                 {tab}
                 {/* Input space */}
-                <form onSubmit={this.handleSubmit} ref={el => this.myFormRef = el} id="sendmess">
+                <form onSubmit={this.handleSubmit} id="sendmess">
                 <textarea
                  onKeyDown={this.onEnterPress}
                  onChange={this.handleChange}

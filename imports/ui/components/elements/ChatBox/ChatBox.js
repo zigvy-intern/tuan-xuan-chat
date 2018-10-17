@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Button from '../Button/Button';
-import ChatLine from '../ChatLine/ChatLine';
-import InputBox from '../InputBox/InputBox';
 
+import InputBox from '../InputBox/InputBox';
+import ChatContent from '../ChatContent/ChatContent'
 class ChatBox extends Component {
     state = {  }
+
     render() { 
         return ( 
             <React.Fragment>
@@ -18,16 +19,10 @@ class ChatBox extends Component {
                 </div>
             </header>
             {/* Show mess part*/}
-            <section className="chatbox__content">
-            {
-                this.props.messages.map((mess,index) =>
-                {
-                    return(
-                    <ChatLine key={index} type="send" time={mess.createdAt} content={mess.text} sender={mess.sender} currentUser={this.props.currentUser}/>
-                    )
-                })
-            }   
-            </section>
+            <ChatContent messages={this.props.messages}
+                currentUser={this.props.currentUser}
+            />
+            
             {/* Chat input & option */}
             <InputBox tab="1"
                 currentUser={this.props.currentUser}

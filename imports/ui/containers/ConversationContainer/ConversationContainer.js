@@ -23,7 +23,7 @@ class ConversationContainer extends Component {
     componentDidMount() {
         const chatManager = new Chatkit.ChatManager({
             instanceLocator,
-            userId: 'mapmap', /** swap out */
+            userId: 'xuanne', /** swap out */
             tokenProvider: new Chatkit.TokenProvider({
                 url: tokenUrl
             })
@@ -62,6 +62,7 @@ class ConversationContainer extends Component {
         this.setState({ messages: [] })
         this.currentUser.subscribeToRoom({
             roomId, //bằng với ID phòng truyền vào
+            // limit: 10, //giới hạn số lượng mess của currentUser dc load
             hooks: {
                 onNewMessage: message => {
                     this.setState({
@@ -91,7 +92,6 @@ class ConversationContainer extends Component {
         })
     }
     render() {
-        console.log(this.currentUser)
         return (
             <React.Fragment>
                 <InboxList currentUser={this.state.user}
