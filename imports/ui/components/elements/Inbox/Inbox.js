@@ -6,7 +6,7 @@ class Inbox extends Component {
     render() { 
         return (
           <React.Fragment> 
-        <div className="border-box inbox" onClick={this.props.onClick}>
+        <div className={this.props.className} onClick={this.props.onClick}>
         <section>
           <Avatar color='yellow' size='medium' url="" name={this.props.sender}/>
           <div>

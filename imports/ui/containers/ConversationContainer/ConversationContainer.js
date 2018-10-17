@@ -95,6 +95,7 @@ class ConversationContainer extends Component {
         return (
             <React.Fragment>
                 <InboxList currentUser={this.state.user}
+                currentRoom={this.state.currentRoom}
                 rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]}
                 subscribeToRoom={this.subscribeToRoom}
                  />

@@ -8,8 +8,11 @@ class InboxList extends Component {
             <div className="inbox-container">
             {
                orderedRooms.map(room=>{
+                const active = this.props.currentRoom === room.id ? "active" : "";
                     return(
-                        <Inbox key={room.id} 
+                        <Inbox 
+                        className={"border-box inbox "+active}
+                        key={room.id} 
                         email={room.name} 
                         inboxContent={room.id}
                         onClick={()=>this.props.subscribeToRoom(room.id)}

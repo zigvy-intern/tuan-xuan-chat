@@ -270,7 +270,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.inbox-container .inbox:hover {
+.inbox-container .inbox:hover, .inbox.active {
     background-color: var(--color-gray-light);
 }
 
