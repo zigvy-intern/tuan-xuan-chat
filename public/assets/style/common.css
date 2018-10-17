@@ -269,6 +269,7 @@ li {
 }
 
 .tooltip {
+   
     visibility: hidden;
     background-color: #333333;
     color: #fff;
@@ -293,7 +294,21 @@ li {
     top: 23px;
     left: 52px;
 }
-
+.conversation-wrapper .tooltip:before{
+    visibility: hidden;
+}
+.conversation-wrapper .tooltip
+{
+    bottom: 10px;
+}
+.conversation-wrapper .chat-line--receive .tooltip
+{
+    left:0px;
+}
+.conversation-wrapper .chat-line--send .tooltip
+{
+    right:0px;
+}
 .avatar--medium:hover .tooltip {
     visibility: visible;
     transition: all 0.5s;

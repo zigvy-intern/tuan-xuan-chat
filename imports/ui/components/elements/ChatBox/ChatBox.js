@@ -31,6 +31,7 @@ class ChatBox extends Component {
             {/* Chat input & option */}
             <InputBox tab="1"
                 currentUser={this.props.currentUser}
+                sendMessage={this.props.sendMessage}
             />
             </div>
 

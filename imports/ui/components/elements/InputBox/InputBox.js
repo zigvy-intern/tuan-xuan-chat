@@ -10,6 +10,7 @@ class InputBox extends Component {
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.onEnterPress= this.onEnterPress.bind(this)
     }
     
     handleChange(e) {
@@ -20,13 +21,10 @@ class InputBox extends Component {
     }
     
     handleSubmit(e) {
+        //khi form submit sẽ chạy sendMess gửi từ Container xuống
         e.preventDefault()
-  
-        this.props.currentUser.sendMessage({
-            text:this.state.message,
-            roomId:18698926
-        })
-      this.setState({
+        this.props.sendMessage(this.state.message)
+        this.setState({
         message: ''
    })
     }
