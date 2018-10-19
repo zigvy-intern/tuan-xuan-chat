@@ -11,19 +11,20 @@ class ConversationContainer extends Component {
         this.state = {
             messages: [],
             user: {},
-            currentRoom:'',
+            currentRoom: '',
             joinableRooms: [],
-            joinedRooms: []
+            joinedRooms: [],
+            users: []
         }
         this.subscribeToRoom = this.subscribeToRoom.bind(this)
-        this.getRooms= this.getRooms.bind(this)
-        this.sendMessage=this.sendMessage.bind(this)
+        this.getRooms = this.getRooms.bind(this)
+        this.sendMessage = this.sendMessage.bind(this)
     }
 
     componentDidMount() {
         const chatManager = new Chatkit.ChatManager({
             instanceLocator,
-            userId: 'xuanne', /** swap out */
+            userId: 'xuanne', /*ID của user vô đây*/
             tokenProvider: new Chatkit.TokenProvider({
                 url: tokenUrl
             })
@@ -36,22 +37,31 @@ class ConversationContainer extends Component {
                 this.currentUser = currentUser
                 //Lấy tất cả các phòng chat
                 this.getRooms()
-               
+
             })
             .catch(err => console.log('error on connecting: ', err))
+        // let orderedRooms = [...this.state.joinableRooms, ...this.state.joinedRooms].sort((a, b) => a.createdAt - b.createdAt)
+        // if (orderedRooms[0] != undefined)
+            
     }
-
-    getRooms()
-    {
+    shouldComponentUpdate(nextProps, nextState) {
+        return true
+      }
+      
+      componentWillUpdate(nextProps, nextState) {
+        this.getRooms()
+        // console.log("Re-render room list")
+    }
+    getRooms() {
         //Lấy tất cả các phòng của user này
         this.currentUser.getJoinableRooms()
-                .then(joinableRooms => {
-                    this.setState({
-                        joinableRooms,
-                        joinedRooms: this.currentUser.rooms
-                    })
+            .then(joinableRooms => {
+                this.setState({
+                    joinableRooms,
+                    joinedRooms: this.currentUser.rooms
                 })
-                .catch(err => console.log('error on joinableRooms: ', err))
+            })
+            .catch(err => console.log('error on joinableRooms: ', err))
     }
 
 
@@ -72,35 +82,39 @@ class ConversationContainer extends Component {
             }
         })
 
-        //Update từ phòng chưa join thành đã join
-        .then(room => {
-            //Lưu id phòng hiện tại
-            this.setState({
-                currentRoom:room.id
+            //Update từ phòng chưa join thành đã join
+            .then(room => {
+                //Lưu id phòng hiện tại
+                this.setState({
+                    room: room,
+                    currentRoom: room.id
+                })
+                this.getRooms()
             })
-            this.getRooms()
-        })
-        .catch(err => console.log('error on subscribing to room: ', err))
+            .catch(err => console.log('error on subscribing to room: ', err))
 
     }
 
-    sendMessage(text)
-    {
+    sendMessage(text) {
         this.state.user.sendMessage({
             text,
-            roomId:this.state.currentRoom
+            roomId: this.state.currentRoom
         })
     }
+
     render() {
+
         return (
             <React.Fragment>
                 <InboxList currentUser={this.state.user}
-                currentRoom={this.state.currentRoom}
-                rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]}
-                subscribeToRoom={this.subscribeToRoom}
-                 />
-                <ChatBox messages={this.state.messages} currentUser={this.state.user}
-                        sendMessage={this.sendMessage}
+                    currentRoom={this.state.currentRoom}
+                    rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]}
+                    subscribeToRoom={this.subscribeToRoom}
+                />
+                <ChatBox messages={this.state.messages}
+                    currentUser={this.state.user}
+                    sendMessage={this.sendMessage}
+                    currentRoom={this.state.currentRoom}
                 />
                 <InfoBox />
             </React.Fragment>

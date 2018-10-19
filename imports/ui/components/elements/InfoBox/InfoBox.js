@@ -4,7 +4,7 @@ import Button from '../Button/Button';
 
 
 class InfoBox extends Component {
-    state = {  }
+
     render() { 
         return ( 
             <React.Fragment>
@@ -19,8 +19,7 @@ class InfoBox extends Component {
                     <input className="text-box" type="text" placeholder="Add teammates and team" />
                     <p>Assign to teammate</p>
                     <div className="avatar-row">
-                       <Avatar size="medium" color="orange" name="T" url=""/>
-                       <Avatar size="medium" color="green" name="X" url=""/>
+                
                     </div>
                     <p>Assign to team</p>
                     <div className="avatar-row">

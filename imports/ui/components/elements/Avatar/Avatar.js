@@ -9,7 +9,7 @@ class Avatar extends Component {
 
         let name= null;
         if(this.props.name)
-             name=this.props.name.slice(0,1)
+             name=this.props.name.slice(0,1).toUpperCase()
 
         return (
             <React.Fragment>

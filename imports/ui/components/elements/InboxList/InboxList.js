@@ -2,15 +2,22 @@ import React, { Component } from 'react';
 import Inbox from '../Inbox/Inbox';
 class InboxList extends Component {
 
+
     render() { 
-        const orderedRooms = [...this.props.rooms].sort((a, b) => a.createdAt - b.createdAt)
+        let orderedRooms = [...this.props.rooms].sort((a, b) => b.updatedAt - a.updatedAt)
+        
         return ( 
             <div className="inbox-container">
             {
-               orderedRooms.map(room=>{
+               orderedRooms.map(room =>
+               {
+                //add class active khi subscribe 1 phòng
                 const active = this.props.currentRoom === room.id ? "active" : "";
+                
                     return(
-                        <Inbox 
+                        <Inbox
+                        time={room.updatedAt}
+                        sender={room.createdByUserId} 
                         className={"border-box inbox "+active}
                         key={room.id} 
                         email={room.name} 
@@ -19,6 +26,7 @@ class InboxList extends Component {
                         />
                     )
                 })
+               
             }
             </div>
          );

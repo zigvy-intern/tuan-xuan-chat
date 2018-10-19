@@ -10,7 +10,7 @@ const NotificationPage = () => {
         <React.Fragment>
              <TopHeader group="name" name="notification"/>
             <MainContent class={"main-container "+"noti-wrapper"}>
-                <NotificationContainer/>
+                {/* <NotificationContainer/> */}
             </MainContent>
        </React.Fragment>
       );

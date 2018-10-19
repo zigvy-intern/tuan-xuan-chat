@@ -598,3 +598,100 @@ li {
     
     }
 }
+
+/* LOGIN */
+.login-page
+{
+    padding: 0 10px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-form
+{
+    min-width: 250px;
+    max-width: 400px;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding:  20px 20px;
+    border: rgba(0, 0, 0, 0.1) solid 1px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: white;
+}
+
+.login-form .btn
+{
+  
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.login-form .btn--large
+{
+    margin-top: 25px;
+}
+.login-page .logo 
+{
+    user-select: none;
+    max-width: 45px;
+    margin-bottom: 25px;
+}
+.login__link
+{
+    color: #979797;
+    height: inherit;
+    display: block;
+}
+.login__link:hover
+{
+    color: var(--color-text-normal)
+}
+.login-form form>*:not(a)
+{
+    margin-bottom: 15px;
+    min-height: 40px !important;
+}
+.login-form select
+{
+    appearance: none;
+    display: block;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    border: rgba(0, 0, 0, 0.1) solid 1px;
+    border-radius: 10px;
+}
+.login-form select::selection:hover
+{
+
+    background-color: wheat;
+}
+.login-form select option
+{
+    display: block;
+    color: white;
+    font-size: 18px;
+    border: unset !important;
+    outline: none;
+
+}
+#sel option:hover
+{
+    background-color: transparent !important;
+    color: #01CEBB;
+}
+.login--option
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login--option .btn
+{
+    font-size: 10px;
+    letter-spacing: inherit;
+}
