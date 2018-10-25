@@ -78,9 +78,9 @@ class MenuSide extends Component {
           <aside className="menu-container">
             <div className="aside-nav">
               <div className="aside__logo center-inner">
-                <a href="#">
+                <Link to="/notification">
                   <img src="./assets/img/SVG/logo.svg" alt="logo" />
-                </a>
+                </Link>
               </div>
               <nav>
                 <ul className="nav__container">

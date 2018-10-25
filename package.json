@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0-beta.55",
+    "@babel/runtime": "^7.1.2",
+    "@pusher/chatkit": "^0.7.18",
     "meteor-node-stubs": "^0.4.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",

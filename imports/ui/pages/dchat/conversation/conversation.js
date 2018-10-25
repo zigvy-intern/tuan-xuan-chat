@@ -6,16 +6,19 @@ import MenuSide from '../../../layouts/MenuSide/MenuSide';
 import ConversationContainer from '../../../containers/ConversationContainer/ConversationContainer';
 
 const ConversationPage = () => {
-    return ( 
+    return (
         <React.Fragment>
-            <TopHeader group="conversation"/>
-           
-            <MainContent class={"main-container "+"conversation-wrapper"}>
-                <ConversationContainer/>
-            </MainContent>
-       </React.Fragment>
-        
-     );
+            <MainLayout>
+                <MenuSide />
+                <TopHeader group="conversation" />
+
+                <MainContent class={"main-container " + "conversation-wrapper"}>
+                    <ConversationContainer />
+                </MainContent>
+            </MainLayout>
+        </React.Fragment>
+
+    );
 }
- 
+
 export default ConversationPage;

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import LoginContainer from '../../../containers/LoginContainer/LoginContainer';
 
 class SignupForm extends Component {
     state = {}
     render() {
         return (
-            <React.Fragment>
+            <LoginContainer>
                 <div className="login-form">
                     <img className="logo" src="./assets/img/SVG/logo.svg" alt="logodchat" />
                     <form method="POST">
@@ -34,7 +35,7 @@ class SignupForm extends Component {
                     </form>
                 </div>
 
-            </React.Fragment>
+            </LoginContainer>
         );
     }
 }

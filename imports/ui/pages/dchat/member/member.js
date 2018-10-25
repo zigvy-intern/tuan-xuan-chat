@@ -6,15 +6,18 @@ import MenuSide from '../../../layouts/MenuSide/MenuSide';
 import MemberContainer from '../../../containers/MemberContainer/MemberContainer';
 
 const MemberPage = () => {
-    return ( 
+    return (
         <React.Fragment>
-             <TopHeader group="name" name="profile"/>
-        
-            <MainContent class={"main-container "+"member"}>
-                <MemberContainer/>
-            </MainContent>
-       </React.Fragment>
-     );
+            <MainLayout>
+                <MenuSide />
+                <TopHeader group="name" name="profile" />
+
+                <MainContent class={"main-container " + "member"}>
+                    <MemberContainer />
+                </MainContent>
+            </MainLayout>
+        </React.Fragment>
+    );
 }
- 
+
 export default MemberPage;

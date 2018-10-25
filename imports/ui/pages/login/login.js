@@ -3,6 +3,7 @@ import LoginForm from '../../components/elements/LoginForm/LoginForm';
 import SignupForm from '../../components/elements/SignupForm/SignupForm';
 import LoginContainer from '../../containers/LoginContainer/LoginContainer';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import DchatPage from '../dchat/index';
 
 
 class LoginPage extends Component {
@@ -10,12 +11,11 @@ class LoginPage extends Component {
     render() {
         return (
             <Router>
+                
                 <LoginContainer>
-                    <Switch>
-                        <Route path={`/`} exact component={LoginForm} />
-                        <Route path={`/signup`} exact component={SignupForm} />
-                    </Switch>
+                        
                 </LoginContainer>
+                        
             </Router>
         );
     }
