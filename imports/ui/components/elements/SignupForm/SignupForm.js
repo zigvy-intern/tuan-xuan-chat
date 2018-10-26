@@ -23,6 +23,7 @@ class SignupForm extends Component {
             password:password,
             customData: {
               avatarColor: color,
+              role:"ctv"
             },
           })
           .then(() => {
