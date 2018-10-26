@@ -39,8 +39,8 @@ class InputBox extends Component {
         {
             tab=<header className="chat__tab">
             <ul>
-                <li className="active-tab"><a href>Reply</a></li>
-                <li><a href>Note</a></li>
+                <li className="active-tab"><a>Reply</a></li>
+                <li><a >Note</a></li>
             </ul>
             </header>
         }
@@ -60,12 +60,12 @@ class InputBox extends Component {
                 {/* More input options */}
                 <footer className="chat__option">
                 <ul>
-                    <li><a href="#">Aa</a></li>
-                    <li><a href="#" className="icon-attachment" /></li>
-                    <li><a href="#" className="icon-picture" /></li>
-                    <li><a href="#" className="icon-emoji" /></li>
+                    <li><a >Aa</a></li>
+                    <li><a className="icon-attachment" /></li>
+                    <li><a className="icon-picture" /></li>
+                    <li><a className="icon-emoji" /></li>
                 </ul>
-               <Button size="small" color="cyan" name="Send"/>
+               <Button size="small" color={this.props.btnColor ? this.props.btnColor : "cyan"} name="Send"/>
              </footer>
              </form>
             </section>

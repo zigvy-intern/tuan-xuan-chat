@@ -607,19 +607,22 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url(./assets/img/SVG/client-bgr.jpg);
+    background-size: contain;
+
 }
 .login-form
 {
     min-width: 250px;
     max-width: 400px;
-    max-height: fit-content;
+    min-height: fit-content;
     display: flex;
     flex-direction: column;
-    padding:  20px 20px;
-    border: rgba(0, 0, 0, 0.1) solid 1px;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+    padding:  30px 20px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     background: white;
+    overflow: hidden;
 }
 
 .login-form .btn
@@ -634,7 +637,7 @@ li {
 {
     margin-top: 25px;
 }
-.login-page .logo 
+.login-form .logo 
 {
     user-select: none;
     max-width: 45px;
@@ -652,8 +655,11 @@ li {
 }
 .login-form form>*:not(a)
 {
-    margin-bottom: 15px;
     min-height: 40px !important;
+}
+.login-form form>input
+{
+    margin-bottom: 15px;
 }
 .login-form select
 {
@@ -686,7 +692,6 @@ li {
 }
 .login--option
 {
-    margin-top: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -696,3 +701,132 @@ li {
     font-size: 10px;
     letter-spacing: inherit;
 }
+
+.client-page
+{
+    position: relative;
+    height: 100vh;
+    background: url(./assets/img/SVG/client-bgr.jpg);
+    background-size: contain;
+
+}
+.client-page>header
+{
+    min-height: 75px;
+    background: white;
+    display: flex;
+    align-items: center;
+   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.client-page>header>img
+{
+    user-select: all;
+    max-width: 45px;
+  
+    margin: 10px 20px;
+}
+.client-chat-btn>img
+{
+    display: block;
+    user-select: all;
+    width: 40px;
+    height: 40px;
+}
+.client-chat-btn
+{
+    margin: 30px ;
+    cursor: pointer;
+    border-radius: 50%;
+    background: white;
+    height: 65px;
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.client-chat-btn:hover
+{
+    transform: scale(1.1);
+}
+
+.client-signup, .client-chatbox
+{
+    position: absolute;
+    bottom: 80px;
+    right:0;
+    margin: 30px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+}
+.client-signup__header
+{
+    min-height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.client-signup__header p{
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+.minimal-line
+{
+    cursor: pointer;
+    content: "";
+    width:20px;
+    height: 3px;
+    background-color: white;
+
+}
+.client-signup>form,.client-signup__header
+{
+    padding: 20px;
+}
+.client-chatbox
+{
+    min-width: 250px;
+    width: 400px;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background: white;
+    overflow: auto;
+}
+
+
+/*********************/
+/* Style chatbox of Conversation*/
+.client-chatbox__container {
+    display: grid;
+    height: auto;
+    grid-template-rows: 80% 20%;
+
+}
+
+.client-chatbox__container .chatbox__content {
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end; */
+    min-height: 250px;
+    width: inherit;
+    padding: 10px;
+    background: #F7F7F7;
+    height: auto;
+    overflow: auto;
+
+}
+.client-chatbox__container .chat__option
+{
+   padding: 10px 20px;
+}
+

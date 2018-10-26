@@ -11,6 +11,7 @@ import MemberPage from './ui/pages/dchat/member/member';
 import SwitchappsPage from './ui/pages/dchat/switchapps/switchapps';
 import LoginForm from './ui/components/elements/LoginForm/LoginForm';
 import SignupForm from './ui/components/elements/SignupForm/SignupForm';
+import ClientPage from './ui/pages/user/ClientPage';
 // import DchatPage from './ui/pages/dchat/index';
 // import LoginPage from './ui/pages/login/login';
 
@@ -24,23 +25,24 @@ class App extends Component {
     render() {
 
         return (
-            <Router>
-                <React.Fragment>
-                    {/* <Link to="/notification">Click</Link> */}
-                    <Switch>
-                        <Route path={`/`} exact component={LoginForm} />
-                        <Route path={`/signup`} exact component={SignupForm} />
-                        <Route path={`/notification`} exact component={NotificationPage} />
-                        <Route path={`/people`} exact component={PeoplePage} />
-                        <Route path={`/conversation`} exact component={ConversationPage} />
-                        <Route path={`/appsetting`} exact component={AppsettingPage} />
-                        <Route path={`/profile`} exact component={MemberPage} />
-                        <Route path={`/switchapps`} exact component={SwitchappsPage} />
-                        <Route component={NotFound} />
-                    </Switch>
-                </React.Fragment>
+            // <Router>
+            //     <React.Fragment>
+            //         {/* <Link to="/notification">Click</Link> */}
+            //         <Switch>
+            //             <Route path={`/`} exact component={LoginForm} />
+            //             <Route path={`/signup`} exact component={SignupForm} />
+            //             <Route path={`/notification`} exact component={NotificationPage} />
+            //             <Route path={`/people`} exact component={PeoplePage} />
+            //             <Route path={`/conversation`} exact component={ConversationPage} />
+            //             <Route path={`/appsetting`} exact component={AppsettingPage} />
+            //             <Route path={`/profile`} exact component={MemberPage} />
+            //             <Route path={`/switchapps`} exact component={SwitchappsPage} />
+            //             <Route component={NotFound} />
+            //         </Switch>
+            //     </React.Fragment>
 
-            </Router>
+            // </Router>
+            <ClientPage/>
         );
 
     }
