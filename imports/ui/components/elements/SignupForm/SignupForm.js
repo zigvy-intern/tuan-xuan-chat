@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect,  withRouter } from 'react-router-dom';
 import LoginContainer from '../../../containers/LoginContainer/LoginContainer';
 import Chatkit from '@pusher/chatkit-server';
 import {chatkit} from '../../../../api/chatkit/clientobj'
 class SignupForm extends Component {
     state = {
-        error:""
+
     }
-
-
 
     handleSubmit = (e) => {
 
@@ -30,8 +28,9 @@ class SignupForm extends Component {
           .then(() => {
             alert("Successfully");
             this.refs.signUpForm.reset()
+            this.props.history.push('/')
           }).catch((err) => {
-            alert("Fail:  "+err.error_description)
+            alert("Fail! "+err.error_description)
             console.log(err);
           });
 
@@ -75,4 +74,4 @@ class SignupForm extends Component {
     }
 }
 
-export default SignupForm;
+export default withRouter(SignupForm);
