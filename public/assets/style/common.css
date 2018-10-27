@@ -792,7 +792,8 @@ li {
 .client-chatbox
 {
     min-width: 250px;
-    width: 400px;
+    max-width: 400px;
+    
     max-height: fit-content;
     display: flex;
     flex-direction: column;

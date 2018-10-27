@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import { Link, Redirect,  withRouter } from 'react-router-dom';
 import LoginContainer from '../../../containers/LoginContainer/LoginContainer';
 import Chatkit from '@pusher/chatkit-server';
-import {chatkit} from '../../../../api/chatkit/clientobj'
+import {chatkit} from '../../../../api/chatkit/clientobj';
+import { Accounts } from 'meteor/accounts-base';
 class SignupForm extends Component {
-    state = {
-
+    constructor(props){
+        super(props);
+        this.state = {
+            error: ''
+        }
     }
 
     handleSubmit = (e) => {
@@ -16,6 +20,20 @@ class SignupForm extends Component {
         let id = this.refs.userID.value.trim();
         let name = this.refs.username.value.trim();
         let color = this.refs.color.value.trim();
+
+        Accounts.createUser({
+            email,
+            password,
+            username: id,
+            profile: { 
+                name,
+                color
+            }},(err) => {
+                this.setState({
+                    error: err
+                })
+          });
+
         chatkit.createUser({
             id: id,
             name: name,
@@ -29,7 +47,7 @@ class SignupForm extends Component {
           .then(() => {
             alert("Successfully");
             this.refs.signUpForm.reset()
-            this.props.history.push('/')
+            this.props.history.push('/admin')
           }).catch((err) => {
             alert("Fail! "+err.error_description)
             console.log(err);
@@ -64,8 +82,8 @@ class SignupForm extends Component {
                         </select>
                         <button className="btn btn--large btn--green" type="submit"> SIGN UP </button>
                         <div className="login--option">
-                            <Link to={`/`} className="login__link">Back</Link>
-                            <div ref="log"></div>
+                            <Link to={`/admin`} className="login__link">Back</Link>
+                            {/* <div ref="log">{this.state.error !== '' ? this.state.error : ''}</div> */}
                         </div>
                     </form>
                 </div>
