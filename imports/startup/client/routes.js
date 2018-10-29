@@ -13,6 +13,15 @@ import SwitchappsPage from '../../ui/pages/dchat/switchapps/switchapps';
 import LoginForm from '../../ui/components/elements/LoginForm/LoginForm';
 import SignupForm from '../../ui/components/elements/SignupForm/SignupForm';
 import ClientPage from '../../ui/pages/user/ClientPage';
+//Create Store
+import { createStore } from 'redux';
+import myReducer from '../../ui/reducers/index';
+import { Provider } from 'react-redux';
+
+const store = createStore(
+  myReducer, /* preloadedState, */
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 import createHistory from 'history/createBrowserHistory';
 const history = createHistory();
@@ -50,20 +59,22 @@ const onEnterPrivatePage = Component => {
 };
 
 export const routes = (
-  <Router history={history}>
-    <Switch>
-      <Route path={`/`} exact component={ClientPage} />
-      <Route path={`/admin`} exact render={() => onEnterPublicPage(LoginForm)}/>
-      <Route path={`/signup`} exact component={SignupForm} />
-      <Route path={`/notification`} exact render={() => onEnterPrivatePage(NotificationPage)} />
-      <Route path={`/people`} exact render={() => onEnterPrivatePage(PeoplePage)} />
-      <Route path={`/conversation`} exact render={() => onEnterPrivatePage(ConversationPage)} />
-      <Route path={`/appsetting`} exact render={() => onEnterPrivatePage(AppsettingPage)} />
-      <Route path={`/profile`} exact render={() => onEnterPrivatePage(MemberPage)} />
-      <Route path={`/switchapps`} exact render={() => onEnterPrivatePage(SwitchappsPage)} />
-      <Route component={NotFound} />
-    </Switch>
-  </Router>
+  <Provider store={store}>
+    <Router history={history}>
+      <Switch>
+        <Route path={`/`} exact component={ClientPage} />
+        <Route path={`/admin`} exact render={() => onEnterPublicPage(LoginForm)}/>
+        <Route path={`/signup`} exact component={SignupForm} />
+        <Route path={`/notification`} exact render={() => onEnterPrivatePage(NotificationPage)} />
+        <Route path={`/people`} exact render={() => onEnterPrivatePage(PeoplePage)} />
+        <Route path={`/conversation`} exact render={() => onEnterPrivatePage(ConversationPage)} />
+        <Route path={`/appsetting`} exact render={() => onEnterPrivatePage(AppsettingPage)} />
+        <Route path={`/profile`} exact render={() => onEnterPrivatePage(MemberPage)} />
+        <Route path={`/switchapps`} exact render={() => onEnterPrivatePage(SwitchappsPage)} />
+        <Route component={NotFound} />
+      </Switch>
+    </Router>
+  </Provider>
 );
 
 export const isAuthenChange = isAuthenticated => {

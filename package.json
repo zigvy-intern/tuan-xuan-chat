@@ -14,8 +14,10 @@
     "meteor-node-stubs": "^0.4.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-redux": "^5.1.0",
     "react-router-dom": "^4.3.1",
     "react-tabs": "^2.3.0",
+    "redux": "^4.0.1",
     "styled-components": "^3.4.9"
   },
   "devDependencies": {},

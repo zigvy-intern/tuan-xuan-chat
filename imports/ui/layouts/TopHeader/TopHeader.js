@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import FormInput from '../../components/elements/FromInput/FromInput';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/index';
 class TopHeader extends Component {
   state = {}
+
+  onToggleMenu = () => {
+    this.props.onToggleMenu();
+  }
+
   render() {
     let group = null;
     if (this.props.group == "name" && this.props.name) {
@@ -91,7 +98,7 @@ class TopHeader extends Component {
     }
     return (
       <header className="header-container" key="header">
-        <div className="menu-burger" id="menu">
+        <div className="menu-burger" id="menu" onClick={this.onToggleMenu}>
           <span className="menu-line menu-line-1" />
           <span className="menu-line menu-line-2" />
           <span className="menu-line menu-line-3" />
@@ -101,4 +108,12 @@ class TopHeader extends Component {
   }
 }
 
-export default TopHeader;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onToggleMenu: () => {
+      dispatch(actions.toggleMenu());
+    }
+  };
+}
+
+export default connect(null, mapDispatchToProps)(TopHeader);
