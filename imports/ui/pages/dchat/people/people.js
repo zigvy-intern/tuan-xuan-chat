@@ -8,13 +8,10 @@ import PeopleContainer from '../../../containers/PeopleContainer/PeopleContainer
 const PeoplePage = () => {
     return ( 
         <React.Fragment>
-            <MainLayout>
-                <MenuSide />
-                <TopHeader group="people"/>,
-                <MainContent class={"main-container "+"people-wrapper"}>
-                    <PeopleContainer/>
-                </MainContent>
-            </MainLayout>
+            <TopHeader group="people"/>,
+            <MainContent class={"main-container "+"people-wrapper"}>
+                <PeopleContainer/>
+            </MainContent>
         </React.Fragment>
     
     );

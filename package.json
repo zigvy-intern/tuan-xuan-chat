@@ -10,6 +10,7 @@
     "@babel/runtime": "^7.1.2",
     "@pusher/chatkit": "^0.7.18",
     "@pusher/chatkit-server": "^0.12.2",
+    "history": "^4.7.2",
     "meteor-node-stubs": "^0.4.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",

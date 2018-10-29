@@ -8,14 +8,11 @@ import SwitchContainer from '../../../containers/SwitchContainer/SwitchContainer
 const SwitchappsPage = () => {
     return (
         <React.Fragment>
-            <MainLayout>
-                <MenuSide />
-                <TopHeader group="name" name="switch apps" />
+            <TopHeader group="name" name="switch apps" />
 
-                <MainContent class="switchapps">
-                    <SwitchContainer />
-                </MainContent>
-            </MainLayout>
+            <MainContent class="switchapps">
+                <SwitchContainer />
+            </MainContent>
         </React.Fragment>
     );
 }
