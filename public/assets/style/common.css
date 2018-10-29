@@ -607,7 +607,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(./assets/img/SVG/client-bgr.jpg);
+    background: url('../img/SVG/client-bgr.jpg');
     background-size: contain;
 
 }
@@ -706,7 +706,7 @@ li {
 {
     position: relative;
     height: 100vh;
-    background: url(./assets/img/SVG/client-bgr.jpg);
+    background: url('../img/SVG/client-bgr.jpg');
     background-size: contain;
 
 }
@@ -793,7 +793,7 @@ li {
 {
     min-width: 250px;
     max-width: 400px;
-    
+    width: 300px;
     max-height: fit-content;
     display: flex;
     flex-direction: column;

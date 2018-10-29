@@ -16,7 +16,10 @@ import ClientPage from './ui/pages/user/ClientPage';
 // import LoginPage from './ui/pages/login/login';
 
 const NotFound = () => {
-    return (<h1 style={{ textAlign: "center", marginTop: "200px" }}>PAGE NOT FOUND!</h1>);
+    return (
+    <div style={{height:"100vh", display:"flex", justifyContent:"center", alignItems:"center"}}>
+    <h1 style={{ textAlign: "center", fontSize:"5vw"}}>PAGE NOT FOUND!</h1>
+    </div>);
 }
 
 class App extends Component {
