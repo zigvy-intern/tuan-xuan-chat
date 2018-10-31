@@ -1,12 +1,22 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-
-const MainLayout = (props) => {
-  return (
-    <div className="grid-container">
-          {props.children}
-      </div>
-    );
+class MainLayout extends Component {
+  render() {
+    let { isDisplayMenu } = this.props;
+    return (
+      <div className={ isDisplayMenu === true ? `grid-container open-menu` : `grid-container`}>
+            {this.props.children}
+        </div>
+      );
+  }
 }
- 
-export default MainLayout;
+
+const mapStateToProps = (state) => {
+  return {
+    isDisplayMenu: state.isDisplayMenu
+  }
+}
+
+
+export default connect(mapStateToProps, null)(MainLayout);

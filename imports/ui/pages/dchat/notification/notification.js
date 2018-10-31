@@ -8,13 +8,10 @@ import NotificationContainer from '../../../containers/NotificationContainer/Not
 const NotificationPage = () => {
     return (
         <React.Fragment>
-            <MainLayout>
-                <MenuSide />
-                <TopHeader group="name" name="notification" />
-                <MainContent class={"main-container " + "noti-wrapper"}>
-                    {/* <NotificationContainer/> */}
-                </MainContent>
-            </MainLayout>
+            <TopHeader group="name" name="notification" />
+            <MainContent class={"main-container " + "noti-wrapper"}>
+                {/* <NotificationContainer/> */}
+            </MainContent>
         </React.Fragment>
     );
 }

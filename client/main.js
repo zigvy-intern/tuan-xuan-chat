@@ -1,9 +1,13 @@
-import React from 'react';
 import { Meteor } from 'meteor/meteor';
+import { Tracker } from 'meteor/tracker';
 import { render } from 'react-dom';
-import App from '../imports/App';
+import { routes, isAuthenChange } from './../imports/startup/client/routes';
 
- 
+Tracker.autorun(() => {
+  const isAuthenticated = !!Meteor.userId();
+  isAuthenChange(isAuthenticated);
+});
+
 Meteor.startup(() => {
-  render(<App />, document.getElementById('reactRoot'));
+  render(routes, document.getElementById('reactRoot'));
 });

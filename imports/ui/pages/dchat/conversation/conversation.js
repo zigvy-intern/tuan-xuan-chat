@@ -8,14 +8,11 @@ import ConversationContainer from '../../../containers/ConversationContainer/Con
 const ConversationPage = () => {
     return (
         <React.Fragment>
-            <MainLayout>
-                <MenuSide />
-                <TopHeader group="conversation" />
+            <TopHeader group="conversation" />
 
-                <MainContent class={"main-container " + "conversation-wrapper"}>
-                    <ConversationContainer />
-                </MainContent>
-            </MainLayout>
+            <MainContent class={"main-container " + "conversation-wrapper"}>
+                <ConversationContainer />
+            </MainContent>
         </React.Fragment>
 
     );
