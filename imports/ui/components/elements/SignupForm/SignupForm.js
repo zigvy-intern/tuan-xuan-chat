@@ -25,6 +25,7 @@ class SignupForm extends Component {
             email,
             password,
             username: id,
+            password:password,
             profile: { 
                 name,
                 color
@@ -38,15 +39,27 @@ class SignupForm extends Component {
             id: id,
             name: name,
             email:email,
-            password:password,
             customData: {
               avatarColor: color,
               role:"ctv"
             },
           })
           .then(() => {
+            //Thông báo
             alert("Successfully");
             this.refs.signUpForm.reset()
+            //Gán role
+            chatkit.assignGlobalRoleToUser({
+                userId: id,
+                roleName: 'admin',
+              })
+                .then(() => {
+                  
+                }).catch((err) => {
+                  console.log(err);
+                });
+            
+                
             this.props.history.push('/admin')
           }).catch((err) => {
             alert("Fail! "+err.error_description)
@@ -63,11 +76,11 @@ class SignupForm extends Component {
                     <img className="logo" src="./assets/img/SVG/logo.svg" alt="logodchat" />
                     <form method="POST" onSubmit={this.handleSubmit} ref="signUpForm">
                         <label htmlFor="userID">Your ID</label>
-                        <input className="text-box" type="text" name="userID" ref="userID" required autoFocus autoComplete="off"  />
+                        <input className="text-box" type="text" name="userID" ref="userID" required  minLength={8} autoFocus autoComplete="off"  />
                         <label htmlFor="username">Display name</label>
-                        <input className="text-box" type="text" name="username" ref="username" maxLength={30} minLength={8} required autoComplete="off" />
+                        <input className="text-box" type="text" name="username" ref="username" maxLength={30} required autoComplete="off" />
                         <label htmlFor="psw">Password</label>
-                        <input className="text-box" type="password" name="psw" ref="psw" maxLength={20} minLength={8} required autoComplete="off" />
+                        <input className="text-box" type="password" name="psw" ref="psw" maxLength={20} required autoComplete="off" />
                         <label htmlFor="email">Your email</label>
                         <input className="text-box" type="email" name="email" ref="email" required autoComplete="off" />
                         <label htmlFor="color">Choose your color</label>
