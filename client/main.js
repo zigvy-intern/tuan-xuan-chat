@@ -5,6 +5,7 @@ import { routes, isAuthenChange } from './../imports/startup/client/routes';
 
 Tracker.autorun(() => {
   const isAuthenticated = !!Meteor.userId();
+  console.log('isAuthenticated',isAuthenticated);
   isAuthenChange(isAuthenticated);
 });
 

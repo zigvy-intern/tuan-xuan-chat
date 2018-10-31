@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import { Link, Redirect,  withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import LoginContainer from '../../../containers/LoginContainer/LoginContainer';
 import Chatkit from '@pusher/chatkit-server';
 import {chatkit} from '../../../../api/chatkit/clientobj';
 import { Accounts } from 'meteor/accounts-base';
+import createHistory from 'history/createBrowserHistory';
+import { Meteor } from 'meteor/meteor';
+
+const history = createHistory();
 class SignupForm extends Component {
     constructor(props){
         super(props);
@@ -34,7 +38,7 @@ class SignupForm extends Component {
                     error: err
                 })
           });
-
+        
         chatkit.createUser({
             id: id,
             name: name,
@@ -47,7 +51,6 @@ class SignupForm extends Component {
           .then(() => {
             //Thông báo
             alert("Successfully");
-            this.refs.signUpForm.reset()
             //Gán role
             chatkit.assignGlobalRoleToUser({
                 userId: id,
@@ -58,9 +61,6 @@ class SignupForm extends Component {
                 }).catch((err) => {
                   console.log(err);
                 });
-            
-                
-            this.props.history.push('/admin')
           }).catch((err) => {
             alert("Fail! "+err.error_description)
             console.log(err);
@@ -106,4 +106,4 @@ class SignupForm extends Component {
     }
 }
 
-export default withRouter(SignupForm);
+export default SignupForm;
