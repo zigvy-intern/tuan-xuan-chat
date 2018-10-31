@@ -8,7 +8,7 @@ import MemberContainer from '../../../containers/MemberContainer/MemberContainer
 const MemberPage = () => {
     return (
         <React.Fragment>
-            <TopHeader group="name" name="profile" />
+            <TopHeader group="profile" name="profile" />
 
             <MainContent class={"main-container " + "member"}>
                 <MemberContainer />

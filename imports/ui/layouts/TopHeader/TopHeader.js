@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
+import { Meteor } from 'meteor/meteor';
 import FormInput from '../../components/elements/FromInput/FromInput';
+import createHistory from 'history/createBrowserHistory';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/index';
+
+const history = createHistory();
 class TopHeader extends Component {
   state = {}
 
   onToggleMenu = () => {
     this.props.onToggleMenu();
+  }
+
+  onSignOut = () => {
+    Meteor.logout();
+    history.push('/admin');
   }
 
   render() {
@@ -71,8 +80,8 @@ class TopHeader extends Component {
         </React.Fragment>
     }
     else if (this.props.group=="appsetting")
-    {
-      group=
+    { 
+    group = 
       <React.Fragment>
       <h1 className="header__heading">App Setting</h1>
 
@@ -94,6 +103,14 @@ class TopHeader extends Component {
           Billing</option>
       </select>
 
+      </React.Fragment>
+    }
+    else if(this.props.group=="profile")
+    {
+    group =
+      <React.Fragment>
+        <h1 className="header__heading">App Setting</h1>
+        <p className="header-right" onClick={this.onSignOut}><span className="icon-exit"></span><span id="sign-out">Sign out</span></p>
       </React.Fragment>
     }
     return (

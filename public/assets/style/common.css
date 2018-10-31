@@ -75,7 +75,15 @@ li {
     align-items: center;
     justify-content: center;
 }
-
+/* Margin */
+.header-right {
+    margin-right: 20px;
+    cursor: pointer;
+}
+#sign-out { 
+    margin-left: 12px;
+    user-select: none;
+}
 /*BUTTON*/
 
 .btn {
