@@ -5,3 +5,15 @@ export const toggleMenu = () => {
         type: types.TOGGLE_MENU
     }
 }
+
+export const togglePopup = () => {
+    return {
+        type: types.TOGGLE_POPUP
+    }
+}
+
+export const hidePopup = () => {
+    return {
+        type: types.HIDE_POPUP
+    }
+}
