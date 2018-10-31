@@ -11,6 +11,7 @@ import MenuSide from '../../layouts/MenuSide/MenuSide';
 
 class DchatPage extends Component {
     state = {}
+
     render() {
         return (
             <React.Fragment>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Meteor } from 'meteor/meteor'
 import Inbox from '../../components/elements/Inbox/Inbox';
 import ChatBox from '../../components/elements/ChatBox/ChatBox';
 import InfoBox from '../../components/elements/InfoBox/InfoBox';
@@ -10,21 +11,28 @@ class ConversationContainer extends Component {
         super()
         this.state = {
             messages: [],
-            user: {},
+            currentUser: {},
             currentRoom: '',
             joinableRooms: [],
             joinedRooms: [],
             users: []
         }
-        this.subscribeToRoom = this.subscribeToRoom.bind(this)
-        this.getRooms = this.getRooms.bind(this)
-        this.sendMessage = this.sendMessage.bind(this)
     }
 
     componentDidMount() {
+        if(Meteor.user())
+        {
+        localStorage.setItem('admin', JSON.stringify(Meteor.user()));
+
+        }
+        let userInStore = JSON.parse(localStorage.getItem('admin'))
+        console.log(userInStore)
+        this.connectToChatKit(userInStore.username)
+    }
+    connectToChatKit = (id) => {
         const chatManager = new Chatkit.ChatManager({
             instanceLocator,
-            userId: 'xuanne', /*ID của user vô đây*/
+            userId: id, /*ID của user vô đây*/
             tokenProvider: new Chatkit.TokenProvider({
                 url: tokenUrl
             })
@@ -32,45 +40,48 @@ class ConversationContainer extends Component {
 
         chatManager.connect()
             .then(currentUser => {
-                //Gán user vào state
-                this.state.user = currentUser
-                this.currentUser = currentUser
-                //Lấy tất cả các phòng chat
+                console.log("Connected")
+                this.setState({
+                    currentUser: currentUser
+                })
                 this.getRooms()
 
+
+
             })
-            .catch(err => console.log('error on connecting: ', err))
-        // let orderedRooms = [...this.state.joinableRooms, ...this.state.joinedRooms].sort((a, b) => a.createdAt - b.createdAt)
-        // if (orderedRooms[0] != undefined)
-            
+            .catch(err => console.log('Error on connecting: ', err))
     }
-    shouldComponentUpdate(nextProps, nextState) {
-        return true
-      }
-      
-      componentWillUpdate(nextProps, nextState) {
-        this.getRooms()
-        // console.log("Re-render room list")
-    }
-    getRooms() {
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     return true
+    //   }
+
+    //   componentWillUpdate(nextProps, nextState) {
+    //     this.getRooms()
+    //     // console.log("Re-render room list")
+    // }
+    getRooms = () =>{
         //Lấy tất cả các phòng của user này
-        this.currentUser.getJoinableRooms()
-            .then(joinableRooms => {
-                this.setState({
-                    joinableRooms,
-                    joinedRooms: this.currentUser.rooms
+        let { currentUser } = this.state
+        if (currentUser) {
+            currentUser.getJoinableRooms()
+                .then(joinableRooms => {
+                    this.setState({
+                        joinableRooms,
+                        joinedRooms: currentUser.rooms
+                    })
                 })
-            })
-            .catch(err => console.log('error on joinableRooms: ', err))
+                .catch(err => console.log('error on joinableRooms: ', err))
+        }
     }
 
 
-    subscribeToRoom(roomId) {
+    subscribeToRoom = (roomId) => {
         // alert(roomId)
         // Theo dõi data từ 1 room
         // Xóa toàn bộ mess khi chuyển room
         this.setState({ messages: [] })
-        this.currentUser.subscribeToRoom({
+        let { currentUser } = this.state
+        currentUser.subscribeToRoom({
             roomId, //bằng với ID phòng truyền vào
             // limit: 10, //giới hạn số lượng mess của currentUser dc load
             hooks: {
@@ -95,10 +106,11 @@ class ConversationContainer extends Component {
 
     }
 
-    sendMessage(text) {
-        this.state.user.sendMessage({
+    sendMessage = (text) => {
+        let { currentUser, currentRoom } = this.state
+        currentUser.sendMessage({
             text,
-            roomId: this.state.currentRoom
+            roomId: currentRoom
         })
     }
 
@@ -106,13 +118,13 @@ class ConversationContainer extends Component {
 
         return (
             <React.Fragment>
-                <InboxList currentUser={this.state.user}
+                <InboxList currentUser={this.state.currentUser}
                     currentRoom={this.state.currentRoom}
                     rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]}
                     subscribeToRoom={this.subscribeToRoom}
                 />
                 <ChatBox messages={this.state.messages}
-                    currentUser={this.state.user}
+                    currentUser={this.state.currentUser}
                     sendMessage={this.sendMessage}
                     currentRoom={this.state.currentRoom}
                 />
