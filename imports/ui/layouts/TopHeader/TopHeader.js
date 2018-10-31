@@ -7,8 +7,33 @@ import * as actions from '../../actions/index';
 
 const history = createHistory();
 class TopHeader extends Component {
-  state = {}
+  constructor(props){
+    super(props);
+    this.state = {
+      displayUserName: ""
+    }
+  }
 
+  componentDidMount = () => {
+    if(Meteor.user()){
+      let name = Meteor.user().profile.name;
+      console.log(name);
+      this.setState({
+        displayUserName: name
+      })
+    }
+  }
+
+  // componentWillMount = () => {
+  //   if(Meteor.user()){
+  //     let name = Meteor.user().profile.name;
+  //     console.log(name);
+  //     this.setState({
+  //       displayUserName: name
+  //     })
+  //   }
+  // }
+  
   onToggleMenu = () => {
     this.props.onToggleMenu();
   }
@@ -22,6 +47,13 @@ class TopHeader extends Component {
     let group = null;
     if (this.props.group == "name" && this.props.name) {
       group = <h1 className="header__heading">{this.props.name}</h1>
+    }
+    else if (this.props.group == "notification"){
+      group =
+      <React.Fragment>
+        <h1 className="header__heading">Notification</h1>
+        <p className="header-right">Hi {this.state.displayUserName}</p>
+      </React.Fragment>
     }
     else if (this.props.group == "people") {
       group = <React.Fragment>
