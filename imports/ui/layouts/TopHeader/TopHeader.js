@@ -1,7 +1,23 @@
 import React, { Component } from 'react';
+import { Meteor } from 'meteor/meteor';
 import FormInput from '../../components/elements/FromInput/FromInput';
+import createHistory from 'history/createBrowserHistory';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/index';
+
+const history = createHistory();
 class TopHeader extends Component {
   state = {}
+
+  onToggleMenu = () => {
+    this.props.onToggleMenu();
+  }
+
+  onSignOut = () => {
+    Meteor.logout();
+    history.push('/admin');
+  }
+
   render() {
     let group = null;
     if (this.props.group == "name" && this.props.name) {
@@ -64,8 +80,8 @@ class TopHeader extends Component {
         </React.Fragment>
     }
     else if (this.props.group=="appsetting")
-    {
-      group=
+    { 
+    group = 
       <React.Fragment>
       <h1 className="header__heading">App Setting</h1>
 
@@ -89,9 +105,17 @@ class TopHeader extends Component {
 
       </React.Fragment>
     }
+    else if(this.props.group=="profile")
+    {
+    group =
+      <React.Fragment>
+        <h1 className="header__heading">App Setting</h1>
+        <p className="header-right" onClick={this.onSignOut}><span className="icon-exit"></span><span id="sign-out">Sign out</span></p>
+      </React.Fragment>
+    }
     return (
       <header className="header-container" key="header">
-        <div className="menu-burger" id="menu">
+        <div className="menu-burger" id="menu" onClick={this.onToggleMenu}>
           <span className="menu-line menu-line-1" />
           <span className="menu-line menu-line-2" />
           <span className="menu-line menu-line-3" />
@@ -101,4 +125,12 @@ class TopHeader extends Component {
   }
 }
 
-export default TopHeader;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onToggleMenu: () => {
+      dispatch(actions.toggleMenu());
+    }
+  };
+}
+
+export default connect(null, mapDispatchToProps)(TopHeader);
