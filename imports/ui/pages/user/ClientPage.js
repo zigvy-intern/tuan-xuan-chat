@@ -8,10 +8,7 @@ class ClientPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isDisplayChat: false,
-            userInStore: {},
-            currentUser: {},
-            currentRoom:{}
+            isDisplayChat: false
         }
     }
     componentDidMount() {

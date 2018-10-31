@@ -34,10 +34,8 @@ class ClientChatBox extends Component {
                 let clientRoom = JSON.parse(localStorage.getItem('room'))
                 if (!clientRoom)
                     this.createRoomOnChatKit()
-                this.subscribeToRoom(clientRoom.id)
-        
-                
-
+                else
+                    this.subscribeToRoom(clientRoom.id)
             })
             .catch(err => console.log('Error on connecting: ', err))
     }
