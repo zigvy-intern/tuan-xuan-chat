@@ -1,4 +1,5 @@
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
 import { Router, Switch, Route, Redirect } from 'react-router';
 
 import MainLayout from '../../ui/layouts/MainLayout/MainLayout';

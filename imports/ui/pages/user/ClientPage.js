@@ -3,8 +3,7 @@ import ClientContainer from '../../containers/ClientContainer/ClientContainer';
 import ClientChatButton from '../../components/elements/ClientChatButton/ClientChatButton';
 import ClientChatBox from '../../components/elements/ClientChatBox/ClientChatBox';
 import ClientSignUpForm from '../../components/elements/ClientSignUpForm/ClientSignUpForm';
-
-
+import { connect } from 'react-redux';
 class ClientPage extends Component {
     constructor(props) {
         super(props)
@@ -32,16 +31,25 @@ class ClientPage extends Component {
 
     render() {
         let { isDisplayChat } = this.state;
-        
+        let { isDisplayPopup } = this.props;
+        console.log(isDisplayPopup);
+        let popup = (
+            isDisplayChat ? 
+            <ClientChatBox currentUser={this.state.currentUser}/> : 
+            <ClientSignUpForm isDisplayChat={this.getState} />);
         return (
             <ClientContainer>
                 <ClientChatButton />
-                {isDisplayChat ? 
-                <ClientChatBox/> : 
-                <ClientSignUpForm isDisplayChat={this.getState} />}
+                {isDisplayPopup ? popup : ''}
             </ClientContainer>
         );
     }
 }
 
-export default ClientPage;
+const mapStateToProps = (state) => {
+    return {
+      isDisplayPopup: state.isDisplayPopup
+    }
+}
+
+export default connect(mapStateToProps, null)(ClientPage);
