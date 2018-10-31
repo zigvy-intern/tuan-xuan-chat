@@ -17,7 +17,7 @@ class InboxList extends Component {
                     return(
                         <Inbox
                         time={room.updatedAt}
-                        sender={room.name} 
+                        sender={room.createdByUserId} 
                         className={"border-box inbox "+active}
                         key={room.id} 
                         email={room.name} 

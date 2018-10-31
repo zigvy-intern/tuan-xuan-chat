@@ -15,7 +15,8 @@ class ConversationContainer extends Component {
             currentRoom: '',
             joinableRooms: [],
             joinedRooms: [],
-            users: []
+            users: [],
+            room:{}
         }
     }
 
@@ -45,9 +46,6 @@ class ConversationContainer extends Component {
                     currentUser: currentUser
                 })
                 this.getRooms()
-
-
-
             })
             .catch(err => console.log('Error on connecting: ', err))
     }
@@ -61,6 +59,7 @@ class ConversationContainer extends Component {
     // }
     getRooms = () =>{
         //Lấy tất cả các phòng của user này
+        var firstRoom;
         let { currentUser } = this.state
         if (currentUser) {
             currentUser.getJoinableRooms()
@@ -69,9 +68,12 @@ class ConversationContainer extends Component {
                         joinableRooms,
                         joinedRooms: currentUser.rooms
                     })
+                    firstRoom=[...this.state.joinableRooms, ...this.state.joinedRooms]
+                    console.log(firstRoom)
                 })
                 .catch(err => console.log('error on joinableRooms: ', err))
-        }
+               
+            }
     }
 
 
@@ -115,7 +117,7 @@ class ConversationContainer extends Component {
     }
 
     render() {
-
+    
         return (
             <React.Fragment>
                 <InboxList currentUser={this.state.currentUser}
@@ -126,7 +128,7 @@ class ConversationContainer extends Component {
                 <ChatBox messages={this.state.messages}
                     currentUser={this.state.currentUser}
                     sendMessage={this.sendMessage}
-                    currentRoom={this.state.currentRoom}
+                    currentRoom={this.state.room}
                 />
                 <InfoBox />
             </React.Fragment>

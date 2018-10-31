@@ -12,7 +12,7 @@ class ChatBox extends Component {
         <div className="chatbox-container chatbox border-box">
             <header className="chatbox-header">
                 <div className="chatbox-header__main bold">
-                {this.props.email}
+                {this.props.currentRoom.name}
                 </div>
                 <div className="chatbox-header__right">
                 <i className="fas fa-ellipsis-h" />

@@ -9,10 +9,7 @@ class ClientPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isDisplayChat: false,
-            userInStore: {},
-            currentUser: {},
-            currentRoom:{}
+            isDisplayChat: false
         }
     }
     componentDidMount() {
@@ -40,7 +37,7 @@ class ClientPage extends Component {
             <ClientContainer>
                 <ClientChatButton />
                 {isDisplayChat ? 
-                <ClientChatBox currentUser={this.state.currentUser}/> : 
+                <ClientChatBox/> : 
                 <ClientSignUpForm isDisplayChat={this.getState} />}
             </ClientContainer>
         );
