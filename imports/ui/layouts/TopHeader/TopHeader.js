@@ -17,7 +17,6 @@ class TopHeader extends Component {
   componentDidMount = () => {
     if(Meteor.user()){
       let name = Meteor.user().profile.name;
-      console.log(name);
       this.setState({
         displayUserName: name
       })

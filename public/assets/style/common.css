@@ -804,7 +804,7 @@ li {
 {
     min-width: 250px;
     max-width: 400px;
-    min-height: 500px;
+    min-height: fit-content;
     width: 300px;
     max-height: fit-content;
     display: flex;
@@ -821,7 +821,6 @@ li {
 .client-chatbox__container {
     display: grid;
     height: auto;
-    grid-template-rows: 80% 20%;
 
 }
 

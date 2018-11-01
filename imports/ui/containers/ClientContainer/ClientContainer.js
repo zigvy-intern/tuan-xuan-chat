@@ -9,7 +9,6 @@ class ClientContainer extends Component {
             <header>
                 <img src="./assets/img/SVG/logo.svg" alt="true" />
                 <h1>APP NAME</h1>
-                <Link to="/admin"><b style={{marginLeft:"200px"}}>Login</b></Link>
             </header>
             {this.props.children}
             </main>

@@ -6,6 +6,7 @@ import InfoBox from '../../components/elements/InfoBox/InfoBox';
 import InboxList from '../../components/elements/InboxList/InboxList';
 import Chatkit from '@pusher/chatkit'
 import { tokenUrl, instanceLocator } from './config'
+import { Tracker } from 'meteor/tracker'
 class ConversationContainer extends Component {
     constructor() {
         super()
@@ -49,17 +50,8 @@ class ConversationContainer extends Component {
             })
             .catch(err => console.log('Error on connecting: ', err))
     }
-    // shouldComponentUpdate(nextProps, nextState) {
-    //     return true
-    //   }
-
-    //   componentWillUpdate(nextProps, nextState) {
-    //     this.getRooms()
-    //     // console.log("Re-render room list")
-    // }
     getRooms = () =>{
         //Lấy tất cả các phòng của user này
-        var firstRoom;
         let { currentUser } = this.state
         if (currentUser) {
             currentUser.getJoinableRooms()
@@ -68,12 +60,10 @@ class ConversationContainer extends Component {
                         joinableRooms,
                         joinedRooms: currentUser.rooms
                     })
-                    firstRoom=[...this.state.joinableRooms, ...this.state.joinedRooms]
-                    console.log(firstRoom)
+               
                 })
                 .catch(err => console.log('error on joinableRooms: ', err))
-               
-            }
+        }
     }
 
 
