@@ -17,11 +17,11 @@ class InboxList extends Component {
                     return(
                         <Inbox
                         time={room.updatedAt}
-                        sender={room.createdByUserId} 
+                        sender={room.name} 
                         className={"border-box inbox "+active}
                         key={room.id} 
                         email={room.name} 
-                        inboxContent={room.id}
+                        inboxContent=""
                         onClick={()=>this.props.subscribeToRoom(room.id)}
                         />
                     )
