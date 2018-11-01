@@ -74,6 +74,7 @@ class MenuSide extends Component {
         return result;
       }
       render() {
+        let admin = JSON.parse(localStorage.getItem('admin'));
         return (
           <aside className="menu-container">
             <div className="aside-nav">
@@ -90,7 +91,7 @@ class MenuSide extends Component {
           <div className="center-inner">
             <div className="aside__avatar">
             <Link to={`/profile`}>
-              <Avatar color="pink" size="large" name="P"/>
+              <Avatar color={admin.profile.color} size="large" name={admin.profile.name}/>
               </Link>
             </div>
           </div>

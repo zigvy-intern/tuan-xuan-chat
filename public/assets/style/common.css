@@ -618,7 +618,7 @@ li {
     justify-content: center;
     align-items: center;
     background: url('../img/SVG/client-bgr.jpg');
-    background-size: contain;
+    background-size: cover;
 
 }
 .login-form
@@ -664,7 +664,7 @@ li {
 {
     color: var(--color-text-normal)
 }
-.login-form form>*:not(a)
+.login-form form>*:not(p)
 {
     min-height: 40px !important;
 }
@@ -726,7 +726,7 @@ li {
     position: relative;
     height: 100vh;
     background: url('../img/SVG/client-bgr.jpg');
-    background-size: contain;
+    background-size: cover;
 
 }
 .client-page>header
