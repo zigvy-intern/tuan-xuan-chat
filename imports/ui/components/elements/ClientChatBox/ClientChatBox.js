@@ -33,7 +33,10 @@ class ClientChatBox extends Component {
                 })
                 let clientRoom = JSON.parse(localStorage.getItem('room'))
                 if (!clientRoom)
+                {
                     this.createRoomOnChatKit()
+                   
+                }
                 else
                     this.subscribeToRoom(clientRoom.id)
             })
@@ -50,9 +53,8 @@ class ClientChatBox extends Component {
                 id: room.id,
                 name: room.name
             }
-            console.log(`Room ${room.name} is created`)
             localStorage.setItem('room', JSON.stringify(clientRoom));
-          
+            this.subscribeToRoom(room.id)
         })
             .catch(err => {
                 console.log(`Error creating room ${err}`)

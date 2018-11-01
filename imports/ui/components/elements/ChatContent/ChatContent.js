@@ -18,6 +18,7 @@ class ChatContent extends Component {
     }
 
     render() { 
+        
         return ( 
             <section className="chatbox__content">
             {/* <ChatLine key="1" type="send" time="1 hour" content="Hello, may I help you?" sender="K" currentUser="X"/> */}
@@ -25,7 +26,9 @@ class ChatContent extends Component {
                 this.props.messages.map((mess,index) =>
                 {
                     return(
-                    <ChatLine key={index} type="send" time={mess.createdAt} content={mess.text} sender={mess.sender} currentUser={this.props.currentUser}/>
+                    <ChatLine key={index} type="send" time={mess.createdAt} content={mess.text} sender={mess.sender} currentUser={this.props.currentUser}
+                    />
+                    
                     )
                 })
             }   

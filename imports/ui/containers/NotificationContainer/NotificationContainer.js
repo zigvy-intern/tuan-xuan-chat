@@ -6,14 +6,7 @@ import Inbox from '../../components/elements/Inbox/Inbox';
 
 class NotificationContainer extends Component {
     state = {  }
-    componentDidMount()
-    {
-        if(Meteor.user())
-        {
-        localStorage.setItem('admin', JSON.stringify(Meteor.user()));
 
-        }
-    }
     render() { 
         return ( 
             <React.Fragment>
@@ -22,7 +15,7 @@ class NotificationContainer extends Component {
                 <p className="bold">UNREAD MESSAGE</p>
                 <span className="inbox__noti">10</span>
             </div>
-                {this.renderInboxList()}
+             
 
             </div>
             <div className="noti-right-container">
