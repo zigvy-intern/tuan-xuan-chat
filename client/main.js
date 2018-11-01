@@ -12,3 +12,4 @@ Tracker.autorun(() => {
 Meteor.startup(() => {
   render(routes, document.getElementById('reactRoot'));
 });
+
