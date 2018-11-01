@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Chatkit from '@pusher/chatkit-server';
 import {chatkit} from '../../../../api/chatkit/clientobj';
 import {Clients} from '../../../../api/clients/clients';
+import {randomColor} from '../../../../api/users/users'
 
 class ClientSignUpForm extends Component {
     state = {}
@@ -12,14 +13,15 @@ class ClientSignUpForm extends Component {
         let email = this.refs.email.value.trim();
         let username = this.refs.username.value.trim();
         let id = '_' + Math.random().toString(36).substr(2, 9);
-        let user = {id, email, username}
+        let color = randomColor()
+        let user = {id, email, username, color}
 
         chatkit.createUser({
             id: id,
             name: username,
             customData: {
-            email:email,
-              avatarColor: 'blue',
+                email:email,
+              avatarColor: color,
               role:"client"
             },
           })
