@@ -650,7 +650,8 @@ li {
 .login-form .logo 
 {
     user-select: none;
-    max-width: 45px;
+    max-width: 100px;
+    margin: 0px auto;
     margin-bottom: 25px;
 }
 .login__link
@@ -695,6 +696,10 @@ li {
     outline: none;
 
 }
+.login--option
+{
+    margin-top: 20px;
+}
 #sel option:hover
 {
     background-color: transparent !important;
@@ -711,7 +716,11 @@ li {
     font-size: 10px;
     letter-spacing: inherit;
 }
-
+.error {
+    margin: 10px auto;
+    color: var(--color-orange);
+}
+/* Client page */
 .client-page
 {
     position: relative;

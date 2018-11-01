@@ -82,7 +82,7 @@ export const isAuthenChange = isAuthenticated => {
     const pathname = history.location.pathname;
     const isUnauthenticatedPage = unauthenticatedPages.includes(pathname);
     const isAuthenticatedPage = authenticatedPages.includes(pathname);
-  
+    
     if (isUnauthenticatedPage && isAuthenticated) {
       history.push('/notification');
     } else if (isAuthenticatedPage && !isAuthenticated) {
