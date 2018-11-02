@@ -83,6 +83,6 @@ class Table extends Component {
 }
 export default withTracker(() => {
     return {
-        clients: Clients.find({}).fetch()
+        clients: Clients.find({}, { sort: { createdAt: -1 } }).fetch()
     };
 })(Table);

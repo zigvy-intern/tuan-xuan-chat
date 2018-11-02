@@ -9,3 +9,16 @@ export const chatkit = new Chatkit({
     key: secretKey,
   })
   
+getUser= (id)=> 
+{
+  chatkit.getUser({
+    id
+  })
+    .then(user => {
+      console.log('got a user', user)
+      return user
+
+    })
+    .catch(err => console.error(err))
+  }
+export {getUser}

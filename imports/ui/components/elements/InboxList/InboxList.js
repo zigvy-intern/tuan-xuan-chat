@@ -5,7 +5,7 @@ class InboxList extends Component {
 
 
     render() {
-        let orderedRooms = [...this.props.rooms].sort((a, b) => b.updatedAt - a.updatedAt)
+        let orderedRooms = [...this.props.rooms];
 
         return (
             <div className="inbox-container">
