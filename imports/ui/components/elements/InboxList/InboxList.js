@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import Inbox from '../Inbox/Inbox';
-
+import {Clients} from '../../../../api/clients/clients'
 class InboxList extends Component {
 
+    getColor = (id) =>
+    {
+        let user= Clients.findOne({_id:id})
+        if(user)
+        return user.avatarColor
+    }
 
     render() {
         let orderedRooms = [...this.props.rooms];
@@ -13,10 +19,10 @@ class InboxList extends Component {
                     orderedRooms.map(room => {
                         //add class active khi subscribe 1 phòng
                         const active = this.props.currentRoom === room.id ? "active" : "";
-                        console.log(room)
+                        const color = this.getColor(room.createdByUserId)
                         return (
                             <Inbox
-                                createdByUserId={room.createdByUserId}
+                                avatarColor={color? color : "red"}
                                 time={room.updatedAt}
                                 sender={room.name}
                                 className={"border-box inbox " + active}

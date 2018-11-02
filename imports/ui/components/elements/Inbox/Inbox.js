@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Avatar from '../Avatar/Avatar';
+
 class Inbox extends Component {
 
   render() {
@@ -8,7 +9,7 @@ class Inbox extends Component {
       <React.Fragment>
         <div className={this.props.className} onClick={this.props.onClick}>
           <section>
-            <Avatar color='yellow' size='medium' url="" name={this.props.sender} />
+            <Avatar color={this.props.avatarColor} size='medium' url="" name={this.props.sender} />
             <div>
               <p className="inbox__email bold">{this.props.email}</p>
               <p className="inbox__time">{this.props.time}</p>

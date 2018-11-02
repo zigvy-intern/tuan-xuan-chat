@@ -19,6 +19,7 @@ class ClientSignUpForm extends Component {
 
         if(user){
             Clients.insert({
+                _id: id,
                 name: username,
                 email: email,
                 avatarColor: color,

@@ -53,6 +53,7 @@ class InputBox extends Component {
                 {/* Input space */}
                 <form onSubmit={this.handleSubmit} id="sendmess">
                 <textarea
+                maxLength="250"
                  onKeyDown={this.onEnterPress}
                  onChange={this.handleChange}
                  className="chat__text-box" type="text" placeholder="Enter your message here" 
