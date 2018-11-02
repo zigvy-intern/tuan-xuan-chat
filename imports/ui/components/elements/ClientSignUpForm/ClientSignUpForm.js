@@ -21,6 +21,7 @@ class ClientSignUpForm extends Component {
             Clients.insert({
                 name: username,
                 email: email,
+                avatarColor: color,
                 location: (
                     Math.random() > 0.5 ? 'Ho Chi Minh city' : 'Ha Noi'
                 ),

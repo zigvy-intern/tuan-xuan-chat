@@ -15,10 +15,10 @@ class TopHeader extends Component {
   }
 
   componentDidMount = () => {
-    if(Meteor.user()){
-      let name = Meteor.user().profile.name;
+    let user = JSON.parse(localStorage.getItem('admin'));
+    if(user){
       this.setState({
-        displayUserName: name
+        displayUserName: user.profile.name
       })
     }
   }
