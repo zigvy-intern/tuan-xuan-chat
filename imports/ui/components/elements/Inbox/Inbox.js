@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import Avatar from '../Avatar/Avatar';
-import {getUser} from '../../../../api/chatkit/clientobj';
 class Inbox extends Component {
 
   render() {
-    let user = getUser(this.props.createdByUserId)
+   
     return (
       <React.Fragment>
         <div className={this.props.className} onClick={this.props.onClick}>

@@ -13,6 +13,7 @@ class InboxList extends Component {
                     orderedRooms.map(room => {
                         //add class active khi subscribe 1 phòng
                         const active = this.props.currentRoom === room.id ? "active" : "";
+                        console.log(room)
                         return (
                             <Inbox
                                 createdByUserId={room.createdByUserId}
