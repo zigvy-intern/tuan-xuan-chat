@@ -1,28 +1,10 @@
 import React, { Component } from 'react';
 import Avatar from '../Avatar/Avatar';
-import { chatkit } from '../../../../api/chatkit/clientobj';
-import Chatkit from '@pusher/chatkit-server';
+import {getUser} from '../../../../api/chatkit/clientobj';
 class Inbox extends Component {
-  constructor()
-  {
-    super()
-    this.state={
-      createdByUser:{}
-    }
-  }
-  getUser = () =>
-  {
-    chatkit.getUser({
-      id:this.props.createdByUserId
-    })
-      .then(user => {
-        console.log('got a user', user)
-        return user
 
-      })
-      .catch(err => console.error(err))
-    }
   render() {
+    let user = getUser(this.props.createdByUserId)
     return (
       <React.Fragment>
         <div className={this.props.className} onClick={this.props.onClick}>
@@ -34,7 +16,7 @@ class Inbox extends Component {
             </div>
           </section>
           <section>
-            <Avatar color='pink' size='small' url="" name={this.props.receiver} />
+            <Avatar color='white' size='small' url="" name={this.props.receiver} />
             <p className="inbox__content">{this.props.inboxContent}</p>
           </section>
         </div>
